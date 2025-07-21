@@ -21,7 +21,7 @@ function Hero() {
       <div className="hero-content">
         <h2>Test. Inspection. Certification</h2>
         <p>
-          Your partner for testing, inspection, and certification excellence.
+          Tic with certainty from test to trust
         </p>
         <a href="#contact" className="button-primary">
           Get in Touch

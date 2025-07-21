@@ -1,78 +1,82 @@
 .hero {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 1rem;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-  }
-  
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
-    z-index: 1;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-  
+  background-color: #333;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero a.button-primary {
+  background-color: white;
+  color: #2563eb;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.hero a.button-primary:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
   .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.05rem;
   }
-  
   .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
   }
-  
+
   .hero a.button-primary {
-    background-color: white;
-    color: #2563eb;
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.2s, color 0.2s, transform 0.2s;
-    margin-top: 1rem;
-    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
-  
-  .hero a.button-primary:hover {
-    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .hero a.button-primary {
+    width: 100%;
   }
-  
-  
-  @media (max-width: 768px) {
-    .hero h2 {
-      font-size: 1.05rem;
-    }
-    .hero p {
-      font-size: 1rem;
-    }
-  
-    .hero a.button-primary {
-      padding: 0.6rem 1.2rem;
-      font-size: 0.9rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero a.button-primary {
-      width: 100%;
-    }
-  }
+}
