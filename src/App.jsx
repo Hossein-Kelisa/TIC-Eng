@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header';
-import Hero from './components/Hero';
+import Hero from './Components/Hero';
 import Services from './Components/Services';
 import About from './Components/About';
 import Industries from './Components/Industries';
