@@ -1,9 +1,11 @@
 import React from 'react';
+import './Header.css'; 
+import logo from '../assets/logo.jpg'; 
 
 function Header() {
   return (
     <header>
-      <h1>Tic-Eng.com</h1>
+      <img src={logo} alt="TIC Engineering Logo" className="logo" />
       <nav>
         <a href="#services">Services</a>
         <a href="#about">About</a>

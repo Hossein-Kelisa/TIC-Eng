@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
+import Header from './Components/Header';
 import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Industries from './components/Industries';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Services from './Components/Services';
+import About from './Components/About';
+import Industries from './Components/Industries';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 function App() {
   return (

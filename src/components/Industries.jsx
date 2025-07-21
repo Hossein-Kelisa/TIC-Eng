@@ -1,4 +1,5 @@
 import React from 'react';
+import './Industries.css'; 
 
 function Industries() {
   return (
