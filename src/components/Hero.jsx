@@ -46,8 +46,8 @@ function Hero() {
       }}
     >
       <div className="hero-content">
-        <h2>Test. Inspection. Certification</h2>
-        <p>Tic with certainty from test to trust</p>
+        <h2>Tic with certainty from test to trust</h2>
+        <p>Connect with our TIC experts</p>
         <a href="#contact" className="button-primary">
           Get in Touch
         </a>
