@@ -1,11 +1,14 @@
-import React from 'react';
-import './Header.css'; 
-import logo from '../assets/Logo.jpg'; 
+import React from "react";
+import "./Header.css";
+import logo from "../assets/Logo.jpg";
 
 function Header() {
   return (
-    <header>
-      <img src={logo} alt="TIC Engineering Logo" className="logo" />
+    <header className="header">
+      <div className="logo-container">
+        <img src={logo} alt="TIC Engineering Logo" className="logo" />
+        <span className="logo-text">Test-Inspection-Certification</span>{" "}
+      </div>
       <nav>
         <a href="#services">Services</a>
         <a href="#about">About</a>
