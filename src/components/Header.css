@@ -10,11 +10,6 @@ header {
     z-index: 1000;
   }
   
-  header h1 {
-    color: #2563eb;
-    font-size: 1.8rem;
-  }
-  
   nav a {
     margin-left: 1rem;
     text-decoration: none;
@@ -23,14 +18,25 @@ header {
   }
   
   nav a:hover {
-    color: #2563eb;
+    color: #e61b1b;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
   }
   
   .logo {
     width: auto;
     height: 50px;
     background-size: cover;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+  }
+  .logo-text {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 500;
+    white-space: nowrap; /* prevent text breaking */
   }
   @media (max-width: 768px) {
     header {
@@ -48,6 +54,9 @@ header {
     .logo {
       height: 40px;
     }
+    .logo-text {
+      font-size: 0.8rem;
+    }
   }
   
   @media (max-width: 480px) {
@@ -57,7 +66,7 @@ header {
     .logo {
       height: 30px;
     }
+    .logo-text {
+      font-size: 0.7rem;
+    }
   }
-
-  
-  
