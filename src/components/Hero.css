@@ -12,7 +12,7 @@
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  transition: background-image 3s ease-in-out;
+  transition: background-image 2s ease-in-out;
 }
 
 .hero::before {
