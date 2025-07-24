@@ -14,6 +14,7 @@ function Hero() {
           const img = new Image();
           img.src = src;
           img.onload = resolve; // resolve when loaded
+          img.onerror = resolve; // resolve even if there's an error
         });
       });
 
