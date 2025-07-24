@@ -59,6 +59,7 @@
 
 .hero a.button-primary:hover {
   transform: scale(1.05);
+  color: rgb(255, 8, 0);
 }
 
 @media (max-width: 768px) {
