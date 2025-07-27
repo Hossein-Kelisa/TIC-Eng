@@ -81,3 +81,21 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-point h4 {
+    font-size: 1.1rem;
+  }
+
+  .about-point p {
+    font-size: 0.9rem;
+  }
+}
