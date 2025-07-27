@@ -29,7 +29,7 @@ function Services() {
         {services.map((service, index) => (
           <FadeInOnScroll key={index}>
             <div className="service-box">
-              <img src={service.image} alt={service.title} className="service-image" />
+            <img src={service.image} alt={`${service.title} service illustration`} className="service-image" />
               <h4>{service.title}</h4>
               <p>{service.description}</p>
             </div>
