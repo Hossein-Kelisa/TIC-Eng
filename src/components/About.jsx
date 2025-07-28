@@ -48,7 +48,7 @@ function About() {
 
         <FadeInOnScroll>
           <img
-            src="https://res.cloudinary.com/dk9rkpvhm/image/upload/testing_fc326x.jpg"
+            src="https://res.cloudinary.com/dk9rkpvhm/image/upload/4_ubycxu.jpg"
             alt="About Us"
             className="about-image"
           />
