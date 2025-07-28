@@ -7,17 +7,17 @@ function Services() {
     {
       title: 'Testing',
       description: 'We check your products to ensure they are safe and high quality.',
-      image: 'https://res.cloudinary.com/dk9rkpvhm/image/upload/20945220_nsiovf.jpg',
+      image: 'https://res.cloudinary.com/dk9rkpvhm/image/upload/1_d24idv.jpg',
     },
     {
       title: 'Inspection',
       description: 'We examine equipment, buildings, and products carefully!!!.',
-      image: 'https://res.cloudinary.com/dk9rkpvhm/image/upload/20944106_bc6aee.jpg',
+      image: 'https://res.cloudinary.com/dk9rkpvhm/image/upload/2_kuav6y.jpg',
     },
     {
       title: 'Certification',
       description: 'We provide certificates to show your products meet standards.',
-      image: 'https://res.cloudinary.com/dk9rkpvhm/image/upload/3959768_cimwje.jpg', 
+      image: 'https://res.cloudinary.com/dk9rkpvhm/image/upload/3_bxkbhe.jpg', 
     },
   ];
   return (
