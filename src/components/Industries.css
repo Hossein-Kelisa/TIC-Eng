@@ -1,4 +1,45 @@
-#industries p {
-    max-width: 600px;
-    margin: 0 auto;
+.industries-section {
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.industries-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
   }
+
+  .section-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+  }
+}
