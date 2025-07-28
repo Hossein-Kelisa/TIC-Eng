@@ -11,7 +11,7 @@ function Services() {
     },
     {
       title: 'Inspection',
-      description: 'We examine equipment, buildings, and products carefully.',
+      description: 'We examine equipment, buildings, and products carefully!!!.',
       image: 'https://res.cloudinary.com/dk9rkpvhm/image/upload/20944106_bc6aee.jpg',
     },
     {
