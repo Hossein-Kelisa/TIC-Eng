@@ -1,18 +1,80 @@
 .hero {
-  background-color: #333;
-  height: 80vh;
+  background-color: #330303;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 70vh;
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(224, 183, 111, 0.6);
+  background-color: #000; 
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+  transition: opacity 1s ease-in-out;
+  display: block;
+}
+
+.hero-right {
+  padding-left: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 1rem;
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  transition: background-image 2s ease-in-out;
+  text-align: left;
+}
+
+.hero-right h2 {
+  font-size: 3.2em;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: #e2c26a;
+}
+
+.hero-right p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+}
+
+.hero a.button-primary {
+  background-color: white;
+  color: #000000;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.hero a.button-primary:hover {
+  transform: scale(1.05);
+  color: rgb(255, 8, 0);
 }
 
 .hero::before {
@@ -23,61 +85,73 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.6)
+    to right,
+    rgba(0, 0, 0, 0.7) 40%,
+    rgba(0, 0, 0, 0) 60%
   );
   z-index: 1;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.hero a.button-primary {
-  background-color: white;
-  color: #2563eb;
-  padding: 0.8rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.2s, color 0.2s, transform 0.2s;
-  margin-top: 1rem;
-  display: inline-block;
-}
-
-.hero a.button-primary:hover {
-  transform: scale(1.05);
-  color: rgb(255, 8, 0);
-}
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-  .hero p {
-    font-size: 1rem;
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    height: 100vh;
+    padding: 2rem 1rem;
   }
 
+  .hero-left,
+  .hero-right {
+    flex: unset;
+    width: 100%;
+  }
+
+  .hero-left {
+    max-height: 50vh; 
+  }
+
+  .hero-right {
+    padding-left: 0;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .hero-right h2 {
+    font-size: 2.4rem;
+    margin-top: 3rem;
+  }
+
+  .hero-right p {
+    font-size: 1.1rem;
+    margin-top: 4rem;
+  }
   .hero a.button-primary {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.9rem;
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
+  .hero-right h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-right p {
+    font-size: 1rem;
+  }
+  .hero-left {
+    max-height: 40vh; 
+    aspect-ratio: 4 / 3; 
+  }
+
   .hero a.button-primary {
     width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-height: 40vh;
   }
 }

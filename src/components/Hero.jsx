@@ -6,46 +6,46 @@ function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  // Step 1: Preload images when component loads
   useEffect(() => {
     const preloadImages = async () => {
       const promises = heroImages.map((src) => {
         return new Promise((resolve) => {
           const img = new Image();
           img.src = src;
-          img.onload = resolve; // resolve when loaded
-          img.onerror = resolve; // resolve even if there's an error
+          img.onload = resolve;
+          img.onerror = resolve;
         });
       });
 
-      await Promise.all(promises); // wait until all loaded
-      setImagesLoaded(true); // now ready to show
+      await Promise.all(promises);
+      setImagesLoaded(true);
     };
 
     preloadImages();
   }, []);
 
-  // Step 2: Start slideshow after loading
   useEffect(() => {
     if (!imagesLoaded) return;
 
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % heroImages.length);
-    }, 5000); // every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [imagesLoaded]);
 
   return (
-    <section
-      className="hero"
-      style={{
-        backgroundImage: imagesLoaded
-          ? `url(${heroImages[currentIndex]})`
-          : "none",
-      }}
-    >
-      <div className="hero-content">
+    <section className="hero">
+      <div className="hero-left">
+        {imagesLoaded && (
+          <img
+            src={heroImages[currentIndex]}
+            alt={`Slide ${currentIndex + 1}`}
+            className="hero-image"
+          />
+        )}
+      </div>
+      <div className="hero-right hero-content">
         <h2>Tic with certainty from test to trust</h2>
         <p>Connect with our TIC experts</p>
         <a href="#contact" className="button-primary">
