@@ -17,10 +17,10 @@ function HomePage() {
       <Hero />
       <Services />
       <About />
+      <Industries />
       <Team />
       <Comment />
       <FAQ />
-      <Industries />
       <Contact />
       <Footer />
     </main>
