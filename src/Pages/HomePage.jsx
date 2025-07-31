@@ -6,6 +6,9 @@ import About from '../components/About';
 import Industries from '../components/Industries';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Team from '../components/Team';
+import Testimonials from '../components/Testimonials';
+import FAQ from '../components/FAQ';
 
 function HomePage() {
   return (
@@ -14,6 +17,9 @@ function HomePage() {
       <Hero />
       <Services />
       <About />
+      <Team />
+      <Testimonials />
+      <FAQ />
       <Industries />
       <Contact />
       <Footer />
