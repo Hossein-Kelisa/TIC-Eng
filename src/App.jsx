@@ -1,25 +1,8 @@
 import React from 'react';
-import './App.css';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Industries from './components/Industries';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import HomePage from './Pages/HomePage';
 
 function App() {
-  return (
-    <main>
-      <Header />
-      <Hero />
-      <Services />
-      <About />
-      <Industries />
-      <Contact />
-      <Footer />
-    </main>
-  );
+  return <HomePage />;
 }
 
 export default App;

@@ -1,9 +1,8 @@
 .about-section {
   padding: 80px 20px;
-  max-width: 1000px;
   margin: 0 auto;
-  background-color: #f9fafb;
-  color: #1f2937;
+  background: linear-gradient(to bottom, #e2c26a, #dbd4ca);
+  color: #872513;
   text-align: center;
 }
 
@@ -47,7 +46,7 @@
 
 .icon {
   font-size: 2.5rem;
-  color: #3b82f6; /* Blue */
+  color: #4e664e; 
   flex-shrink: 0;
   margin-top: 4px;
 }
