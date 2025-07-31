@@ -1,29 +1,40 @@
 .contact-section {
-  padding: 4rem 1rem;
-  background-color: #ffffff;
+  padding: 80px 20px;
+  background-color: #f3f4f6;
+  color: #1f2937;
   text-align: center;
 }
 
-.contact-section .container {
-  max-width: 700px;
+.container {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 15px;
 }
 
 .section-title {
-  font-size: 2rem;
-  color: #2563eb;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #4b5563;
+}
+
+.contact-info {
+  margin-bottom: 2rem;
 }
 
 .contact-detail {
   font-size: 1.1rem;
-  color: #333;
-  margin: 0.5rem 0;
+  margin-bottom: 1rem;
+  color: #374151;
 }
 
 .contact-detail a {
-  color: #2563eb;
+  color: #3b82f6;
   text-decoration: none;
 }
 
@@ -33,25 +44,31 @@
 
 .button-primary {
   display: inline-block;
-  margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #2563eb;
+  background-color: #3b82f6;
   color: #fff;
-  border-radius: 6px;
+  font-size: 1rem;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .button-primary:hover {
-  background-color: #1e4fcc;
+  background-color: #2563eb;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .section-title {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
+  .contact-description,
   .contact-detail {
     font-size: 1rem;
+  }
+
+  .button-primary {
+    width: 100%;
+    padding: 1rem;
   }
 }
