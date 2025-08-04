@@ -10,6 +10,8 @@ header {
   z-index: 1000;
   margin-top: 6px;
   border-radius: 10px;
+  border-top: 0.3px solid #633434;
+  border-bottom: 0.3px solid #633434;
 }
 
 nav a {
