@@ -8,6 +8,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    margin-top: 6px;
+    border-radius: 10px;
   }
   
   nav a {
