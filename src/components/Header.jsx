@@ -17,7 +17,7 @@ function Header() {
       </div>
 
       {/* Hamburger icon for mobile */}
-      <button className="hamburger" onClick={toggleMenu}>
+      <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">
         ☰
       </button>
 
