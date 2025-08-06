@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 import { FaUsers, FaRocket, FaGlobe } from 'react-icons/fa'; // react-icons package
-import FadeInOnScroll from './FadeInOnScroll';
+import Fades from './Fades'; 
 
 function About() {
   const points = [
@@ -24,15 +24,15 @@ function About() {
 
   return (
     <section id="about" className="about-section">
-      <FadeInOnScroll>
+      <Fades animationType="fadeZoom">
         <h3 className="about-title">Why Choose Us?</h3>
         <p className="about-subtitle">
           We are committed to providing outstanding services with a focus on quality and customer satisfaction.
         </p>
-      </FadeInOnScroll>
+      </Fades>
 
       <div className="about-content">
-        <FadeInOnScroll>
+        <Fades animationType="fadeZoom">
           <ul className="about-points">
             {points.map((point, index) => (
               <li key={index} className="about-point">
@@ -44,15 +44,15 @@ function About() {
               </li>
             ))}
           </ul>
-        </FadeInOnScroll>
+        </Fades>
 
-        <FadeInOnScroll>
+        <Fades animationType="fadeScale">
           <img
             src="https://res.cloudinary.com/dk9rkpvhm/image/upload/4_ubycxu.jpg"
             alt="About Us"
             className="about-image"
           />
-        </FadeInOnScroll>
+        </Fades>
       </div>
     </section>
   );

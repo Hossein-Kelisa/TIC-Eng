@@ -42,6 +42,78 @@ nav a:hover {
   font-weight: 500;
   white-space: nowrap;
 }
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+.hamburger:hover {
+  color: #e61b1b;
+  transform: scale(1.1);
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* hide it by default */
+  width: 180px;
+  height: 100%;
+  background: linear-gradient(135deg, #fafafa 30%, #d9b41f 100%);
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1001;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.mobile-menu a {
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.mobile-menu a:hover {
+  color: #e61b1b;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.close-button {
+  align-self: flex-end;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: #e61b1b;
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
 @media (max-width: 768px) {
   header {
     align-items: center;
@@ -60,13 +132,21 @@ nav a:hover {
   .logo-text {
     font-size: 0.8rem;
   }
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
   header {
     margin-top: 2px;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 0.5rem 1rem;
   }
   nav {
