@@ -56,7 +56,7 @@ export default function Fades({ children, animationType = "fadeScale" }) {
       ref={ref}
       initial={chosen.initial}
       animate={inView ? chosen.animate : chosen.initial}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 1, ease: "easeOut" }}
     >
       {children}
     </motion.div>
