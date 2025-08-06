@@ -60,7 +60,7 @@ nav a:hover {
   right: -100%; /* hide it by default */
   width: 180px;
   height: 100%;
-  background-color: #fff;
+  background: linear-gradient(135deg, #fafafa 30%, #d9b41f 100%);
   box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
