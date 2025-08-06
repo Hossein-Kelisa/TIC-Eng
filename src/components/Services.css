@@ -97,9 +97,22 @@
     padding: 0;
   }
   .service-card {
-    margin-bottom: 2rem;
-  }
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 2rem; /* Center and add spacing */
+  }  
   .service-image {
-    height: 160px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .service-card {
+    width: 100%;
+    max-width: 250px;
+  } 
+  .service-image {
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
 }
