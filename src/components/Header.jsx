@@ -17,7 +17,11 @@ function Header() {
       </div>
 
       {/* Hamburger icon for mobile */}
-      <button className="hamburger" onClick={toggleMenu} aria-label="Toggle menu">
+      <button
+        className="hamburger"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
         ☰
       </button>
 
@@ -32,7 +36,11 @@ function Header() {
 
       {/* Slide-out menu for mobile */}
       <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
-        <button className="close-button" onClick={toggleMenu}>
+        <button
+          className="close-button"
+          onClick={toggleMenu}
+          aria-label="Close menu"
+        >
           ×
         </button>
         <a href="#services" onClick={toggleMenu}>
