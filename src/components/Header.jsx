@@ -51,6 +51,7 @@ function Header() {
           Contact
         </a>
       </div>
+      {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
     </header>
   );
 }
