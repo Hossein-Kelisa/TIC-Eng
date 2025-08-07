@@ -1,55 +1,107 @@
 .faq-section {
-    padding: 80px 20px;
-    margin: 0 auto;
-    background: linear-gradient(to bottom, #e2c26a, #dbd4ca);
+  padding: 80px 20px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #e2c26a, #dbd4ca);
+}
+
+.faq-title {
+  font-size: 5rem;
+  margin-bottom: 8rem;
+  text-align: center;
+  font-weight: 700;
+  color: #8b0d04;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  background-color: #f9fafb;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #951004;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  border-left-color: #d1341e;
+  background-color: #f3f4f6;
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+  user-select: none;
+}
+
+.faq-answer {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  transition: max-height 0.3s ease;
+}
+.faq-item.open {
+  border-left-color: #d1341e;
+  background-color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+  .faq-section {
+    padding: 60px 15px;
   }
-  
+
+  .faq-title {
+    font-size: 3.3rem;
+    margin-bottom: 6rem;
+  }
+
+  .faq-question {
+    font-size: 1.05rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 50px 15px;
+  }
+
   .faq-title {
     font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    font-weight: 700;
-    color: #8b0d04;
+    margin-bottom: 3.5rem;
   }
-  
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .faq-item {
-    background-color: #f9fafb;
-    padding: 1rem 1.5rem;
-    border-left: 4px solid #951004;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  
+
   .faq-question {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #111827;
-  }
-  
-  .faq-answer {
     font-size: 1rem;
-    color: #4b5563;
-    line-height: 1.6;
   }
-  
-  @media (max-width: 480px) {
-    .faq-title {
-      font-size: 1.6rem;
-    }
-  
-    .faq-question {
-      font-size: 1rem;
-    }
-  
-    .faq-answer {
-      font-size: 0.95rem;
-    }
+
+  .faq-answer {
+    font-size: 0.9rem;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .faq-title {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-question {
+    font-size: 0.9rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+}

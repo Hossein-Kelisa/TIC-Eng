@@ -1,5 +1,4 @@
 .industries-section {
-  height: 175vh;
   padding: 160px 20px 100px;
   background: linear-gradient(to bottom, #dbd4ca, #e2c26a);
   text-align: center;
@@ -68,7 +67,6 @@
   }
   .industries-section {
     padding: 140px 20px 80px;
-    height: 260vh;
   }
   .industry-image {
     height: 180px;
@@ -84,7 +82,6 @@
   }
   .industries-section {
     padding: 100px 10px 80px;
-    height: 390vh;
   }
   .industries-grid {
     grid-template-columns: 1fr;
