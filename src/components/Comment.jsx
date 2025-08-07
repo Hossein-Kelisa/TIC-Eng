@@ -1,5 +1,6 @@
 import React from 'react';
 import './Comment.css';
+import Fades from './Fades';
 
 const testimonials = [
   { name: 'Adel', text: 'Great service, very professional!' },
@@ -10,13 +11,18 @@ const testimonials = [
 function Comment() {
   return (
     <section id="comment" className="comment-section">
-      <h3 className="comment-title">What Our Clients Say</h3>
-      <div className="comment-container">
+      <Fades animationType="fadeZoom">
+        <h3 className="comment-title">What Our Clients Say</h3>
+      </Fades>
+
+      <div className="comment-grid">
         {testimonials.map((item, index) => (
-          <div key={index} className="comment-card">
-            <p className="comment-text">"{item.text}"</p>
-            <p className="comment-name">- {item.name}</p>
-          </div>
+          <Fades animationType="fadeSlide" key={index}>
+            <div className="comment-card">
+              <p className="comment-text">"{item.text}"</p>
+              <p className="comment-name">{item.name}</p>
+            </div>
+          </Fades>
         ))}
       </div>
     </section>
