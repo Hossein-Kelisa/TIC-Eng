@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
-import './FAQ.css';
+import React, { useState } from "react";
+import "./FAQ.css";
 
 const faqs = [
-  { question: 'How can I contact support?', answer: 'You can contact us through the contact form or email.' },
-  { question: 'What is your refund policy?', answer: 'We offer a full refund within 30 days if you are not satisfied.' },
-  { question: 'Do you offer custom services?', answer: 'Yes, please contact us to discuss your needs.' },
+  {
+    question: "How can I contact support?",
+    answer: "You can contact us through the contact form or email.",
+  },
+  {
+    question: "What is your refund policy?",
+    answer: "We offer a full refund within 30 days if you are not satisfied.",
+  },
+  {
+    question: "Do you offer custom services?",
+    answer: "Yes, please contact us to discuss your needs.",
+  },
 ];
 
 function FAQ() {
@@ -23,13 +32,21 @@ function FAQ() {
       <h3 className="faq-title">Frequently Asked Questions</h3>
       <div className="faq-list">
         {faqs.map((faq, index) => (
-          <div key={index} className={`faq-item ${openIndex === index ? 'open' : ''}`}>
+          <div
+            key={index}
+            className={`faq-item ${openIndex === index ? "open" : ""}`}
+          >
             <h4
               className="faq-question"
               onClick={() => toggleFAQ(index)}
               role="button"
               tabIndex={0}
-              onKeyPress={(e) => { if (e.key === 'Enter') toggleFAQ(index); }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  toggleFAQ(index);
+                }
+              }}
             >
               {faq.question}
             </h4>

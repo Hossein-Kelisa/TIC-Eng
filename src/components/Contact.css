@@ -61,7 +61,7 @@
   font-weight: 600;
   border-radius: 10px;
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 8px rgba(23, 97, 67, 0.3);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   max-width: 220px;
   user-select: none;
@@ -70,7 +70,7 @@
 .button-primary:hover,
 .button-primary:focus {
   background-color: #23840b;
-  box-shadow: 0 6px 12px rgba(30, 64, 175, 0.5);
+  box-shadow: 0 6px 12px rgba(35, 132, 11, 0.5);
   outline: none;
 }
 .button-wrapper {

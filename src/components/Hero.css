@@ -1,5 +1,5 @@
 .hero {
-  background-color: #330303;
+  background-color: #052053;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(224, 183, 111, 0.6);
-  background-color: #000; 
+  background-color: #d52323; 
 }
 
 .hero-image {
