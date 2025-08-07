@@ -36,10 +36,17 @@
 }
 
 .comment-text {
+  display: -webkit-box;           /* for multiline ellipsis */
+  -webkit-line-clamp: 4;          /* limit text to 4 lines */
+  line-clamp: 4;                  /* standard property */
+  -webkit-box-orient: vertical;   /* vertical orientation */
+  overflow: hidden;               /* hide extra text */
+  text-overflow: ellipsis;        /* show "..." */
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #374151;
   line-height: 1.6;
+  margin: 0;
   margin-bottom: 1rem;
 }
 
@@ -80,7 +87,7 @@
 
 @media (max-width: 480px) {
   .comment-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-bottom: 3rem;
   }
 
