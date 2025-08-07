@@ -31,11 +31,11 @@ function Industries() {
     <section id="industries" className="industries-section">
       <div className="container">
         <Fades animationType="fadeZoom">
-          <h3 className="section-title">Industries We Serve</h3>
+          <h3 className="industries-title">Industries We Serve</h3>
         </Fades>
 
         <Fades animationType="fadeZoom">
-          <p className="section-description">
+          <p className="industries-description">
             We provide professional certification, inspection, and testing services across various sectors — helping businesses maintain quality, safety, and compliance.
           </p>
         </Fades>

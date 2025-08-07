@@ -5,13 +5,7 @@
   text-align: center;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.section-title {
+.contact-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -51,6 +45,7 @@
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  max-width: 200px;
 }
 
 .button-primary:hover {
@@ -58,7 +53,7 @@
 }
 
 @media (max-width: 480px) {
-  .section-title {
+  .contact-title {
     font-size: 2rem;
   }
 
