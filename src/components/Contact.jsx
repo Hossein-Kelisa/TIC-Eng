@@ -5,7 +5,7 @@ function Contact() {
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <h3 className="section-title">Get in Touch</h3>
+        <h3 className="contact-title">Get in Touch</h3>
         <p className="contact-description">
           We'd love to hear from you! Reach out with questions, projects, or partnership opportunities.
         </p>
