@@ -34,7 +34,7 @@ function Contact() {
         </div>
 
         <div className="button-wrapper">
-          <a href="mailto:contact@tic-eng.com" className="button-primary">
+          <a href="mailto:contact@tic-eng.com" className="button-SendEmail">
             Send Us an Email
           </a>
         </div>

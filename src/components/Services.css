@@ -30,6 +30,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
 }
 
 .service-card:hover {
@@ -52,7 +53,8 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: space-between; /* ✅ Push text apart */
+  flex: 1; /* ✅ Fill remaining space equally */
 }
 
 .service-content h4 {
@@ -69,7 +71,7 @@
 
 @media (max-width: 1024px) {
   .services-title {
-    font-size: 5rem;
+    font-size: 5.5rem;
     margin-bottom: 7rem;
   }
   .services-section {
@@ -89,7 +91,8 @@
 
 @media (max-width: 760px) {
   .services-title {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-top: 4rem;
   }
   .services-section {
     padding: 100px 10px 80px;
@@ -106,7 +109,7 @@
   }
   .service-image {
     aspect-ratio: 16 / 9;
-    height: auto;
+    height: 250px;
   }
 }
 @media (max-width: 480px) {
