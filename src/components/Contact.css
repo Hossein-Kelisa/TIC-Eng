@@ -53,7 +53,7 @@
   color: #154c09;
 }
 
-.button-primary {
+.button-SendEmail {
   display: inline-block;
   padding: 0.85rem 2rem;
   background-color: #176143;
@@ -68,8 +68,8 @@
   user-select: none;
 }
 
-.button-primary:hover,
-.button-primary:focus {
+.button-SendEmail:hover,
+.button-SendEmail:focus {
   background-color: #23840b;
   box-shadow: 0 6px 12px rgba(35, 132, 11, 0.5);
   outline: none;
@@ -126,7 +126,7 @@
     font-size: 1rem;
   }
 
-  .button-primary {
+  .button-SendEmail {
     width: 100%;
     max-width: none;
     padding: 1rem;

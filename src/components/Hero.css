@@ -96,7 +96,7 @@
 @media (max-width: 1024px) {
   .hero {
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     padding: 2rem 1rem;
   }
 
@@ -126,14 +126,15 @@
     margin-top: 4rem;
   }
   .hero a.button-primary {
-    width: 90%;
-    padding: 0.7rem 1.5rem;
-    font-size: 1.1rem;
-    margin: 0 auto;
+    margin: 0 auto 5rem;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 1rem;
+    height: auto; 
+  }
   .hero-right h2 {
     font-size: 1.8rem;
   }
@@ -150,7 +151,7 @@
     width: 80%;
     padding: 0.7rem 1rem;
     font-size: 1rem;
-    margin: 0 auto;
+    margin: 10px auto 3rem;
   }
 
   .hero-image {
