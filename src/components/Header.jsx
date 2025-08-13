@@ -13,7 +13,11 @@ function Header() {
     <header className="header">
       <div className="logo-container">
         <img src={logo} alt="TIC Engineering Logo" className="logo" />
-        <span className="logo-text">Test-Inspection-Certification</span>
+        <span className="logo-text">
+          <span className="highlight">T</span>est-
+          <span className="highlight">I</span>nspection-
+          <span className="highlight">C</span>ertification
+        </span>
       </div>
 
       {/* Hamburger icon for mobile */}
