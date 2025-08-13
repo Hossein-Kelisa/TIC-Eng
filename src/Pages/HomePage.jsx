@@ -19,7 +19,7 @@ function HomePage() {
       <About />
       <Industries />
       <Team />
-      <Comment />
+      {/* <Comment /> */}
       <FAQ />
       <Contact />
       <Footer />

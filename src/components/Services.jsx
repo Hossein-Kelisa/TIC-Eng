@@ -5,7 +5,7 @@ import Fades from "./Fades";
 function Services() {
   const services = [
     {
-      title: "Testing",
+      title: "Test",
       description:
         "We check your products to ensure they are safe and high quality.",
       image:
