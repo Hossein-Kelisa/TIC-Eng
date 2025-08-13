@@ -1,5 +1,5 @@
 .about-section {
-  padding: 80px 20px;
+  padding: 80px 20px; /* Adjust padding for larger screens */
   margin: 0 auto;
   background: linear-gradient(to bottom, #e2c26a, #dbd4ca);
   color: #872513;
