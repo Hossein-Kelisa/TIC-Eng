@@ -1,32 +1,32 @@
-const serviceRequest = require('../models/serviceRequest'); 
+const serviceRequest = require("../models/serviceRequest");
 
 // Create new service form
-const createServiceForm = async (req, res) => {
-    try {
-      if (!req.body.requestNumber || !req.body.requestDate) {
-        return res.status(400).json({ message: 'Request number and date are required' });
-      }
-  
-      const serviceForm = new serviceRequest(req.body);
-      await serviceForm.save();
-      res.status(201).json(serviceForm);
-    } catch (error) {
-      console.error(error);
-      res.status(400).json({ message: 'Error creating service form', error: error.message });
+const createServiceForm = async (req, res, next) => {
+  try {
+    const { requestNumber, requestDate } = req.body;
+    if (!requestNumber || !requestDate) {
+      res.status(400);
+      throw new Error("Request number and date are required");
     }
-  };
-  
-//   // Get all service forms
-//   const getAllServiceForms = async (req, res) => {
-//     try {
-//       const serviceForms = await ServiceRequest.find();
-//       res.json(serviceForms);
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).json({ message: 'Error fetching service forms', error: error.message });
-//     }
-//   };
-  
+
+    const serviceForm = new serviceRequest(req.body);
+    await serviceForm.save();
+    res.status(201).json(serviceForm);
+  } catch (error) {
+    next(error);
+  }
+};
+
+  // // Get all service forms
+  // const getAllServiceForms = async (req, res, next) => {
+  //   try {
+  //     const serviceForms = await ServiceRequest.find();
+  //     res.json(serviceForms);
+  //   } catch (error) {
+  //  next(error);
+  // };
+  // };
+
 //   // Get service form by ID
 //   const getServiceFormById = async (req, res) => {
 //     try {
@@ -40,7 +40,7 @@ const createServiceForm = async (req, res) => {
 //       res.status(500).json({ message: 'Error fetching service form', error: error.message });
 //     }
 //   };
-  
+
 //   // Update service form by ID
 //   const updateServiceForm = async (req, res) => {
 //     try {
@@ -58,7 +58,7 @@ const createServiceForm = async (req, res) => {
 //       res.status(400).json({ message: 'Error updating service form', error: error.message });
 //     }
 //   };
-  
+
 //   // Delete service form by ID
 //   const deleteServiceForm = async (req, res) => {
 //     try {
@@ -72,11 +72,11 @@ const createServiceForm = async (req, res) => {
 //       res.status(500).json({ message: 'Error deleting service form', error: error.message });
 //     }
 //   };
-  
-  module.exports = {
-    createServiceForm
-    // getAllServiceForms,
-    // getServiceFormById,
-    // updateServiceForm,
-    // deleteServiceForm,
-  };
+
+module.exports = {
+  createServiceForm,
+  // getAllServiceForms,
+  // getServiceFormById,
+  // updateServiceForm,
+  // deleteServiceForm,
+};
