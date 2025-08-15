@@ -1,4 +1,5 @@
-import User from '../models/user.js';
+// authController.js
+import User from '../models/user.js';        // Model name PascalCase
 import generateToken from '../utils/generateToken.js';
 
 // @desc    Register a new user
@@ -15,10 +16,10 @@ export const registerUser = async (req, res) => {
     }
 
     // 2️⃣ Create new user
-    const user = await User.create({ name, email, password });
+    const newUser = await User.create({ name, email, password });
 
     // 3️⃣ Generate JWT token
-    const token = generateToken(user._id);
+    const token = generateToken(newUser._id);
 
     // 4️⃣ Send cookie (optional) and JSON response
     res.cookie('token', token, {
@@ -28,9 +29,9 @@ export const registerUser = async (req, res) => {
 
     // JSON response with token for Postman testing
     res.status(201).json({
-      _id: user._id,
-      name: user.name,
-      email: user.email,
+      _id: newUser._id,
+      name: newUser.name,
+      email: newUser.email,
       token
     });
 
