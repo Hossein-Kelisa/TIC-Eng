@@ -1,4 +1,4 @@
-// Back-End/middleware/validateRegister.js
+// Back-End/middlewares/validateRegister.js
 import { body, validationResult } from "express-validator";
 
 export const validateRegister = [
