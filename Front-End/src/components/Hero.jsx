@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import heroImages from "../Data/heroImages";
+import { Link } from "react-router-dom";
 import "./Hero.css";
 
 function Hero() {
@@ -51,6 +52,9 @@ function Hero() {
         <a href="#contact" className="button-primary">
           Get in Touch
         </a>
+        <Link to="/auth" className="login-btn">
+          log in
+        </Link>
       </div>
     </section>
   );
