@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Header.css";
 import logo from "../assets/Logo.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +13,9 @@ function Header() {
   return (
     <header className="header">
       <div className="logo-container">
+        <Link to="/" className="logo-link">
         <img src={logo} alt="TIC Engineering Logo" className="logo" />
+        </Link>
         <span className="logo-text">
           <span className="highlight">T</span>est-
           <span className="highlight">I</span>nspection-
