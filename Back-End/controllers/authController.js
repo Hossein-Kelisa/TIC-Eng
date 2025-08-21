@@ -1,9 +1,18 @@
 // authController.js
-import User from '../models/User.js';
+import User from '../models/userModel.js';
 import generateToken from '../utils/generateToken.js';
 
 export const registerUser = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { userName, email, password, confirmPassword } = req.body;
+  // Validate required fields
+  if (!userName || !email || !password || !confirmPassword) {
+    return res.status(400).json({ message: 'All fields are required' });
+  }
+
+  // Check if passwords match
+  if (password !== confirmPassword) {
+    return res.status(400).json({ message: 'Passwords do not match' });
+  }
 
   try {
     // 1️⃣ Check if user already exists
@@ -13,7 +22,7 @@ export const registerUser = async (req, res) => {
     }
 
     // 2️⃣ Create new user
-    const newUsers = await User.create({ name, email, password });
+    const newUsers = await User.create({ userName, email, password });
 
     // 3️⃣ Generate JWT token
     const token = generateToken(newUsers._id);
