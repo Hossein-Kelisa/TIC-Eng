@@ -4,6 +4,17 @@ import "./RegisterForm.css";
 export default function RegisterForm({ handleSubmit }) {
   return (
     <form className="auth-form register-form" onSubmit={handleSubmit}>
+      <label htmlFor="user-name" className="form-label">
+        User Name
+      </label>
+      <input
+        id="user-name"
+        name="user-name"
+        type="text"
+        className="form-input"
+        required
+      />
+
       <label htmlFor="email" className="form-label">
         Email
       </label>
@@ -21,6 +32,16 @@ export default function RegisterForm({ handleSubmit }) {
       <input
         id="password"
         name="password"
+        type="password"
+        className="form-input"
+        required
+      />
+      <label htmlFor="confirmPassword" className="form-label">
+        Confirm Password
+      </label>
+      <input
+        id="confirmPassword"
+        name="confirmPassword"
         type="password"
         className="form-input"
         required
