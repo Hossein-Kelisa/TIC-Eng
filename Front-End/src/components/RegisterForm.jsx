@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./RegisterForm.css";
 
 export default function RegisterForm({ handleSubmit }) {
   return (
