@@ -1,7 +1,5 @@
 import Swal from "sweetalert2";
 
-// Helpers to show alerts using SweetAlert2
-// These functions can be used to display different types of alerts in the application
 export const showSuccessAlert = (isLogin) =>
   Swal.fire({
     icon: "success",

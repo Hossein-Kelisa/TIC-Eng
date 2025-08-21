@@ -2,7 +2,7 @@
 import { body, validationResult } from "express-validator";
 
 export const validateRegister = [
-  body("name").trim().notEmpty().withMessage("Name is required"),
+  body("userName").trim().notEmpty().withMessage("userName is required"),
   body("email").isEmail().withMessage("Valid email is required").normalizeEmail(),
   body("password").isLength({ min: 6 }).withMessage("Password must be at least 6 characters"),
   body("confirmPassword").custom((value, { req }) => {

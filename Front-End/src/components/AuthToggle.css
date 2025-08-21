@@ -1,0 +1,25 @@
+.auth-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.auth-toggle-text {
+  color: #555;
+}
+
+.auth-toggle-btn {
+  background: none;
+  border: none;
+  color: #e61b1b;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.auth-toggle-btn:hover {
+  color: #b20202;
+}

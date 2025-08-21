@@ -1,0 +1,17 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.forgot-password {
+  color: #e61b1b;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: right;
+}
+
+.forgot-password:hover {
+  color: #b20202;
+  text-decoration: underline;
+}

@@ -1,11 +1,13 @@
 import PropTypes from "prop-types";
+import "./AuthToggle.css";
 
-// Component to toggle between login and registration modes
 export default function AuthToggle({ isLogin, toggleMode }) {
   return (
-    <div className="switch-text">
-      {isLogin ? "Don’t have an account?" : "Already have an account?"}
-      <button className="switch-btn" onClick={toggleMode}>
+    <div className="auth-toggle">
+      <span className="auth-toggle-text">
+        {isLogin ? "Don’t have an account?" : "Already have an account?"}
+      </span>
+      <button className="auth-toggle-btn" onClick={toggleMode}>
         {isLogin ? "Sign up" : "Sign in"}
       </button>
     </div>

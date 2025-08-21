@@ -2,22 +2,20 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Swal from "sweetalert2";
 import axios from "axios";
+import "./ForgotPass.css";
 
 export default function ForgotPass({ handleBack }) {
   const [email, setEmail] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       await axios.post("/api/auth/forgot-password", { email });
-      console.log("Reset link sent to:", email); // Simulated success
       Swal.fire({
         icon: "success",
         title: "Check your email",
         text: `A reset link has been sent to ${email} (simulated)`,
       });
-
       setEmail("");
     } catch (error) {
       Swal.fire({
@@ -29,20 +27,25 @@ export default function ForgotPass({ handleBack }) {
   };
 
   return (
-    <form className="auth-form" onSubmit={handleSubmit}>
-      <label htmlFor="forgot-email">Enter your email</label>
+    <form className="auth-form forgot-pass-form" onSubmit={handleSubmit}>
+      <label htmlFor="forgot-email" className="form-label2">
+        Enter your email
+      </label>
       <input
         id="forgot-email"
         name="email"
         type="email"
+        className="form-input2"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
 
-      <button type="submit">Send Reset Link</button>
+      <button type="submit" className="primary-btn2">
+        Send Reset Link
+      </button>
 
-      <button type="button" onClick={handleBack}>
+      <button type="button" className="secondary-btn" onClick={handleBack}>
         Back to login
       </button>
     </form>
