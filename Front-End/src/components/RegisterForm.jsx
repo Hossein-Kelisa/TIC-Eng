@@ -4,12 +4,12 @@ import "./RegisterForm.css";
 export default function RegisterForm({ handleSubmit }) {
   return (
     <form className="auth-form register-form" onSubmit={handleSubmit}>
-      <label htmlFor="user-name" className="form-label">
+      <label htmlFor="userName" className="form-label">
         User Name
       </label>
       <input
-        id="user-name"
-        name="user-name"
+        id="userName"
+        name="userName"
         type="text"
         className="form-input"
         required
