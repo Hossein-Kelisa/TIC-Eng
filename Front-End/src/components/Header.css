@@ -1,7 +1,7 @@
 header {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +34,7 @@ nav button:hover {
 .logo-container {
   display: flex;
   align-items: center;
-  margin-left: 1.5rem;
+  margin-left: 4.5rem;
 }
 
 .logo {
@@ -54,6 +54,10 @@ nav button:hover {
   font-weight: 500;
   white-space: nowrap;
 }
+.logo-link {
+  display: flex;
+}
+
 .highlight {
   font-weight: bold;
   font-size: 1rem;
@@ -156,6 +160,9 @@ nav button:hover {
   .logo-text {
     font-size: 0.8rem;
   }
+  .logo-container {
+    margin-left: 1rem;
+  }
   .nav-links {
     display: none;
   }
@@ -171,7 +178,7 @@ nav button:hover {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.1rem;
   }
   nav {
     align-self: flex-end;
@@ -184,5 +191,8 @@ nav button:hover {
   }
   .logo-text {
     font-size: 0.7rem;
+  }
+    .logo-container {
+    margin-left: 0.5rem;
   }
 }
