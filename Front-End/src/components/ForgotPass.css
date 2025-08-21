@@ -4,19 +4,19 @@
   gap: 1rem;
 }
 
-.form-label {
+.form-label2 {
   font-weight: 500;
   color: #444;
 }
 
-.form-input {
+.form-input2 {
   padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 0.95rem;
 }
 
-.primary-btn {
+.primary-btn2 {
   background: #e61b1b;
   color: white;
   border: none;
@@ -26,7 +26,7 @@
   transition: background 0.3s ease;
 }
 
-.primary-btn:hover {
+.primary-btn2:hover {
   background: #b20202;
 }
 

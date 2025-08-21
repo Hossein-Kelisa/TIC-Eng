@@ -28,20 +28,20 @@ export default function ForgotPass({ handleBack }) {
 
   return (
     <form className="auth-form forgot-pass-form" onSubmit={handleSubmit}>
-      <label htmlFor="forgot-email" className="form-label">
+      <label htmlFor="forgot-email" className="form-label2">
         Enter your email
       </label>
       <input
         id="forgot-email"
         name="email"
         type="email"
-        className="form-input"
+        className="form-input2"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
       />
 
-      <button type="submit" className="primary-btn">
+      <button type="submit" className="primary-btn2">
         Send Reset Link
       </button>
 
