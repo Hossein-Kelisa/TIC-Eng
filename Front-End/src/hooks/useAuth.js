@@ -1,6 +1,6 @@
-
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { loginUser, registerUser } from "../services/authService";
 import {
   showSuccessAlert,
   showErrorAlert,
@@ -8,62 +8,48 @@ import {
 } from "./showAlert";
 
 export const useAuth = () => {
-  // State to toggle between login and registration modes
   const [isLogin, setIsLogin] = useState(true);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const toggleMode = () => setIsLogin((prev) => !prev);
-  // Function to handle form submission for both login and registration
-  const handleSubmit = async (e) => {
-    e.preventDefault();
 
-    // Extract form values
-    const formData = {
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+
+const formData = isLogin
+  ? {
       email: e.target.email.value,
       password: e.target.password.value,
+    }
+  : {
+      userName: e.target.userName.value,
+      email: e.target.email.value,
+      password: e.target.password.value,
+      confirmPassword: e.target.confirmPassword.value,
     };
 
-    // Define the API endpoint based on the mode
-    const url = isLogin ? "/api/auth/login" : "/api/auth/register";
-
     try {
-      // Send the form data to the server
-      const response = await fetch(url, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const result = isLogin
+        ? await loginUser(formData)
+        : await registerUser(formData);
 
-      const result = await response.json();
+      localStorage.setItem("token", result.token);
+      localStorage.setItem("user", JSON.stringify(result.user));
 
-      // Check if the response is successful
-      if (isLogin) {
-        if (response.ok) {
-          localStorage.setItem("token", result.token);
-          localStorage.setItem("user", JSON.stringify(result.user));
-          await showSuccessAlert(isLogin);
-          navigate("/");
-        } else {
-          // Handle other errors, such as incorrect password or email
-          showErrorAlert("Password or email is incorrect.");
-        }
-      } else {
-        if (response.ok) {
-          await showSuccessAlert(isLogin);
-          navigate("/");
-        } else {
-          // Handle email already registered error
-          if (!isLogin && result.error?.toLowerCase().includes("email")) {
-            showEmailExistsAlert();
-          }
-        }
-      }
+      await showSuccessAlert(isLogin);
+      navigate("/");
     } catch (error) {
-      // Handle network errors
-      console.error("❌ Network error:", error);
-      showErrorAlert("Please check your connection and try again.");
+      if (error.message.includes("email")) {
+        showEmailExistsAlert();
+      } else {
+        showErrorAlert(error.message || "Something went wrong");
+      }
+    } finally {
+      setLoading(false);
     }
   };
 
-  return { isLogin, toggleMode, handleSubmit };
+  return { isLogin, toggleMode, handleSubmit, loading };
 };
