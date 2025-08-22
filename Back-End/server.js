@@ -9,9 +9,29 @@ dotenv.config();
 connectDB();
 
 const app = express();
+
+ // Allowed origins (local + Netlify)
+const allowedOrigins = [
+  'http://localhost:5173',        
+  'https://tic-eng.netlify.app', 
+];
+
+// CORS setup
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests with no origin (e.g., mobile apps, Postman)
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error('CORS not allowed for this origin: ' + origin));
+    },
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 
 app.use('/api/auth', authRouter);
 
