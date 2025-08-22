@@ -14,6 +14,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',        
   'https://tic-eng.netlify.app', 
+  'https://www.tic-eng.com'
 ];
 
 // CORS setup
