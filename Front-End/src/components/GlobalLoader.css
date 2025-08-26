@@ -1,8 +1,8 @@
 .global-loader {
   position: fixed;
-  inset: 0; /* shorthand for top, right, bottom, left: 0 */
+  inset: 0; 
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(4px); /* adds a professional frosted-glass effect */
+  backdrop-filter: blur(4px); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@
   content: "";
   width: 20px;
   height: 20px;
-  background: #5685dd;
+  background: #4971bc;
   border-radius: 50%;
   animation: pulse 0.6s infinite alternate;
 }
