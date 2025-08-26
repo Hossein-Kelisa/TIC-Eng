@@ -14,21 +14,21 @@ export const useAuth = () => {
 
   const toggleMode = () => setIsLogin((prev) => !prev);
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
 
-const formData = isLogin
-  ? {
-      email: e.target.email.value,
-      password: e.target.password.value,
-    }
-  : {
-      userName: e.target.userName.value,
-      email: e.target.email.value,
-      password: e.target.password.value,
-      confirmPassword: e.target.confirmPassword.value,
-    };
+    const formData = isLogin
+      ? {
+          email: e.target.email.value,
+          password: e.target.password.value,
+        }
+      : {
+          userName: e.target.userName.value,
+          email: e.target.email.value,
+          password: e.target.password.value,
+          confirmPassword: e.target.confirmPassword.value,
+        };
 
     try {
       const result = isLogin
