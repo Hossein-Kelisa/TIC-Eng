@@ -35,19 +35,27 @@ export const useAuth = () => {
         ? await loginUser(formData)
         : await registerUser(formData);
 
+      // Save user info
       localStorage.setItem("token", result.token);
       localStorage.setItem("user", JSON.stringify(result.user));
 
-      await showSuccessAlert(isLogin);
+      // Stop loader immediately
+      setLoading(false);
+
+      // Show success alert (do NOT await)
+      showSuccessAlert(isLogin);
+
+      // Navigate to home
       navigate("/");
     } catch (error) {
+      // Stop loader on error
+      setLoading(false);
+
       if (error.message.includes("email")) {
         showEmailExistsAlert();
       } else {
         showErrorAlert(error.message || "Something went wrong");
       }
-    } finally {
-      setLoading(false);
     }
   };
 
