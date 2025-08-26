@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LoadingContext } from "../utiles/loadingUtiles";
 
-export function useLoading() {
+export default function useLoading() {
   return useContext(LoadingContext);
 }

@@ -1,7 +1,7 @@
-import { useLoading } from "../hooks/useLoading";
+import useLoading from "../hooks/useLoading";
 import "./GlobalLoader.css";
 
-export function GlobalLoader() {
+export default function GlobalLoader() {
   const { loading } = useLoading();
 
   if (!loading) return null;
