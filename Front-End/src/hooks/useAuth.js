@@ -51,11 +51,15 @@ export const useAuth = () => {
       // Stop loader on error
       setLoading(false);
 
-      if (error.message.includes("email")) {
-        showEmailExistsAlert();
-      } else {
-        showErrorAlert(error.message || "Something went wrong");
+      if (!isLogin) {
+        // Registration
+        if (error.message.includes("email")) {
+          showEmailExistsAlert();
+          return;
+        }
       }
+      // All other errors
+      showErrorAlert(error.message || "Something went wrong");
     }
   };
 
