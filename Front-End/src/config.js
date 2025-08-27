@@ -1,1 +1,0 @@
-// export const API_URL = "https://tic-eng.onrender.com";

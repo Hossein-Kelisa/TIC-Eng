@@ -7,7 +7,6 @@ import Industries from '../components/Industries';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Team from '../components/Team';
-// import Comment from '../components/Comment';
 import FAQ from '../components/FAQ';
 
 function HomePage() {
@@ -19,7 +18,6 @@ function HomePage() {
       <About />
       <Industries />
       <Team />
-      {/* <Comment /> */}
       <FAQ />
       <Contact />
       <Footer />

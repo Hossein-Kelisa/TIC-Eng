@@ -14,40 +14,48 @@ export const useAuth = () => {
 
   const toggleMode = () => setIsLogin((prev) => !prev);
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
 
-const formData = isLogin
-  ? {
-      email: e.target.email.value,
-      password: e.target.password.value,
-    }
-  : {
-      userName: e.target.userName.value,
-      email: e.target.email.value,
-      password: e.target.password.value,
-      confirmPassword: e.target.confirmPassword.value,
-    };
+    const formData = isLogin
+      ? {
+          email: e.target.email.value,
+          password: e.target.password.value,
+        }
+      : {
+          userName: e.target.userName.value,
+          email: e.target.email.value,
+          password: e.target.password.value,
+          confirmPassword: e.target.confirmPassword.value,
+        };
 
     try {
       const result = isLogin
         ? await loginUser(formData)
         : await registerUser(formData);
 
+      // Save user info
       localStorage.setItem("token", result.token);
       localStorage.setItem("user", JSON.stringify(result.user));
 
-      await showSuccessAlert(isLogin);
+      // Stop loader immediately
+      setLoading(false);
+
+      // Show success alert (do NOT await)
+      showSuccessAlert(isLogin);
+
+      // Navigate to home
       navigate("/");
     } catch (error) {
+      // Stop loader on error
+      setLoading(false);
+
       if (error.message.includes("email")) {
         showEmailExistsAlert();
       } else {
         showErrorAlert(error.message || "Something went wrong");
       }
-    } finally {
-      setLoading(false);
     }
   };
 

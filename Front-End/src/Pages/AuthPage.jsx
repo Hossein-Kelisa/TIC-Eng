@@ -6,14 +6,17 @@ import AuthToggle from "../components/AuthToggle";
 import ForgotPass from "../components/ForgotPass";
 import { useAuth } from "../hooks/useAuth";
 import { useState } from "react";
+import GlobalLoader from "../components/GlobalLoader"; 
 import "./AuthPage.css";
 
 export default function AuthPage() {
-  const { isLogin, toggleMode, handleSubmit } = useAuth();
+  const { isLogin, toggleMode, handleSubmit, loading } = useAuth();
   const [showForgotForm, setShowForgotForm] = useState(false);
 
   return (
     <>
+      {loading && <GlobalLoader />} {/* Show loader when loading is true */}
+      
       <Header />
       <main className="auth-page">
         <div className="auth-container">
