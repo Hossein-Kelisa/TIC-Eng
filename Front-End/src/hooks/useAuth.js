@@ -5,7 +5,7 @@ import {
   showSuccessAlert,
   showErrorAlert,
   showEmailExistsAlert,
-} from "./showAlert";
+} from "../utils/showAlert";
 
 export const useAuth = () => {
   const [isLogin, setIsLogin] = useState(true);
