@@ -37,7 +37,7 @@ export const useAuth = () => {
 
       // Save user info
       localStorage.setItem("token", result.token);
-      localStorage.setItem("user", JSON.stringify(result.user));
+      localStorage.setItem("user", JSON.stringify(result));
 
       // Stop loader immediately
       setLoading(false);

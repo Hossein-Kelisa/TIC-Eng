@@ -36,7 +36,7 @@ export const registerUser = async (req, res) => {
     // JSON response with token for Postman testing
     res.status(201).json({
       _id: newUsers._id,
-      name: newUsers.name,
+      userName: newUsers.userName,
       email: newUsers.email,
       token
     });
@@ -65,7 +65,7 @@ export const loginUser = async (req, res) => {
       // Send JSON with token
       res.json({
         _id: user._id,
-        name: user.name,
+        userName: user.userName,
         email: user.email,
         token
       });
