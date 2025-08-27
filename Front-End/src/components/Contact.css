@@ -143,3 +143,36 @@
     font-size: 0.95rem;
   }
 }
+
+/* ina ro baraye Team estefade mikonam */
+
+/* .container1{
+  display:flex;
+  gap: 40px;
+}
+.card1{
+  width: 300px;
+  height: 379px;
+  border-radius: 20px;
+  background: url('../assets/Logo.png') center center no-repeat;
+  background-size: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: background 0.85s ease, background-size 0.85s ease;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card1:hover{
+  background: url('../assets/Logo.png') left center no-repeat;
+  background-size: 600px;
+}
+.card1.alt{
+  background: url('../assets/Logo.png') center center no-repeat;
+  background-size: 300px;
+}
+.card1.alt:hover{
+  background: url('../assets/Logo.png') right center no-repeat;
+  background-size: 600px;
+} */
