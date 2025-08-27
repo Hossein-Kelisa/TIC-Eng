@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { LoadingContext } from "../utiles/loadingUtiles";
+import { LoadingContext } from "../utils/loadingUtils";
 
 export function LoadingProvider({ children }) {
   const [loading, setLoading] = useState(false);
