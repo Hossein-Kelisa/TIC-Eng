@@ -1,7 +1,7 @@
 .header {
   backdrop-filter: blur(30px);
-  box-shadow: 0px 0px 20px rgba(198, 198, 206, 0.37);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 20px rgba(198, 198, 206, 0.492);
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -30,7 +30,8 @@
 }
 .logo-text {
   font-size: 0.9rem;
-  color: #545353;
+  color: #000000;
+  text-shadow: 1px 1px 20px rgb(228, 228, 228);
   font-weight: 500;
   white-space: nowrap;
 }
@@ -50,7 +51,8 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #a1a3ad;
+  color: #272727;
+  text-shadow: 0.1px 0.1px 25px rgba(238, 238, 238, 0.822);
 }
 .hamburger:hover {
   color: #ca1e1e;
