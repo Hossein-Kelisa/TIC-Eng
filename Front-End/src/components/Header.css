@@ -1,3 +1,17 @@
+/* .header{
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  For blur header, don't forget to check on small screens 
+} */
+
 header {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -13,40 +27,11 @@ header {
   border-top: 0.1px solid #cdcccc;
   border-bottom: 0.1px solid #cdcccc;
 }
-/* .header{
-  backdrop-filter: blur(30px);
-  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
-  border: 2px solid rgba(255, 255, 255, 0.18);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  padding: 0.5rem 1rem;
-  justify-content: space-between;
-  align-items: center;
-  For blur header, don't forget to check on small screens 
-} */
-nav button {
-  margin-left: 0.5rem;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.2s;
-  background: none;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-nav button:hover {
-  color: #e61b1b;
-  transform: scale(1.1);
-  transition: color 0.2s, transform 0.2s;
-}
 
 .logo-container {
   display: flex;
   align-items: center;
-  margin-left: 4.5rem;
+  margin-left: 5rem;
 }
 
 .logo {
@@ -77,53 +62,36 @@ nav button:hover {
 }
 
 .hamburger {
-  display: none;
-  font-size: 1.8rem;
+  display: block;
+  font-size: 3rem;
   background: none;
   border: none;
   cursor: pointer;
   color: #333;
 }
 .hamburger:hover {
-  color: #e61b1b;
+  color: #ca1e1e;
   transform: scale(1.1);
+  transition: color 0.5s, transform 0.5s;
 }
-.mobile-menu {
+.sidebar-menu {
   position: fixed;
   top: 0;
-  right: -100%; /* hide it by default */
-  width: 180px;
+  right: -100%; 
+  width: 220px;
   height: 100%;
   background: linear-gradient(135deg, #fafafa 30%, #d9b41f 100%);
   box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 2rem 1rem;
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1001;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
-
-.mobile-menu button {
-  margin-bottom: 1rem;
-  text-decoration: none;
-  color: #333;
-  font-size: 1rem;
-    font-size: 1rem;
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-}
-
-.mobile-menu button:hover {
-  color: #e61b1b;
-  transform: scale(1.1);
-  transition: color 0.2s, transform 0.2s;
-}
-
-.mobile-menu.open {
+.sidebar-menu.open {
   right: 0;
 }
 
@@ -139,8 +107,30 @@ nav button:hover {
 }
 
 .close-button:hover {
+  color: #d31717;
+  transform: scale(1.2);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.sidebar-nav button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  background: none;
+  border: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-nav button:hover {
   color: #e61b1b;
   transform: scale(1.1);
+  transition: color 0.3s, transform 0.3s;
 }
 
 .overlay {
@@ -149,7 +139,7 @@ nav button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
   transition: opacity 0.3s ease;
   z-index: 1000;
 }
@@ -160,12 +150,6 @@ nav button:hover {
     margin-top: 3px;
     padding: 0.5rem 1rem;
   }
-
-  nav button {
-    margin-left: 0;
-    margin-right: 1rem;
-    font-size: 0.9rem;
-  }
   .logo {
     height: 40px;
   }
@@ -175,12 +159,15 @@ nav button:hover {
   .logo-container {
     margin-left: 1rem;
   }
-  .nav-links {
-    display: none;
-  }
 
   .hamburger {
     display: block;
+    font-size: 2.5rem;
+    margin-right: 1rem;
+  }
+  .sidebar-menu {
+    width: 200px;
+    padding: 1rem;
   }
 }
 
@@ -192,12 +179,7 @@ nav button:hover {
     align-items: center;
     padding: 0.5rem 0.1rem;
   }
-  nav {
-    align-self: flex-end;
-  }
-  nav button {
-    font-size: 0.8rem;
-  }
+
   .logo {
     height: 30px;
   }
@@ -206,5 +188,13 @@ nav button:hover {
   }
     .logo-container {
     margin-left: 0.5rem;
+  }
+  .hamburger {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+  .sidebar-menu {
+    width: 160px;
+    padding: 0.5rem;
   }
 }

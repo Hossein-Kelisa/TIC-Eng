@@ -2,11 +2,13 @@ import { useState } from "react";
 import "./Header.css";
 import logo from "../assets/Logo.png";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import AuthButton from "./AuthButton";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -32,6 +34,7 @@ function Header() {
 
   return (
     <header className="header">
+      {/* Logo */}
       <div className="logo-container">
         <Link to="/" className="logo-link">
           <img src={logo} alt="TIC Engineering Logo" className="logo" />
@@ -43,7 +46,7 @@ function Header() {
         </span>
       </div>
 
-      {/* Hamburger icon for mobile */}
+      {/* Hamburger always visible */}
       <button
         className="hamburger"
         onClick={toggleMenu}
@@ -52,17 +55,8 @@ function Header() {
         ☰
       </button>
 
-      {/* Normal nav for desktop */}
-      <nav className="nav-links">
-        <button onClick={() => handleScroll("services")}>Services</button>
-        <button onClick={() => handleScroll("about")}>About</button>
-        <button onClick={() => handleScroll("industries")}>Industries</button>
-        <button onClick={() => handleScroll("team")}>Team</button>
-        <button onClick={() => handleScroll("contact")}>Contact</button>
-      </nav>
-
-      {/* Slide-out menu for mobile */}
-      <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
+      {/* Slide-out menu */}
+      <div className={`sidebar-menu ${isMenuOpen ? "open" : ""}`}>
         <button
           className="close-button"
           onClick={toggleMenu}
@@ -70,12 +64,21 @@ function Header() {
         >
           ×
         </button>
-        <button onClick={() => handleScroll("services")}>Services</button>
-        <button onClick={() => handleScroll("about")}>About</button>
-        <button onClick={() => handleScroll("industries")}>Industries</button>
-        <button onClick={() => handleScroll("team")}>Team</button>
-        <button onClick={() => handleScroll("contact")}>Contact</button>
+        <AuthButton
+          className="auth-button"
+          isLoggedIn={isLoggedIn}
+          onLogin={() => setIsLoggedIn(true)}
+          onLogout={() => setIsLoggedIn(false)}
+        />
+        <div className="sidebar-nav">
+          <button onClick={() => handleScroll("services")}>Services</button>
+          <button onClick={() => handleScroll("about")}>About</button>
+          <button onClick={() => handleScroll("industries")}>Industries</button>
+          <button onClick={() => handleScroll("team")}>Team</button>
+          <button onClick={() => handleScroll("contact")}>Contact</button>
+        </div>
       </div>
+
       {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
     </header>
   );
