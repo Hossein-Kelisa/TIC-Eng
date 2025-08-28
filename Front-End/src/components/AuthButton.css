@@ -1,0 +1,30 @@
+.Auth-Login {
+  color: #000000;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 3rem;
+}
+.Auth-Login:hover {
+  color: #e61b1b;
+  transform: scale(1.2);
+  transition: color 0.3s, transform 0.3s;
+}
+.Auth-Logout {
+  color: #000000;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 3rem;
+}
+.Auth-Logout:hover {
+  color: #e61b1b;
+  transform: scale(1.2);
+  transition: color 0.3s, transform 0.3s;
+}

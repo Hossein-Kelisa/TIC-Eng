@@ -1,4 +1,5 @@
 import { LogIn, LogOut } from "lucide-react";
+import "./AuthButton.css";
 
 function AuthButton({ isLoggedIn, onLogin, onLogout }) {
   return (
@@ -6,7 +7,7 @@ function AuthButton({ isLoggedIn, onLogin, onLogout }) {
       {isLoggedIn ? (
         <button
           onClick={onLogout}
-          className="flex items-center gap-2 p-2 rounded-xl hover:bg-gray-200 transition"
+          className="Auth-Logout"
         >
           <LogOut size={22} />
           Logout
@@ -14,7 +15,7 @@ function AuthButton({ isLoggedIn, onLogin, onLogout }) {
       ) : (
         <button
           onClick={onLogin}
-          className="flex items-center gap-2 p-2 rounded-xl hover:bg-gray-200 transition"
+          className="Auth-Login"
         >
           <LogIn size={22} />
           Login
