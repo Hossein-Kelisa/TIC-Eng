@@ -74,6 +74,7 @@ nav button:hover {
   font-weight: bold;
   font-size: 1rem;
   color: #b20202; 
+  text-shadow: 0 0 5px rgba(178, 2, 2, 0.7);
 }
 
 .hamburger {
