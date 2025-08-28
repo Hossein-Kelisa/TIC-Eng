@@ -19,7 +19,11 @@ function AuthButton({ isLoggedIn, onLogout }) {
       if (result.isConfirmed) {
         onLogout();
         navigate("/"); // go to home page after logout
-        Swal.fire("Logged out!", "You have successfully logged out.", "success");
+        Swal.fire(
+          "Logged out!",
+          "You have successfully logged out.",
+          "success"
+        );
       }
     });
   };
@@ -27,16 +31,21 @@ function AuthButton({ isLoggedIn, onLogout }) {
   return (
     <div>
       {isLoggedIn ? (
-        <button onClick={handleLogout} className="Auth-Logout">
-          <LogOut size={22} />
+        <button
+          onClick={handleLogout}
+          className="Auth-Logout"
+          aria-label="Logout from your account"
+        >
+          <LogOut size={22} aria-hidden="true" />
           Logout
         </button>
       ) : (
         <button
           onClick={() => navigate("/auth")} // navigate to login page
           className="Auth-Login"
+          aria-label="Login to your account"
         >
-          <LogIn size={22} />
+          <LogIn size={22} aria-hidden="true" />
           Login
         </button>
       )}
