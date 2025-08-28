@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./Header.css";
 import logo from "../assets/Logo.png";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import AuthButton from "./AuthButton";
+import { AuthContext } from "../contexts/AuthContext";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { user, logout } = useContext(AuthContext); //  use global auth
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -66,9 +67,8 @@ function Header() {
         </button>
         <AuthButton
           className="auth-button"
-          isLoggedIn={isLoggedIn}
-          onLogin={() => setIsLoggedIn(true)}
-          onLogout={() => setIsLoggedIn(false)}
+          isLoggedIn={user !== null}
+          onLogout={logout}
         />
         <div className="sidebar-nav">
           <button onClick={() => handleScroll("services")}>Services</button>
