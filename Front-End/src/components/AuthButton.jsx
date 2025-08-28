@@ -1,7 +1,10 @@
 import { LogIn, LogOut } from "lucide-react";
 import "./AuthButton.css";
+import { useNavigate } from "react-router-dom";
 
 function AuthButton({ isLoggedIn, onLogin, onLogout }) {
+  const navigate = useNavigate();
+
   return (
     <div>
       {isLoggedIn ? (
@@ -14,7 +17,10 @@ function AuthButton({ isLoggedIn, onLogin, onLogout }) {
         </button>
       ) : (
         <button
-          onClick={onLogin}
+          onClick={() => {
+            onLogin();
+            navigate("/auth");
+          }}
           className="Auth-Login"
         >
           <LogIn size={22} />
