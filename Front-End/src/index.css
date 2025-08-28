@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color: #333;
-  background-color: #5278be;
+  background-color: #5b84cf;
   /* background: linear-gradient(to right, #ffffff, #052053); */
 
   font-synthesis: none;
@@ -33,7 +33,7 @@ button {
 @media (prefers-color-scheme: light) {
   :root {
     color: #333;
-    background-color: #5278be;
+    background-color: #5b84cf;
     /* background: linear-gradient(to right, #ffffff, #052053); */
   }
 }

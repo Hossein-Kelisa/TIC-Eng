@@ -1,5 +1,5 @@
 .hero {
-  background: linear-gradient(to bottom, #5278be, #dbd4ca);
+  background: linear-gradient(to bottom, #5b84cf, #dbd4ca);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -50,7 +50,7 @@
   margin-bottom: 1rem;
   line-height: 1.1;
   color: #e2c26a;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  text-shadow: 1.2px 1.2px 5px rgb(5, 4, 65);
 }
 
 .hero-right p {
