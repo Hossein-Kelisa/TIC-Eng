@@ -131,7 +131,7 @@
 }
 
 @media (max-width: 768px) {
-  header {
+  .header {
     align-items: center;
     margin-top: 3px;
     padding: 0.5rem 1rem;
@@ -158,7 +158,7 @@
 }
 
 @media (max-width: 480px) {
-  header {
+  .header {
     margin-top: 2px;
     flex-direction: row;
     justify-content: space-between;
