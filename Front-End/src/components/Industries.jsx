@@ -1,4 +1,3 @@
-import React from "react";
 import "./Industries.css";
 import Fades from "./Fades";
 

@@ -1,16 +1,18 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { loginUser, registerUser } from "../services/authService";
 import {
   showSuccessAlert,
   showErrorAlert,
   showEmailExistsAlert,
 } from "../utils/showAlert";
+import { AuthContext } from "../contexts/AuthContext";
 
 export const useAuth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext); // ✅ use context
 
   const toggleMode = () => setIsLogin((prev) => !prev);
 
@@ -35,30 +37,21 @@ export const useAuth = () => {
         ? await loginUser(formData)
         : await registerUser(formData);
 
-      // Save user info
-      localStorage.setItem("token", result.token);
-      localStorage.setItem("user", JSON.stringify(result));
+      // ✅ update AuthContext (global state)
+      login(result);
 
-      // Stop loader immediately
       setLoading(false);
-
-      // Show success alert (do NOT await)
       showSuccessAlert(isLogin);
 
-      // Navigate to home
-      navigate("/");
+      navigate("/"); // go to home page
     } catch (error) {
-      // Stop loader on error
       setLoading(false);
 
-      if (!isLogin) {
-        // Registration
-        if (error.message.includes("email")) {
-          showEmailExistsAlert();
-          return;
-        }
+      if (!isLogin && error.message.includes("email")) {
+        showEmailExistsAlert();
+        return;
       }
-      // All other errors
+
       showErrorAlert(error.message || "Something went wrong");
     }
   };
