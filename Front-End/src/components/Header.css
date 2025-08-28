@@ -1,7 +1,7 @@
-/* .header{
+.header {
   backdrop-filter: blur(30px);
-  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
-  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0px 0px 20px rgba(198, 198, 206, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -9,23 +9,6 @@
   padding: 0.5rem 1rem;
   justify-content: space-between;
   align-items: center;
-  For blur header, don't forget to check on small screens 
-} */
-
-header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  margin-top: 6px;
-  border-radius: 10px;
-  border-top: 0.1px solid #cdcccc;
-  border-bottom: 0.1px solid #cdcccc;
 }
 
 .logo-container {
@@ -58,7 +41,7 @@ header {
 .highlight {
   font-weight: bold;
   font-size: 1rem;
-  color: #b20202; 
+  color: #b20202;
 }
 
 .hamburger {
@@ -67,7 +50,7 @@ header {
   background: none;
   border: none;
   cursor: pointer;
-  color: #333;
+  color: #a1a3ad;
 }
 .hamburger:hover {
   color: #ca1e1e;
@@ -77,22 +60,24 @@ header {
 .sidebar-menu {
   position: fixed;
   top: 0;
-  right: -100%; 
-  width: 220px;
-  height: 100%;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: linear-gradient(135deg, #fafafa 30%, #d9b41f 100%);
   box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
-  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 2rem 0.5rem;
   z-index: 1001;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
 }
 .sidebar-menu.open {
-  right: 0;
+  transform: translateX(0);
 }
 
 .close-button {
@@ -137,11 +122,10 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
-  transition: opacity 0.3s ease;
-  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000; /* sidebar is 1001, overlay is 1000 */
 }
 
 @media (max-width: 768px) {
@@ -186,7 +170,7 @@ header {
   .logo-text {
     font-size: 0.7rem;
   }
-    .logo-container {
+  .logo-container {
     margin-left: 0.5rem;
   }
   .hamburger {
@@ -197,7 +181,7 @@ header {
     width: 160px;
     padding: 0.5rem;
   }
-    .sidebar-nav button {
+  .sidebar-nav button {
     font-size: 1rem;
     margin-bottom: 1.2rem;
   }
