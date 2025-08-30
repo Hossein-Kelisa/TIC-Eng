@@ -64,7 +64,7 @@
 .hero-title {
   font-size: 1.5em;
   margin-bottom: 1.5rem;
-  color: #7eb376a0;
+  color: #72bd67a0;
   text-shadow: 1px 1px 20px rgb(189, 178, 177);
 }
 .hero a.button-primary {
@@ -82,7 +82,7 @@
 
 .hero a.button-primary:hover {
   transform: scale(1.05);
-  color: #0bc4089d;
+  color: #99ea99e8;
   border: 1px solid #c0c4c1a0;
 }
 

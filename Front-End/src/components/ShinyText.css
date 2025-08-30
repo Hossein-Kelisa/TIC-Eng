@@ -10,7 +10,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   display: inline-block;
-  animation: shine 5s linear infinite;
+  animation: shine var(--shine-duration, 5s) linear infinite;
 }
 
 @keyframes shine {
