@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sun, Moon } from "lucide-react";
+// import { Sun, Moon } from "lucide-react";
 import {
   FaFacebook,
   FaLinkedin,
@@ -9,13 +9,13 @@ import {
 import "./TopBar.css";
 
 export default function TopBar({ onLanguageChange }) {
-  const [darkMode, setDarkMode] = useState(false);
+//   const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState("en");
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle("dark");
-  };
+//   const toggleDarkMode = () => {
+//     setDarkMode(!darkMode);
+//     document.documentElement.classList.toggle("dark");
+//   };
 
   const toggleLanguage = () => {
     const newLang = language === "en" ? "fa" : "en";
@@ -34,9 +34,9 @@ export default function TopBar({ onLanguageChange }) {
             className="flag-icon"
           />
         </button>
-        <button onClick={toggleDarkMode} className="dark-btn">
+        {/* <button onClick={toggleDarkMode} className="dark-btn">
           {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-        </button>
+        </button> */}
       </div>
 
       {/* Right: Social Icons */}
