@@ -8,7 +8,7 @@
   top: 0;
   z-index: 1000;
   border-radius: 2px;
-  height: 130px;
+  min-height: 130px;
   font-family: "PT Serif", serif;
 }
 
@@ -138,7 +138,7 @@
 
 @media (max-width: 768px) {
   .header {
-    height: 100px;
+    min-height: 100px;
   }
   .logo {
     height: 70px;
@@ -168,7 +168,7 @@
 
 @media (max-width: 480px) {
   .header {
-    height: 80px;
+    min-height: 80px;
     padding: 0.1rem 0.1rem;
   }
 
