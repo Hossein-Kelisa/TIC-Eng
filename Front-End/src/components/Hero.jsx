@@ -50,7 +50,7 @@ function Hero() {
         <h2>Tic with certainty from test to trust</h2>
         {/* <p>Connect with our TIC experts</p> */}
         <ShinyText
-          text="Contact with our TIC experts"
+          text="Connect with our TIC experts"
           disabled={false}
           speed={3}
           className="hero-title"
