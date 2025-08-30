@@ -2,32 +2,80 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f5f5f5;
+  background: #f8f9fa;
   color: #333;
   padding: 8px 16px;
   font-size: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .dark .top-bar {
-  background: #222;
+  background: #1f2937; /* Dark Gray */
   color: #f5f5f5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .top-bar-left {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  align-items: center;
 }
 
+/* Flag Button */
+.lang-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  transition: transform 0.2s ease;
+}
+
+.lang-btn:hover {
+  transform: scale(1.1);
+}
+
+.flag-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+/* Dark Mode Button */
+.dark-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.dark-btn:hover {
+  transform: rotate(20deg);
+}
+
+/* Social Icons */
 .social-icons {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   font-size: 18px;
+  align-items: center;
 }
 
-.lang-btn,
-.dark-btn {
-  border: none;
-  background: transparent;
+.social-icons a,
+.social-icons svg {
+  color: inherit;
+  transition: color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
-  font-weight: bold;
+}
+
+.social-icons a:hover svg,
+.social-icons svg:hover {
+  color: #007bff; /* Professional blue */
+  transform: scale(1.2);
 }

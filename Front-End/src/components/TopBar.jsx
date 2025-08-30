@@ -1,7 +1,14 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { Sun, Moon } from "lucide-react";
-import { FaFacebook, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import './TopBar.css';
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
+import "./TopBar.css";
+import EN from "../assets/flags/EN.png";
+import FA from "../assets/flags/FA.png";
 
 export default function TopBar({ onLanguageChange }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,7 +30,11 @@ export default function TopBar({ onLanguageChange }) {
       {/* Left: Language & Dark Mode */}
       <div className="top-bar-left">
         <button onClick={toggleLanguage} className="lang-btn">
-          {language === "en" ? "FA" : "EN"}
+          <img
+            src={language === "en" ? EN : FA}
+            alt="flag"
+            className="flag-icon"
+          />
         </button>
         <button onClick={toggleDarkMode} className="dark-btn">
           {darkMode ? <Sun size={18} /> : <Moon size={18} />}
