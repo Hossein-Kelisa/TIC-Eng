@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Sun, Moon } from "lucide-react";
 import { FaFacebook, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import './TopBar.css';
 
 export default function TopBar({ onLanguageChange }) {
   const [darkMode, setDarkMode] = useState(false);
