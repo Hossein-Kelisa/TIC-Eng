@@ -21,7 +21,7 @@
 
 .logo {
   width: auto;
-  height: 90px;
+  height: 120px;
   background-size: cover;
   margin-right: 0.5rem;
 }
@@ -141,7 +141,7 @@
     min-height: 100px;
   }
   .logo {
-    height: 70px;
+    height: 90px;
   }
   .logo-text {
     font-size: 0.8rem;
@@ -173,7 +173,7 @@
   }
 
   .logo {
-    height: 45px;
+    height: 65px;
   }
   .logo-text {
     font-size: 0.5rem;
