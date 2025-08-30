@@ -8,7 +8,7 @@
   top: 0;
   z-index: 1000;
   border-radius: 2px;
-  min-height: 130px;
+  height: 130px;
   font-family: "PT Serif", serif;
 }
 
@@ -138,24 +138,27 @@
 
 @media (max-width: 768px) {
   .header {
-    align-items: center;
-    margin-top: 3px;
-    padding: 0.5rem 1rem;
+    height: 100px;
   }
   .logo {
-    height: 40px;
+    height: 70px;
   }
   .logo-text {
     font-size: 0.8rem;
+    margin-left: -40px;
+    margin-top: 70px;
   }
   .logo-container {
-    margin-left: 1rem;
+    margin-left: 5rem;
   }
+  .highlight {
+  font-size: 0.8rem;
+}
 
   .hamburger {
     display: block;
     font-size: 2.5rem;
-    margin-right: 1rem;
+    padding: 0.8rem;
   }
   .sidebar-menu {
     width: 200px;
@@ -165,25 +168,29 @@
 
 @media (max-width: 480px) {
   .header {
-    margin-top: 2px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0.1rem;
+    height: 80px;
+    padding: 0.1rem 0.1rem;
   }
 
   .logo {
-    height: 30px;
+    height: 45px;
   }
   .logo-text {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+    margin-left: -40px;
+    margin-top: 55px;
   }
   .logo-container {
-    margin-left: 0.5rem;
+    margin-left: 3rem;
   }
+
+  .highlight {
+    font-size: 0.7rem;
+  }
+
   .hamburger {
     font-size: 2rem;
-    margin-right: 0.5rem;
+    padding-right: 1rem;
   }
   .sidebar-menu {
     width: 160px;
