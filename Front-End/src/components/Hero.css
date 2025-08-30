@@ -1,17 +1,16 @@
 .hero {
-  background: linear-gradient(to bottom, #5b84cf, #dbd4ca);
+  background: linear-gradient(to right, #010204, #031354);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   position: relative;
   overflow: hidden;
 }
 
 .hero-left,
 .hero-right {
-  flex: 1;
   position: relative;
   z-index: 2;
 }
@@ -20,12 +19,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 70vh;
+  max-height: 90vh;
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 5px 10px 20px 6px rgba(47, 47, 47, 0.689);
+  box-shadow: 4px 1px 20px 4px rgba(199, 179, 30, 0.56);
+  flex: 1.5;
 }
 
 .hero-image {
@@ -43,6 +43,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: left;
+  flex: 1;
 }
 
 .hero-right h2 {
@@ -50,20 +51,21 @@
   margin-bottom: 1rem;
   line-height: 1.1;
   color: #e2c26a;
-  text-shadow: 1.2px 1.2px 5px rgb(5, 4, 65);
+  text-shadow: 1.2px 1.2px 5px rgba(218, 62, 38, 0.431);
 }
 
 .hero-right p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
   opacity: 0.85;
-  color: rgb(3, 24, 63);
-  text-shadow: 1px 1px 10px rgb(164, 126, 126);
+  color: rgb(242, 242, 242);
+  text-shadow: 2px 3px 7px rgb(27, 158, 13);
 }
 
 .hero a.button-primary {
-  background-color: white;
-  color: #000000;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
   padding: 0.8rem 2rem;
   border-radius: 8px;
   text-decoration: none;
@@ -75,7 +77,7 @@
 
 .hero a.button-primary:hover {
   transform: scale(1.05);
-  color: rgb(255, 8, 0);
+  color: rgb(24, 148, 15);
 }
 
 @media (max-width: 1024px) {
