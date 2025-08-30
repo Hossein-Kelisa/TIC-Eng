@@ -19,7 +19,11 @@ const Search = () => {
         placeholder="Search..."
         onKeyDown={(e) => e.key === "Enter" && handleSearch()}
       />
-      <button className="search-icon" onClick={handleSearch}>
+      <button
+        className="search-icon"
+        onClick={handleSearch}
+        aria-label="Search"
+      >
         <FaSearch />
       </button>
     </div>
