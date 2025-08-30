@@ -5,6 +5,7 @@ import logo from "../assets/Logo.png";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 // import AuthButton from "./AuthButton";
 // import { AuthContext } from "../contexts/AuthContext";
+import Search from "./Search";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,6 +47,10 @@ function Header() {
           <span className="highlight">I</span>nspection-
           <span className="highlight">C</span>ertification
         </span>
+      </div>
+      
+      <div className="search-container">
+        <Search />
       </div>
 
       {/* Hamburger always visible */}

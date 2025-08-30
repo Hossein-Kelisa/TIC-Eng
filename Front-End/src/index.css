@@ -1,12 +1,9 @@
 :root {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: PT Serif, Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color: #333;
-  background-color: #5b84cf;
-  /* background: linear-gradient(to right, #ffffff, #052053); */
-
+  background-color: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -33,7 +30,6 @@ button {
 @media (prefers-color-scheme: light) {
   :root {
     color: #333;
-    background-color: #5b84cf;
-    /* background: linear-gradient(to right, #ffffff, #052053); */
+    background-color: #ffffff;
   }
 }
