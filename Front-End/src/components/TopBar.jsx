@@ -20,7 +20,9 @@ export default function TopBar({ onLanguageChange }) {
   const toggleLanguage = () => {
     const newLang = language === "en" ? "fa" : "en";
     setLanguage(newLang);
-    onLanguageChange(newLang);
+    if (typeof onLanguageChange === "function") {
+      onLanguageChange(newLang); // Safe call
+    }
   };
 
   return (
