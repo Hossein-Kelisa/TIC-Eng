@@ -8,7 +8,7 @@
   top: 0;
   z-index: 1000;
   border-radius: 2px;
-  height: 130px;
+  min-height: 130px;
 }
 
 .logo-container {
