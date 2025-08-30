@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import heroImages from "../Data/heroImages";
+import ShinyText from "./ShinyText";
 import "./Hero.css";
 
 function Hero() {
@@ -47,7 +48,13 @@ function Hero() {
       </div>
       <div className="hero-right hero-content">
         <h2>Tic with certainty from test to trust</h2>
-        <p>Connect with our TIC experts</p>
+        {/* <p>Connect with our TIC experts</p> */}
+        <ShinyText
+          text="Contact with our TIC experts"
+          disabled={false}
+          speed={3}
+          className="hero-title"
+        />
         <a href="#contact" className="button-primary">
           Get in Touch
         </a>
