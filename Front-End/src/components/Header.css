@@ -48,6 +48,9 @@
   font-size: 1rem;
   color: #b20202;
 }
+.search-container {
+  margin-left: -4.5rem;
+}
 
 .hamburger {
   display: block;
@@ -134,6 +137,16 @@
   height: 100vh;
   background-color: rgba(0,0,0,0.6);
   z-index: 1000; /* sidebar is 1001, overlay is 1000 */
+}
+@media (max-width: 900px) {
+  .logo-container {
+    margin-left: 7rem;
+  }
+}
+@media (max-width: 820px) {
+  .logo-container {
+    margin-left: 6rem;
+  }
 }
 
 @media (max-width: 768px) {
