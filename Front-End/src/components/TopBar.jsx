@@ -7,8 +7,6 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import "./TopBar.css";
-import EN from "../assets/flags/EN.png";
-import FA from "../assets/flags/FA.png";
 
 export default function TopBar({ onLanguageChange }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,7 +29,7 @@ export default function TopBar({ onLanguageChange }) {
       <div className="top-bar-left">
         <button onClick={toggleLanguage} className="lang-btn">
           <img
-            src={language === "en" ? EN : FA}
+            src={language === "en" ? "Flags/EN.png" : "Flags/FA.png"}
             alt="flag"
             className="flag-icon"
           />
