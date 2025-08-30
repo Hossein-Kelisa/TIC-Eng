@@ -6,7 +6,7 @@ const Search = () => {
   const [query, setQuery] = useState("");
 
   const handleSearch = () => {
-    // Implement search logic here
+    console.log("Searching for:", query);
   };
 
   return (
@@ -17,6 +17,7 @@ const Search = () => {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search..."
+        onKeyDown={(e) => e.key === "Enter" && handleSearch()}
       />
       <button className="search-icon" onClick={handleSearch}>
         <FaSearch />
