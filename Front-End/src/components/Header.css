@@ -35,9 +35,8 @@
   text-shadow: 1px 1px 20px rgb(228, 228, 228);
   font-weight: 500;
   white-space: nowrap;
-  position: relative;
-  top: 40px;
-  left: -25px;
+  margin-left: -60px;
+  margin-top: 90px;
 }
 .logo-link {
   display: flex;
