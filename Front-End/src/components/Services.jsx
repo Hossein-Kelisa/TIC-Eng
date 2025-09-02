@@ -47,15 +47,20 @@ function Services() {
           </Fades>
         ))}
       </div>
-      <a href="/shekayat.pdf" download>
-        shekayat <FaFilePdf />
-      </a>
-      <a href="/joosh.pdf" download>
-        joosh <FaFilePdf />
-      </a>
-      <a href="/makhzan.pdf" download>
-        makhzan <FaFilePdf />
-      </a>
+      <div className="download-forms">
+        <h4>Request Service Forms</h4>
+        <div className="download-buttons">
+          <a href="/shekayat.pdf" download className="download-btn">
+            Download Shekayat <FaFilePdf />
+          </a>
+          <a href="/joosh.pdf" download className="download-btn">
+            Download Joosh <FaFilePdf />
+          </a>
+          <a href="/makhzan.pdf" download className="download-btn">
+            Download Makhzan <FaFilePdf />
+          </a>
+        </div>
+      </div>
     </section>
   );
 }
