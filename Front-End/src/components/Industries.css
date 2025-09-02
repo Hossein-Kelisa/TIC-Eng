@@ -1,6 +1,7 @@
 .industries-section {
   padding: 160px 20px 100px;
-  background: linear-gradient(to bottom, #dbd4ca, #e2c26a);
+  /* background: linear-gradient(to bottom, #dbd4ca, #e2c26a); */
+  background: linear-gradient(to bottom, #e2c26a, #dbd4ca);
   text-align: center;
 }
 
@@ -67,7 +68,7 @@
 
 .industries-btn {
   padding: 10px 20px;
-  background: rgb(6, 28, 108); 
+  background: rgb(6, 28, 108);
   color: white;
   border: none;
   border-radius: 10px;
