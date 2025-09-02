@@ -1,18 +1,19 @@
 import "./Services.css";
 import Fades from "./Fades";
+import { FaFilePdf } from "react-icons/fa";
 
 function Services() {
   const services = [
     {
       title: "Test",
-      description:
-        "Ensure your projects and compliance standards.",
+      description: "Ensure your projects and compliance standards.",
       image:
         "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/65cdbc34b9d510ec993c0cb6_654c9fb1fbfb300821c1a860_manual_20inspection-min_angb56.jpg",
     },
     {
       title: "Inspection",
-      description: "Trusted inspection services to meet global standards and regulations.",
+      description:
+        "Trusted inspection services to meet global standards and regulations.",
       image:
         "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/inspectionn_xttqa2.jpg",
     },
@@ -46,6 +47,15 @@ function Services() {
           </Fades>
         ))}
       </div>
+      <a href="/shekayat.pdf" download>
+        shekayat <FaFilePdf />
+      </a>
+      <a href="/joosh.pdf" download>
+        joosh <FaFilePdf />
+      </a>
+      <a href="/makhzan.pdf" download>
+        makhzan <FaFilePdf />
+      </a>
     </section>
   );
 }
