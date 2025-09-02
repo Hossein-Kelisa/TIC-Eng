@@ -4,7 +4,7 @@ import "./DownloadForms.css";
 
 function DownloadForms() {
   return (
-    <section className="download-forms-section">
+    <section id="download-forms" className="download-forms-section">
       <div className="download-forms">
         <Fades animationType="fadeZoom">
           <h4>Download Services Request Forms</h4>
