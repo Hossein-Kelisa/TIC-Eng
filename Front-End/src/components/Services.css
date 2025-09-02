@@ -1,6 +1,7 @@
 .services-section {
   padding: 160px 20px 100px;
   background: linear-gradient(to bottom, #dbd4ca, #e2c26a);
+  /* background: linear-gradient(to bottom, #e2c26a, #dbd4ca); */
   text-align: center;
 }
 
@@ -123,38 +124,3 @@
   }
 }
 
-
-.download-forms {
-  margin-top: 10rem;
-  text-align: center;
-}
-
-.download-forms h4 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.download-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.download-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #007bff;
-  color: white;
-  padding: 0.7rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.download-btn:hover {
-  background: #7d10b4;
-}
