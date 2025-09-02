@@ -1,6 +1,7 @@
 .contact-section {
   padding: 80px 20px;
-  background: linear-gradient(to bottom, #e2c26a, #e1e1e1);
+  background: linear-gradient(to bottom, #dbd4ca, #e2c26a);
+  /* background: linear-gradient(to bottom, #e2c26a, #dbd4ca); */
   color: #1f2937;
   text-align: center;
 }
