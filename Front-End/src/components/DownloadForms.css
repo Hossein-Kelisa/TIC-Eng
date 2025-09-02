@@ -30,16 +30,20 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #007bff;
+  background: #d32f2f;
   color: white;
   padding: 0.7rem 1.2rem;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 .download-btn:hover {
-  background: #7d10b4;
+  background: #b71c1c;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 @media screen and (max-width: 768px) {
   .download-forms h4 {
@@ -69,5 +73,6 @@
   .download-btn {
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
+    border-radius: 8px;
   }
 }
