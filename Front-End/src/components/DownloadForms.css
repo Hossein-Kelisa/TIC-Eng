@@ -1,0 +1,73 @@
+.download-forms-section {
+  padding: 80px 20px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #dbd4ca, #e2c26a);
+  /* background: linear-gradient(to bottom, #e2c26a, #dbd4ca); */
+  text-align: center;
+}
+.download-forms {
+  margin-top: 10rem;
+  text-align: center;
+}
+.download-forms h4 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #872513;
+}
+.download-subtitle {
+  font-size: 1.2rem;
+  margin: 5rem 0;
+  color: #4b5563;
+}
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #007bff;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.download-btn:hover {
+  background: #7d10b4;
+}
+@media screen and (max-width: 768px) {
+  .download-forms h4 {
+    font-size: 2.5rem;
+  }
+
+  .download-subtitle {
+    font-size: 1rem;
+    margin: 4rem 0;
+  }
+
+  .download-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .download-forms h4 {
+    font-size: 2rem;
+  }
+
+  .download-subtitle {
+    font-size: 0.95rem;
+    margin: 5rem 0;
+  }
+
+  .download-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

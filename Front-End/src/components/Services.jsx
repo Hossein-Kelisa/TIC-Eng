@@ -1,6 +1,5 @@
 import "./Services.css";
 import Fades from "./Fades";
-import { FaFilePdf } from "react-icons/fa";
 
 function Services() {
   const services = [
@@ -46,20 +45,6 @@ function Services() {
             </div>
           </Fades>
         ))}
-      </div>
-      <div className="download-forms">
-        <h4>Request Service Forms</h4>
-        <div className="download-buttons">
-          <a href="/shekayat.pdf" download className="download-btn">
-            Download Shekayat <FaFilePdf />
-          </a>
-          <a href="/joosh.pdf" download className="download-btn">
-            Download Joosh <FaFilePdf />
-          </a>
-          <a href="/makhzan.pdf" download className="download-btn">
-            Download Makhzan <FaFilePdf />
-          </a>
-        </div>
       </div>
     </section>
   );
