@@ -16,6 +16,10 @@ const requestSchema = new mongoose.Schema(
       type: String,
       required: [true, "Email is required"],
       lowercase: true,
+      match: [
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        "Please enter a valid email address",
+      ],
     },
     company: {
       type: String,
@@ -33,6 +37,7 @@ const requestSchema = new mongoose.Schema(
     phone: {
       type: String,
       required: [true, "Phone number is required"],
+      match: [/^\+?[0-9\s\-()]{7,20}$/, "Please enter a valid phone number"],
     },
     fileUrl: {
       type: String,
