@@ -29,20 +29,20 @@ function RequestForm() {
     });
     if (file) data.append("file", file);
 
-    // try {
-    //   const res = await fetch("http://localhost:5000/api/requests", {
-    //     method: "POST",
-    //     body: data,
-    //   });
-    //   if (res.ok) {
-    //     alert("Request submitted successfully ✅");
-    //   } else {
-    //     alert("Something went wrong ❌");
-    //   }
-    // } catch (err) {
-    //   console.error(err);
-    //   alert("Error submitting form");
-    // }
+    try {
+      const res = await fetch("http://localhost:5000/api/requests", {
+        method: "POST",
+        body: data,
+      });
+      if (res.ok) {
+        alert("Request submitted successfully ✅");
+      } else {
+        alert("Something went wrong ❌");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error submitting form");
+    }
   };
 
   return (
