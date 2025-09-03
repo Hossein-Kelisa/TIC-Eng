@@ -1,19 +1,10 @@
 import express from "express";
 import { upload } from "../middlewares/uploadMiddleware.js";
+import { createRequest } from "../controllers/requestController.js";
 
 const router = express.Router();
 
-// فقط آپلود تست
-router.post("/upload", upload.single("file"), (req, res) => {
-  try {
-    console.log("📂 File uploaded:", req.file);
-    res.json({
-      message: "File uploaded successfully!",
-      file: req.file,
-    });
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
-});
+// submit full form with file upload
+router.post("/", upload.single("file"), createRequest);
 
 export default router;
