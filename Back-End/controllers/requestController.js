@@ -1,28 +1,27 @@
 import Request from "../models/serviceRequest.js";
+import { sendNewRequestEmail } from "../utils/email.js";
+import path from "path";
 
 /**
  * Create a new service request
- * expects: name, email, company?, service, message?, phone, file (pdf)
+ * expects: firstName, lastName, email, company?, service, message?, phone, file (pdf)
  */
 export const createRequest = async (req, res, next) => {
   try {
-    const { firstName, lastName, email, company, service, message, phone } =
-      req.body;
+    const { firstName, lastName, email, company, service, message, phone } = req.body;
 
-    // basic required fields
+    // ✅ check required fields
     if (!firstName || !lastName || !email || !service || !phone) {
       return res.status(400).json({
         message: "firstName, lastName, email, service, phone are required",
       });
     }
 
-    // if file uploaded by multer
-    const fileUrl = req.file
-      ? `/uploads/forms/${req.file.filename}`
-      : undefined;
+    // ✅ handle file upload
+    const fileUrl = req.file ? `/uploads/forms/${req.file.filename}` : undefined;
 
-    //save to database
-    const doc = await Request.create({
+    // ✅ save request in database
+    const savedRequest = await Request.create({
       firstName,
       lastName,
       email: String(email).toLowerCase(),
@@ -33,13 +32,17 @@ export const createRequest = async (req, res, next) => {
       fileUrl,
     });
 
+    // ✅ send email notification (with attachment if file exists)
+    const filePath = req.file ? path.resolve(`uploads/forms/${req.file.filename}`) : null;
+    await sendNewRequestEmail(savedRequest, filePath);
+
+    // ✅ return response
     return res.status(201).json({
       message: "✅ Request submitted successfully!",
-      data: doc,
+      data: savedRequest,
     });
   } catch (err) {
-    // pass to error handler if exists
-    if (next) return next(err);
-    return res.status(500).json({ message: "Server error" });
+    if (next) return next(err); // pass error to global handler
+    return res.status(500).json({ message: "❌ Server error" });
   }
 };
