@@ -3,7 +3,8 @@ import { createRequest } from "../services/requestService";
 
 export default function RequestForm() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     company: "",
     service: "testing",
@@ -38,7 +39,8 @@ export default function RequestForm() {
       await createRequest(data);
       setSuccess("✅ Request submitted successfully!");
       setFormData({
-        name: "",
+        firstName: "",
+        lastName: "",
         email: "",
         company: "",
         service: "testing",
@@ -65,9 +67,19 @@ export default function RequestForm() {
 
       <input
         type="text"
-        name="name"
-        placeholder="Name"
-        value={formData.name}
+        name="firstName"
+        placeholder="First Name"
+        value={formData.firstName}
+        onChange={handleChange}
+        required
+        className="w-full border p-2 rounded"
+      />
+
+      <input
+        type="text"
+        name="lastName"
+        placeholder="Last Name"
+        value={formData.lastName}
         onChange={handleChange}
         required
         className="w-full border p-2 rounded"

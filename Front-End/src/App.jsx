@@ -3,6 +3,7 @@ import HomePage from "./Pages/HomePage";
 import AuthPage from "./Pages/AuthPage";
 import RequestForm from "./Pages/RequestForm";
 import { AuthProvider } from "./contexts/AuthContext";
+import DashboardPage from "./Pages/DashboardPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/request" element={<RequestForm />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
       </Router>
     </AuthProvider>
