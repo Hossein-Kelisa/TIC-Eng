@@ -1,17 +1,20 @@
-import jwt from 'jsonwebtoken';
-import User from '../models/userModel.js';
+import jwt from "jsonwebtoken";
+import User from "../models/userModel.js";
 
 export const protect = async (req, res, next) => {
   let token;
 
   // Get token from header if it exists
-  if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
-    token = req.headers.authorization.split(' ')[1];
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith("Bearer")
+  ) {
+    token = req.headers.authorization.split(" ")[1];
   }
 
   // If no token, return 401
   if (!token) {
-    return res.status(401).json({ message: 'Not authorized, no token' });
+    return res.status(401).json({ message: "Not authorized, no token" });
   }
 
   try {
@@ -19,10 +22,18 @@ export const protect = async (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     // Attach user to request (without password)
-    req.user = await User.findById(decoded.id).select('-password');
+    req.user = await User.findById(decoded.id).select("-password");
 
     next(); // allow access
   } catch (error) {
-    res.status(401).json({ message: 'Not authorized, token failed' });
+    res.status(401).json({ message: "Not authorized, token failed" });
   }
+};
+
+// middlewares/authMiddleware.js
+export const adminOnly = (req, res, next) => {
+  if (req.user && req.user.role === "admin") {
+    return next();
+  }
+  return res.status(403).json({ message: "Access denied, admins only" });
 };

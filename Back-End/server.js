@@ -8,6 +8,8 @@ import requestRouter from "./routes/requestRoutes.js";
 import { corsOptions } from "./config/corsOption.js";
 import errorHandler from "./middlewares/errorHandler.js";
 import AppError from "./utils/AppError.js";
+import adminRouter from "./routes/adminRoutes.js";
+import userRouter from "./routes/userRouter.js";
 
 dotenv.config();
 connectDB();
@@ -27,6 +29,8 @@ app.use("/uploads", express.static("uploads"));
 // API routes
 app.use("/api/auth", authRouter);
 app.use("/api/requests", requestRouter);
+app.use("/api/admin", adminRouter);
+app.use("/api/users", userRouter);
 
 // Health check route
 app.get("/api/health", (req, res) => {

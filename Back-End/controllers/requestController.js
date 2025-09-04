@@ -46,3 +46,21 @@ export const createRequest = async (req, res, next) => {
     return res.status(500).json({ message: "❌ Server error" });
   }
 };
+
+/**
+ * Get all service requests (Admin only)
+ */
+export const getRequests = async (req, res, next) => {
+  try {
+    const requests = await Request.find().sort({ createdAt: -1 });
+
+    return res.json({
+      message: "✅ Requests fetched successfully",
+      count: requests.length,
+      data: requests,
+    });
+  } catch (err) {
+    if (next) return next(err);
+    return res.status(500).json({ message: "❌ Server error" });
+  }
+};
