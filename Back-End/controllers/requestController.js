@@ -2,6 +2,7 @@ import Request from "../models/serviceRequest.js";
 import { sendNewRequestEmail } from "../utils/email.js";
 import path from "path";
 
+
 /**
  * Create a new service request
  * expects: firstName, lastName, email, company?, service, message?, phone, file (pdf)
