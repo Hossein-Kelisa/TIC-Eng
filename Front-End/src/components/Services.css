@@ -1,6 +1,7 @@
 .services-section {
   padding: 160px 20px 100px;
   background: linear-gradient(to bottom, #dbd4ca, #e2c26a);
+  /* background: linear-gradient(to bottom, #e2c26a, #dbd4ca); */
   text-align: center;
 }
 
@@ -122,3 +123,4 @@
     height: auto;
   }
 }
+

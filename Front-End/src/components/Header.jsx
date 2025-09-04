@@ -79,6 +79,7 @@ function Header() {
         <div className="sidebar-nav">
           <button onClick={() => handleScroll("services")}>Services</button>
           <button onClick={() => handleScroll("about")}>About</button>
+          <button onClick={() => handleScroll("download-forms")}>Download Forms</button>
           <button onClick={() => handleScroll("industries")}>Industries</button>
           <button onClick={() => handleScroll("team")}>Team</button>
           <button onClick={() => handleScroll("contact")}>Contact</button>
