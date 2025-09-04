@@ -32,6 +32,11 @@ app.use("/api/requests", requestRouter);
 app.use("/api/admin", adminRouter);
 app.use("/api/users", userRouter);
 
+// Root route (for Render health check or quick test)
+app.get("/", (req, res) => {
+  res.send("Backend is running ✅");
+});
+
 // Health check route
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", message: "Server is running 🚀" });
