@@ -1,7 +1,6 @@
-import Request from "../models/serviceRequest.js";
+import Request from "../models/request.js";
 import { sendNewRequestEmail } from "../utils/email.js";
 import path from "path";
-
 
 /**
  * Create a new service request
