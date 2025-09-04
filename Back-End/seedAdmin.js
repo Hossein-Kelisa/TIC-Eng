@@ -1,37 +1,31 @@
 import mongoose from "mongoose";
-import bcrypt from "bcrypt";
-import User from "./models/userModel.js";
 import dotenv from "dotenv";
+import User from "./models/userModel.js";
 
 dotenv.config();
 
 const createAdmin = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log("✅ MongoDB Connected");
 
-    // Check if admin user already exists
-    const existingAdmin = await User.findOne({ role: "admin" });
-    if (existingAdmin) {
-      console.log("⚠️ Admin user already exists:", existingAdmin.email);
-      process.exit();
+    const adminExists = await User.findOne({ email: process.env.ADMIN_EMAIL });
+    if (adminExists) {
+      console.log("Admin already exists");
+      return process.exit();
     }
-
-    const hashedPassword = await bcrypt.hash("Admin-Tic-Eng", 10);
 
     const admin = new User({
       userName: "Admin-Tic",
-      email: "admin@tic-eng.com",
-      password: hashedPassword,
+      email: process.env.ADMIN_EMAIL,
+      password: process.env.ADMIN_PASSWORD, 
       role: "admin",
     });
 
     await admin.save();
-    console.log("✅ Admin created:", admin.email);
-
+    console.log("Admin user created successfully");
     process.exit();
   } catch (error) {
-    console.error("❌ Error creating admin:", error.message);
+    console.error(error);
     process.exit(1);
   }
 };
