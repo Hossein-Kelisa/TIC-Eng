@@ -6,6 +6,11 @@ const userSchema = new mongoose.Schema(
     userName: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+    role: {
+      type: String,
+      enum: ["user", "admin"],
+      default: "user", // regular users are default
+    },
   },
   { timestamps: true }
 );
@@ -18,8 +23,14 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
-userSchema.methods.matchPassword = function (enteredPassword) {
-  return bcrypt.compare(enteredPassword, this.password);
+// Compare entered password with hashed password
+userSchema.methods.matchPassword = async function (enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
+
+// Check if user is admin
+userSchema.methods.isAdmin = function () {
+  return this.role === "admin";
 };
 
 export default mongoose.model("User", userSchema);

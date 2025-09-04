@@ -4,41 +4,47 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import connectDB from "./config/connectDB.js";
 import authRouter from "./routes/authRoutes.js";
+import requestRouter from "./routes/requestRoutes.js";
+import { corsOptions } from "./config/corsOption.js";
+import errorHandler from "./middlewares/errorHandler.js";
+import AppError from "./utils/AppError.js";
+import adminRouter from "./routes/adminRoutes.js";
+import userRouter from "./routes/userRouter.js";
 
 dotenv.config();
 connectDB();
 
 const app = express();
 
-// Allowed origins (local + Netlify)
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://tic-eng.netlify.app",
-  "https://tic-eng.com",
-  "https://www.tic-eng.com",
-];
+// CORS
+app.use(cors(corsOptions));
 
-// CORS setup
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (e.g., mobile apps, Postman)
-      if (!origin || allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-      return callback(new Error("CORS not allowed for this origin: " + origin));
-    },
-    credentials: true,
-  })
-);
-
+// Middleware
 app.use(express.json());
 app.use(cookieParser());
 
+//static files for uploads
+app.use("/uploads", express.static("uploads"));
+
+// API routes
 app.use("/api/auth", authRouter);
+app.use("/api/requests", requestRouter);
+app.use("/api/admin", adminRouter);
+app.use("/api/users", userRouter);
+
+// Health check route
+app.get("/api/health", (req, res) => {
+  res.json({ status: "ok", message: "Server is running 🚀" });
+});
+
+// Handle 404 errors (don't find any routes)
+app.use((req, res, next) => {
+  next(new AppError(`Route not found: ${req.originalUrl}`, 404));
+});
+
+// Global error handling middleware
+app.use(errorHandler);
 
 //start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () =>
-  console.log(`Server running on port ${PORT}`)
-);
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
