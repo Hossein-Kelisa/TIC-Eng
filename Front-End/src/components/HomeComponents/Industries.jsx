@@ -1,5 +1,6 @@
 import "./Industries.css";
 import Fades from "../RestComponents/Fades";
+import { Link } from "react-router-dom";
 
 const industries = [
   {
@@ -58,13 +59,13 @@ function Industries() {
             </Fades>
           ))}
         </div>
-        {/* <Fades animationType="fadeZoom">
+        <Fades animationType="fadeZoom">
           <div className="industries-btn-wrapper">
-            <a href="#RequestFormm" className="RequestService-btn">
+            <Link to="/request" className="RequestService-btn">
               Request Service
-            </a>
+            </Link>
           </div>
-        </Fades> */}
+        </Fades>
       </div>
     </section>
   );
