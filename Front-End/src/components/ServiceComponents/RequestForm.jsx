@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createRequest } from "../../services/requestService";
+import "./RequestForm.css";
 
 export default function RequestForm() {
   const [formData, setFormData] = useState({
@@ -56,14 +57,11 @@ export default function RequestForm() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-4 max-w-md mx-auto p-6 bg-white shadow-md rounded-lg"
-    >
-      <h2 className="text-xl font-bold text-center">Service Request Form</h2>
+    <form onSubmit={handleSubmit} className="request-form">
+      <h2 className="request-form__title">Service Request Form</h2>
 
-      {error && <p className="text-red-500">{error}</p>}
-      {success && <p className="text-green-600">{success}</p>}
+      {error && <p className="request-form__error">{error}</p>}
+      {success && <p className="request-form__success">{success}</p>}
 
       <input
         type="text"
@@ -72,7 +70,7 @@ export default function RequestForm() {
         value={formData.firstName}
         onChange={handleChange}
         required
-        className="w-full border p-2 rounded"
+        className="request-form__input"
       />
 
       <input
@@ -82,7 +80,7 @@ export default function RequestForm() {
         value={formData.lastName}
         onChange={handleChange}
         required
-        className="w-full border p-2 rounded"
+        className="request-form__input"
       />
 
       <input
@@ -92,7 +90,7 @@ export default function RequestForm() {
         value={formData.email}
         onChange={handleChange}
         required
-        className="w-full border p-2 rounded"
+        className="request-form__input"
       />
 
       <input
@@ -101,15 +99,16 @@ export default function RequestForm() {
         placeholder="Company"
         value={formData.company}
         onChange={handleChange}
-        className="w-full border p-2 rounded"
+        className="request-form__input"
       />
 
       <select
         name="service"
         value={formData.service}
         onChange={handleChange}
-        className="w-full border p-2 rounded"
+        className="request-form__select"
       >
+        <option value="">Select Service</option>
         <option value="testing">Testing</option>
         <option value="inspection">Inspection</option>
         <option value="certification">Certification</option>
@@ -120,7 +119,7 @@ export default function RequestForm() {
         placeholder="Message"
         value={formData.message}
         onChange={handleChange}
-        className="w-full border p-2 rounded"
+        className="request-form__textarea"
       />
 
       <input
@@ -130,21 +129,21 @@ export default function RequestForm() {
         value={formData.phone}
         onChange={handleChange}
         required
-        className="w-full border p-2 rounded"
+        className="request-form__input"
       />
-
+    
       <input
         type="file"
         name="file"
         accept="application/pdf"
         onChange={handleChange}
-        className="w-full"
+        className="request-form__file"
       />
 
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+        className="request-form__button"
       >
         {loading ? "Submitting..." : "Submit"}
       </button>
