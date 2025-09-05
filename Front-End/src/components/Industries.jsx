@@ -58,13 +58,13 @@ function Industries() {
             </Fades>
           ))}
         </div>
-        <Fades animationType="fadeZoom">
+        {/* <Fades animationType="fadeZoom">
           <div className="industries-btn-wrapper">
             <a href="#RequestForm" className="RequestService-btn">
-              Request Service2
+              Request Service
             </a>
           </div>
-        </Fades>
+        </Fades> */}
       </div>
     </section>
   );
