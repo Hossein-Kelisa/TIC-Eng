@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getRequests } from "../services/requestService";
+import { getRequests } from "../../services/requestService";
 
 
 export default function RequestList() {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import heroImages from "../Data/heroImages";
-import ShinyText from "./ShinyText";
+import heroImages from "../../Data/heroImages";
+import ShinyText from "../RestComponents/ShinyText";
 import "./Hero.css";
 
 function Hero() {

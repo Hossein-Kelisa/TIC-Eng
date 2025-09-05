@@ -1,5 +1,5 @@
 import "./Industries.css";
-import Fades from "./Fades";
+import Fades from "../RestComponents/Fades";
 
 const industries = [
   {

@@ -1,4 +1,4 @@
-import Fades from "./Fades";
+import Fades from "../RestComponents/Fades";
 import { FaFilePdf } from "react-icons/fa";
 import "./DownloadForms.css";
 

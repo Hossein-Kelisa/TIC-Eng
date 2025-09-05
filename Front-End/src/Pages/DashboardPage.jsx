@@ -1,4 +1,4 @@
-import RequestList from "../components/RequestList";
+import RequestList from "../components/ServiceComponents/RequestList";
 
 export default function DashboardPage() {
   return (
