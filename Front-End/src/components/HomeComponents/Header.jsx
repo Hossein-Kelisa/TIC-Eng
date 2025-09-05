@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import { useContext } from "react";
 import "./Header.css";
-import logo from "../assets/Logo.png";
+import logo from "../../assets/Logo.png";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 // import AuthButton from "./AuthButton";
 // import { AuthContext } from "../contexts/AuthContext";

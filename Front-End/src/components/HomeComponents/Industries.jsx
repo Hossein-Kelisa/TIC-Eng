@@ -1,5 +1,5 @@
 import "./Industries.css";
-import Fades from "./Fades";
+import Fades from "../RestComponents/Fades";
 
 const industries = [
   {
@@ -60,7 +60,7 @@ function Industries() {
         </div>
         {/* <Fades animationType="fadeZoom">
           <div className="industries-btn-wrapper">
-            <a href="#RequestForm" className="RequestService-btn">
+            <a href="#RequestFormm" className="RequestService-btn">
               Request Service
             </a>
           </div>

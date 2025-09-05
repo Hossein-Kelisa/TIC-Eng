@@ -5,7 +5,7 @@ const API_URL = import.meta.env.VITE_API_URL;
  */
 export async function createRequest(formData) {
   try {
-    const response = await fetch(`${API_URL}/api/requests`, {
+    const response = await fetch(`${API_URL}/requests`, {
       method: "POST",
       body: formData, // FormData includes file + fields
       credentials: "include",
@@ -32,7 +32,7 @@ export async function getRequests() {
   if (!token) throw new Error("No admin token found");
 
   try {
-    const response = await fetch(`${API_URL}/api/requests`, {
+    const response = await fetch(`${API_URL}/requests`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

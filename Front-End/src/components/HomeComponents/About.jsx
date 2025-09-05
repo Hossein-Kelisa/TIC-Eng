@@ -1,6 +1,6 @@
 import "./About.css";
 import { FaUsers, FaRocket, FaGlobe } from "react-icons/fa";
-import Fades from "./Fades";
+import Fades from "../RestComponents/Fades";
 
 function About() {
   const points = [

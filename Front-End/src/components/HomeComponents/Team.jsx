@@ -1,5 +1,5 @@
 import './Team.css';
-import Fades from './Fades';
+import Fades from '../RestComponents/Fades';
 
 const teamMembers = [
   {

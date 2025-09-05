@@ -1,5 +1,5 @@
 import "./Services.css";
-import Fades from "./Fades";
+import Fades from "../RestComponents/Fades";
 
 function Services() {
   const services = [
