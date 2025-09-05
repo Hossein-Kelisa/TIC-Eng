@@ -12,7 +12,7 @@ export default function RequestList() {
       setLoading(true);
       setError("");
       try {
-        const result = await getRequests(); // از localStorage توکن می‌خونه
+        const result = await getRequests(); //reads token from localStorage
         const dataArray = Array.isArray(result) ? result : result.data || [];
         setRequests(dataArray);
       } catch (err) {
