@@ -60,7 +60,9 @@ function Industries() {
         </div>
         <Fades animationType="fadeZoom">
           <div className="industries-btn-wrapper">
-            <button className="industries-btn">Send Request</button>
+            <a href="#RequestForm" className="RequestService-btn">
+              Request Service
+            </a>
           </div>
         </Fades>
       </div>
