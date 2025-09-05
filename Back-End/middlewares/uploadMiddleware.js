@@ -1,18 +1,18 @@
 import multer from "multer";
 import path from "path";
 
-// مسیر ذخیره‌سازی فایل‌ها
+//path to save uploaded files
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "uploads/forms"); // ذخیره در پوشه uploads/forms
+    cb(null, "uploads/forms"); //save to /uploads/forms
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-    cb(null, uniqueSuffix + path.extname(file.originalname)); // مثل: 123456.pdf
+    cb(null, uniqueSuffix + path.extname(file.originalname)); // e.g. 1632345678901-123456789.pdf
   },
 });
 
-// فیلتر فقط برای PDF
+// file filter to allow only PDFs
 const fileFilter = (req, file, cb) => {
   if (file.mimetype === "application/pdf") {
     cb(null, true);
@@ -21,9 +21,9 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-// ساخت middleware
+// create middleware
 export const upload = multer({
   storage,
   fileFilter,
-  limits: { fileSize: 5 * 1024 * 1024 }, // حداکثر 5MB
+  limits: { fileSize: 5 * 1024 * 1024 }, // max 5MB
 });
