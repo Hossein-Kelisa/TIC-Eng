@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { createRequest } from "../../services/requestService";
+import FormInput from "./FormInput";
+import FormSelect from "./FormSelect";
+import FormTextarea from "./FormTextarea";
+import FormFileUpload from "./FormFileUpload";
+import FormButton from "./FormButton";
 import "./RequestForm.css";
 
 export default function RequestForm() {
@@ -63,90 +68,75 @@ export default function RequestForm() {
       {error && <p className="request-form__error">{error}</p>}
       {success && <p className="request-form__success">{success}</p>}
 
-      <input
+      <FormInput
         type="text"
         name="firstName"
         placeholder="First Name"
         value={formData.firstName}
         onChange={handleChange}
         required
-        className="request-form__input"
       />
 
-      <input
+      <FormInput
         type="text"
         name="lastName"
         placeholder="Last Name"
         value={formData.lastName}
         onChange={handleChange}
         required
-        className="request-form__input"
       />
 
-      <input
+      <FormInput
         type="email"
         name="email"
         placeholder="Email"
         value={formData.email}
         onChange={handleChange}
         required
-        className="request-form__input"
       />
 
-      <input
+      <FormInput
         type="text"
         name="company"
         placeholder="Company"
         value={formData.company}
         onChange={handleChange}
-        className="request-form__input"
       />
 
-      <select
+      <FormSelect
         name="service"
         value={formData.service}
         onChange={handleChange}
-        className="request-form__select"
-      >
-        <option value="">Select Service</option>
-        <option value="testing">Testing</option>
-        <option value="inspection">Inspection</option>
-        <option value="certification">Certification</option>
-      </select>
+        options={[
+          { value: "testing", label: "Testing" },
+          { value: "inspection", label: "Inspection" },
+          { value: "certification", label: "Certification" },
+        ]}
+      />
 
-      <textarea
+      <FormTextarea
         name="message"
         placeholder="Message"
         value={formData.message}
         onChange={handleChange}
-        className="request-form__textarea"
       />
 
-      <input
+      <FormInput
         type="text"
         name="phone"
         placeholder="Phone"
         value={formData.phone}
         onChange={handleChange}
         required
-        className="request-form__input"
-      />
-    
-      <input
-        type="file"
-        name="file"
-        accept="application/pdf"
-        onChange={handleChange}
-        className="request-form__file"
       />
 
-      <button
-        type="submit"
-        disabled={loading}
-        className="request-form__button"
-      >
-        {loading ? "Submitting..." : "Submit"}
-      </button>
+      <FormFileUpload
+        name="file"
+        onChange={handleChange}
+        accept="application/pdf"
+      />
+
+      <FormButton loading={loading} />
     </form>
   );
 }
