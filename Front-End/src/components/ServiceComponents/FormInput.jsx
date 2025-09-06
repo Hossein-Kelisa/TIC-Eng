@@ -1,3 +1,5 @@
+import "./FormInput.css";
+
 export default function FormInput({ type, name, value, onChange, placeholder, required }) {
   return (
     <div className="form-group">

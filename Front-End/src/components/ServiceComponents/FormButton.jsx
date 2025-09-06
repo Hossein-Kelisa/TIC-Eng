@@ -1,3 +1,5 @@
+import "./FormButton.css";
+
 export default function FormButton({ loading }) {
   return (
     <button

@@ -1,3 +1,5 @@
+import "./FormFileUpload.css";
+
 export default function FormFileUpload({ name, onChange, accept }) {
   return (
     <div className="form-group">

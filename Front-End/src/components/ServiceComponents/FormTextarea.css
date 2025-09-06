@@ -1,0 +1,17 @@
+.request-form__textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.request-form__textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+.request-form__textarea {
+  min-height: 100px;
+  resize: vertical;
+}

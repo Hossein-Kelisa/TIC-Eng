@@ -1,3 +1,5 @@
+import "./FormSelect.css";
+
 export default function FormSelect({ name, value, onChange, options }) {
   return (
     <div className="form-group">

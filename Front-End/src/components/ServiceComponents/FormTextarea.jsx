@@ -1,3 +1,5 @@
+import "./FormTextarea.css";
+
 export default function FormTextarea({ name, value, onChange, placeholder }) {
   return (
     <div className="form-group">
