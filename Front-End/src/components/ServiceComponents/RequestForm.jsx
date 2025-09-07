@@ -82,6 +82,8 @@ export default function RequestForm() {
         icon: "error",
         confirmButtonText: "OK",
       });
+    } finally {
+      setLoading(false);
     }
   };
 
