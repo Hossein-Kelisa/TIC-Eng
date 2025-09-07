@@ -57,7 +57,7 @@ export const createRequest = async (req, res, next) => {
     });
 
     // ✅ send email notification (with link if file uploaded)
-    await sendNewRequestEmail(savedRequest, fileUrl);
+await sendNewRequestEmail(savedRequest, savedRequest.fileUrl);
 
     // ✅ return response
     return res.status(201).json({

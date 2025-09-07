@@ -61,7 +61,7 @@ export async function sendNewRequestEmail(savedRequest, fileUrl) {
         ${
           fileUrl
             ? `<p>File: <a href="${fileUrl}" target="_blank">Download PDF</a></p>`
-            : ""
+            : "<p>No file uploaded</p>"
         }
       `,
       attachments,
