@@ -17,9 +17,16 @@ const transporter = nodemailer.createTransport({
 // extract S3 key from public URL
 function extractS3KeyFromUrl(urlString) {
   const bucketHost = `${process.env.S3_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com`;
-  return urlString.includes(bucketHost)
-    ? urlString.split(`${bucketHost}/`)[1]
-    : null;
+  if (typeof urlString !== "string" || !urlString.includes(bucketHost)) {
+    return null;
+  }
+  const parts = urlString.split(`${bucketHost}/`);
+  if (parts.length < 2 || !parts[1] || parts[1].trim() === "") {
+    return null;
+  }
+  // Optionally, remove any query string or fragment from the key
+  const key = parts[1].split(/[?#]/)[0];
+  return key;
 }
 
 /**
