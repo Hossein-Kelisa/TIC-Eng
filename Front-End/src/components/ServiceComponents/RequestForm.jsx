@@ -62,8 +62,6 @@ export default function RequestForm() {
         file: null,
       });
 
-      setLoading(false); // stop internal state loading
-
       // Close loading and show success
       Swal.close();
       await Swal.fire({
@@ -76,7 +74,6 @@ export default function RequestForm() {
       navigate("/"); // Go to home after OK
     } catch (err) {
       console.error("Request submission error:", err);
-      setLoading(false); // stop internal state loading
 
       Swal.close();
       await Swal.fire({
