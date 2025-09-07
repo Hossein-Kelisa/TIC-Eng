@@ -1,6 +1,15 @@
 import Request from "../models/request.js";
 import { sendNewRequestEmail } from "../utils/email.js";
-import path from "path";
+import multer from "multer";
+import { s3, PutObjectCommand } from "../utils/s3.js";
+import { v4 as uuidv4 } from "uuid";
+
+// ✅ multer middleware (keeps file in memory, not local folder)
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 10 * 1024 * 1024 }, // 10 MB limit
+});
+export const uploadMiddleware = upload.single("file");
 
 /**
  * Create a new service request
@@ -17,8 +26,23 @@ export const createRequest = async (req, res, next) => {
       });
     }
 
-    // ✅ handle file upload
-    const fileUrl = req.file ? `/uploads/forms/${req.file.filename}` : undefined;
+    // ✅ upload file to S3 (if exists)
+    let fileUrl;
+    if (req.file) {
+      const key = `forms/${Date.now()}-${uuidv4()}-${req.file.originalname.replace(/\s+/g, "_")}`;
+
+      const putParams = {
+        Bucket: process.env.S3_BUCKET_NAME,
+        Key: key,
+        Body: req.file.buffer,
+        ContentType: req.file.mimetype,
+      };
+
+      await s3.send(new PutObjectCommand(putParams));
+
+      // construct public URL
+      fileUrl = `https://${process.env.S3_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/${key}`;
+    }
 
     // ✅ save request in database
     const savedRequest = await Request.create({
@@ -32,9 +56,8 @@ export const createRequest = async (req, res, next) => {
       fileUrl,
     });
 
-    // ✅ send email notification (with attachment if file exists)
-    const filePath = req.file ? path.resolve(`uploads/forms/${req.file.filename}`) : null;
-    await sendNewRequestEmail(savedRequest, filePath);
+    // ✅ send email notification (with link if file uploaded)
+await sendNewRequestEmail(savedRequest, savedRequest.fileUrl);
 
     // ✅ return response
     return res.status(201).json({
@@ -42,7 +65,7 @@ export const createRequest = async (req, res, next) => {
       data: savedRequest,
     });
   } catch (err) {
-    if (next) return next(err); // pass error to global handler
+    if (next) return next(err);
     return res.status(500).json({ message: "❌ Server error" });
   }
 };
