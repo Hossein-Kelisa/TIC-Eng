@@ -6,11 +6,13 @@ export default function RequestTable({ requests }) {
       <table className="request-list__table">
         <thead>
           <tr>
+            <th>Date</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
             <th>Service</th>
             <th>Phone</th>
+            <th>Message</th>
             <th>Status</th>
             <th>File</th>
           </tr>
