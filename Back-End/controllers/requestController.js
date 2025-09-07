@@ -17,7 +17,8 @@ export const uploadMiddleware = upload.single("file");
  */
 export const createRequest = async (req, res, next) => {
   try {
-    const { firstName, lastName, email, company, service, message, phone } = req.body;
+    const { firstName, lastName, email, company, service, message, phone } =
+      req.body;
 
     // ✅ check required fields
     if (!firstName || !lastName || !email || !service || !phone) {
@@ -29,7 +30,10 @@ export const createRequest = async (req, res, next) => {
     // ✅ upload file to S3 (if exists)
     let fileUrl;
     if (req.file) {
-      const key = `forms/${Date.now()}-${uuidv4()}-${req.file.originalname.replace(/\s+/g, "_")}`;
+      const key = `forms/${Date.now()}-${uuidv4()}-${req.file.originalname.replace(
+        /\s+/g,
+        "_"
+      )}`;
 
       const putParams = {
         Bucket: process.env.S3_BUCKET_NAME,
@@ -57,7 +61,7 @@ export const createRequest = async (req, res, next) => {
     });
 
     // ✅ send email notification (with link if file uploaded)
-await sendNewRequestEmail(savedRequest, savedRequest.fileUrl);
+    await sendNewRequestEmail(savedRequest, savedRequest.fileUrl);
 
     // ✅ return response
     return res.status(201).json({
