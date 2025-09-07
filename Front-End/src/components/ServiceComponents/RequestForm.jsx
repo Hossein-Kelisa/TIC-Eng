@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { createRequest } from "../../services/requestService";
 import FormInput from "./FormInput";
@@ -5,9 +6,11 @@ import FormSelect from "./FormSelect";
 import FormTextarea from "./FormTextarea";
 import FormFileUpload from "./FormFileUpload";
 import FormButton from "./FormButton";
+import Swal from "sweetalert2";
 import "./RequestForm.css";
 
 export default function RequestForm() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -19,8 +22,6 @@ export default function RequestForm() {
     file: null,
   });
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -32,8 +33,6 @@ export default function RequestForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
-    setSuccess("");
     setLoading(true);
 
     const data = new FormData();
@@ -42,8 +41,16 @@ export default function RequestForm() {
     });
 
     try {
+      // Show SweetAlert2 loading
+      Swal.fire({
+        title: "Submitting...",
+        allowOutsideClick: false,
+        didOpen: () => Swal.showLoading(),
+      });
+
       await createRequest(data);
-      setSuccess("✅ Request submitted successfully!");
+
+      // Clear form
       setFormData({
         firstName: "",
         lastName: "",
@@ -54,19 +61,36 @@ export default function RequestForm() {
         phone: "",
         file: null,
       });
+
+      setLoading(false); // stop internal state loading
+
+      // Close loading and show success
+      Swal.close();
+      await Swal.fire({
+        title: "Success!",
+        text: "Your request has been submitted successfully.",
+        icon: "success",
+        confirmButtonText: "OK",
+      });
+
+      navigate("/"); // Go to home after OK
     } catch (err) {
-      setError(err.message || "❌ Failed to submit request");
-    } finally {
-      setLoading(false);
+      console.error("Request submission error:", err);
+      setLoading(false); // stop internal state loading
+
+      Swal.close();
+      await Swal.fire({
+        title: "Error!",
+        text: err.message || "Failed to submit request.",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="request-form">
       <h2 className="request-form__title">Service Request Form</h2>
-
-      {error && <p className="request-form__error">{error}</p>}
-      {success && <p className="request-form__success">{success}</p>}
 
       <FormInput
         type="text"
