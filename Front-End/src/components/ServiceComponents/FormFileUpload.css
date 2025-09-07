@@ -1,13 +1,39 @@
-.request-form__file {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  transition: border-color 0.2s;
+.file-upload {
+  border: 2px dashed #aaa;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: border-color 0.3s, background-color 0.3s;
 }
 
-.request-form__file:focus {
-  border-color: #2563eb;
-  outline: none;
+.file-upload--active {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+.file-upload__input {
+  display: none;
+}
+
+.file-upload__label {
+  font-size: 14px;
+  color: #333;
+}
+.file-upload__label u {
+  cursor: pointer;
+}
+.file-upload__label--active {
+  color: #007bff;
+}
+.file-upload__label--error {
+  color: #ff0000;
+}
+.file-upload__error-message {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.file-upload__file-list {
+  margin-top: 10px;
+  text-align: left;
 }

@@ -6,33 +6,60 @@ import AuthToggle from "../components/AuthComponents/AuthToggle";
 import ForgotPass from "../components/AuthComponents/ForgotPass";
 import { useAuth } from "../hooks/useAuth";
 import { useState } from "react";
-import GlobalLoader from "../components/RestComponents/GlobalLoader"; 
+import Swal from "sweetalert2";
 import "./AuthPage.css";
 
 export default function AuthPage() {
-  const { isLogin, toggleMode, handleSubmit, loading } = useAuth();
+  const { isLogin, toggleMode, handleSubmit } = useAuth();
   const [showForgotForm, setShowForgotForm] = useState(false);
+
+  // Wrap handleSubmit to show SweetAlert loading
+  const handleSubmitWithLoading = async (e) => {
+    e.preventDefault();
+
+    Swal.fire({
+      title: isLogin ? "Logging in..." : "Registering...",
+      allowOutsideClick: false,
+      didOpen: () => Swal.showLoading(),
+    });
+
+    try {
+      const result = await handleSubmit(e); // call useAuth hook
+      Swal.close();
+
+      await Swal.fire({
+        title: "Success!",
+        text: result.message,
+        icon: "success",
+        confirmButtonText: "OK",
+      });
+    } catch (err) {
+      Swal.close();
+      await Swal.fire({
+        title: "Error!",
+        text: err.message || "Something went wrong.",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
+    }
+  };
 
   return (
     <>
-      {loading && <GlobalLoader />} {/* Show loader when loading is true */}
-      
       <Header />
       <main className="auth-page">
         <div className="auth-container">
-          <h2 className="auth-title">
-            {isLogin ? "Login" : "Register"}
-          </h2>
+          <h2 className="auth-title">{isLogin ? "Login" : "Register"}</h2>
 
           {showForgotForm ? (
             <ForgotPass handleBack={() => setShowForgotForm(false)} />
           ) : isLogin ? (
             <LoginForm
-              handleSubmit={handleSubmit}
+              handleSubmit={handleSubmitWithLoading}
               onForgotClick={() => setShowForgotForm(true)}
             />
           ) : (
-            <RegisterForm handleSubmit={handleSubmit} />
+            <RegisterForm handleSubmit={handleSubmitWithLoading} />
           )}
 
           <AuthToggle isLogin={isLogin} toggleMode={toggleMode} />

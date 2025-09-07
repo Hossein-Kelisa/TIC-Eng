@@ -7,15 +7,3 @@ export default function RequestPage() {
     </div>
   );
 }
-
-
-//         <label htmlFor="file-upload" className="file-upload-box">
-//           <p>📄 Drag & drop your PDF here or click to browse</p>
-//         </label>
-//         <input
-//           id="file-upload"
-//           type="file"
-//           accept="application/pdf"
-//           onChange={handleFileChange}
-//           hidden
-//         />
