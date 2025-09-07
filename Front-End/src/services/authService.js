@@ -1,5 +1,28 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
+async function handleResponse(response, defaultErrorMessage) {
+  let result = {};
+  try {
+    result = await response.json();
+  } catch {
+    result = {};
+  }
+
+  if (!response.ok) {
+    return {
+      success: false,
+      message: result.message || defaultErrorMessage,
+      data: null,
+    };
+  }
+
+  return {
+    success: true,
+    message: result.message || "Success",
+    data: result.data || result, // sometimes backend sends `data`, sometimes not
+  };
+}
+
 export async function loginUser(data) {
   try {
     const response = await fetch(`${API_URL}/auth/login`, {
@@ -9,15 +32,13 @@ export async function loginUser(data) {
       credentials: "include",
     });
 
-    const result = await response.json().catch(() => ({}));
-
-    if (!response.ok) {
-      throw new Error(result.message || "Login failed. Please try again.");
-    }
-
-    return result;
+    return await handleResponse(response, "Login failed. Please try again.");
   } catch (err) {
-    throw new Error(err.message || "Network error. Please try again later.");
+    return {
+      success: false,
+      message: err.message || "Network error. Please try again later.",
+      data: null,
+    };
   }
 }
 
@@ -30,14 +51,15 @@ export async function registerUser(data) {
       credentials: "include",
     });
 
-    const result = await response.json().catch(() => ({}));
-
-    if (!response.ok) {
-      throw new Error(result.message || "Registration failed. Try again.");
-    }
-
-    return result;
+    return await handleResponse(
+      response,
+      "Registration failed. Please try again."
+    );
   } catch (err) {
-    throw new Error(err.message || "Network error. Please try again later.");
+    return {
+      success: false,
+      message: err.message || "Network error. Please try again later.",
+      data: null,
+    };
   }
 }

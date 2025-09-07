@@ -24,13 +24,12 @@ export default function AuthPage() {
     });
 
     try {
-      await handleSubmit(e); // original auth submission
+      const result = await handleSubmit(e); // call useAuth hook
       Swal.close();
+
       await Swal.fire({
         title: "Success!",
-        text: isLogin
-          ? "You have successfully logged in."
-          : "You have successfully registered.",
+        text: result.message,
         icon: "success",
         confirmButtonText: "OK",
       });

@@ -1,24 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import { loginUser, registerUser } from "../services/authService";
-import {
-  showSuccessAlert,
-  showErrorAlert,
-  showEmailExistsAlert,
-} from "../utils/showAlert";
 import { AuthContext } from "../contexts/AuthContext";
 
 export const useAuth = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const { login } = useContext(AuthContext); // ✅ use context
+  const { login } = useContext(AuthContext);
 
   const toggleMode = () => setIsLogin((prev) => !prev);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
 
     const formData = isLogin
       ? {
@@ -32,29 +25,22 @@ export const useAuth = () => {
           confirmPassword: e.target.confirmPassword.value,
         };
 
-    try {
-      const result = isLogin
-        ? await loginUser(formData)
-        : await registerUser(formData);
+    const result = isLogin
+      ? await loginUser(formData)
+      : await registerUser(formData);
 
-      // ✅ update AuthContext (global state)
-      login(result);
-
-      setLoading(false);
-      showSuccessAlert(isLogin);
-
-      navigate("/"); // go to home page
-    } catch (error) {
-      setLoading(false);
-
-      if (!isLogin && error.message.includes("email")) {
-        showEmailExistsAlert();
-        return;
-      }
-
-      showErrorAlert(error.message || "Something went wrong");
+    if (!result.success) {
+      throw new Error(result.message);
     }
+
+    // ✅ update AuthContext only when success
+    login(result.data);
+
+    // ✅ navigate on success
+    navigate("/");
+
+    return result;
   };
 
-  return { isLogin, toggleMode, handleSubmit, loading };
+  return { isLogin, toggleMode, handleSubmit };
 };
