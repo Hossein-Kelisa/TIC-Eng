@@ -11,7 +11,8 @@
   transition: background 0.2s, transform 0.1s;
 }
 .request-form__button:hover {
-  background: #1d4ed8;
+  background: #5474cb;
+  transform: scale(1.02);
 }
 
 .request-form__button:disabled {

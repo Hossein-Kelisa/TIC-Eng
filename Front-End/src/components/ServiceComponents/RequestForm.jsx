@@ -16,7 +16,7 @@ export default function RequestForm() {
     lastName: "",
     email: "",
     company: "",
-    service: "testing",
+    service: "",
     message: "",
     phone: "",
     file: null,
