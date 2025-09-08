@@ -3,7 +3,11 @@ import StatusBadge from "./StatusBadge";
 export default function RequestRow({ request }) {
   return (
     <tr>
-      <td>{new Date(request.createdAt).toLocaleDateString()}</td>
+      <td>
+        {request.createdAt && !isNaN(new Date(request.createdAt).getTime())
+          ? new Date(request.createdAt).toLocaleDateString()
+          : "N/A"}
+      </td>
       <td>{request.firstName}</td>
       <td>{request.lastName}</td>
       <td>{request.email}</td>
