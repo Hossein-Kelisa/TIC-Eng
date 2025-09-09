@@ -1,20 +1,49 @@
 .request-form__button {
-  width: 100%;
-  padding: 0.75rem;
-  background: #2563eb;
-  color: white;
+  background-color: #007bff; /* primary blue */
+  color: #fff;
   border: none;
-  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
-}
-.request-form__button:hover {
-  background: #1d4ed8;
+  width: auto; /* default */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Hover effect */
+.request-form__button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Active (when clicked) */
+.request-form__button:active:not(:disabled) {
+  background-color: #00408f;
+  transform: translateY(0);
+}
+
+/* Disabled state */
 .request-form__button:disabled {
-  background: #93c5fd;
+  background-color: #cccccc;
+  color: #666666;
   cursor: not-allowed;
+}
+
+/* Tablet screens (≤768px) */
+@media (max-width: 768px) {
+  .request-form__button {
+    padding: 0.9rem 1.8rem;
+    font-size: 1.05rem;
+    max-width: 100%; /* expand but not full */
+  }
+}
+
+/* Mobile screens (≤480px) */
+@media (max-width: 480px) {
+  .request-form__button {
+    width: 100%; /* full width on small screens */
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
 }

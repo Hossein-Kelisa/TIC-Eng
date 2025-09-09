@@ -1,39 +1,60 @@
 .file-upload {
+  position: relative;
   border: 2px dashed #aaa;
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 1.5rem;
   text-align: center;
-  transition: border-color 0.3s, background-color 0.3s;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  background-color: #fafafa;
 }
 
 .file-upload--active {
   border-color: #007bff;
-  background-color: #f0f8ff;
+  background-color: #e9f3ff;
 }
 
 .file-upload__input {
-  display: none;
+  display: none; /* hide the default input */
 }
 
 .file-upload__label {
-  font-size: 14px;
+  display: block;
+  font-size: 1rem;
   color: #333;
-}
-.file-upload__label u {
   cursor: pointer;
 }
-.file-upload__label--active {
+
+.file-upload__label u {
   color: #007bff;
+  font-weight: 500;
+  text-decoration: underline;
 }
-.file-upload__label--error {
-  color: #ff0000;
+
+.file-upload__label span {
+  display: block;
+  word-break: break-word; /* long filenames won't overflow */
+  font-size: 0.95rem;
+  color: #555;
 }
-.file-upload__error-message {
-  color: #ff0000;
-  font-size: 12px;
-  margin-top: 8px;
+
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
+  .file-upload {
+    padding: 1.2rem;
+  }
+
+  .file-upload__label {
+    font-size: 0.95rem;
+  }
 }
-.file-upload__file-list {
-  margin-top: 10px;
-  text-align: left;
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .file-upload {
+    padding: 1rem;
+  }
+
+  .file-upload__label {
+    font-size: 0.9rem;
+  }
 }
