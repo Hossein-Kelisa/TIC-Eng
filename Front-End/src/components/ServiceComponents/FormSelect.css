@@ -1,13 +1,48 @@
 .request-form__select {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  transition: border-color 0.2s;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none; /* remove default arrow */
+}
+.request-form__select option {
+  padding: 0.5rem;
+  color: #333;
+  background: #fff;
 }
 
+/* Focus */
 .request-form__select:focus {
-  border-color: #2563eb;
-  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Disabled */
+.request-form__select:disabled {
+  background-color: #f5f5f5;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
+  .request-form__select {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .request-form__select {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9rem;
+    background-position: right 0.75rem center;
+    background-size: 10px;
+  }
 }
