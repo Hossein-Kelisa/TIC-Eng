@@ -5,13 +5,13 @@
 }
 
 .forgot-password {
-  color: #e61b1b;
+  color: #007bff;
   font-size: 0.9rem;
   cursor: pointer;
   text-align: right;
 }
 
 .forgot-password:hover {
-  color: #b20202;
+  color: #0056b3;
   text-decoration: underline;
 }

@@ -45,7 +45,7 @@ export default function AuthPage() {
   };
 
   return (
-    <>
+    <div id="AuthPage">
       <Header />
       <main className="auth-page">
         <div className="auth-container">
@@ -61,11 +61,13 @@ export default function AuthPage() {
           ) : (
             <RegisterForm handleSubmit={handleSubmitWithLoading} />
           )}
-
-          <AuthToggle isLogin={isLogin} toggleMode={toggleMode} />
+          {/* Only show toggle if NOT on forgot password */}
+          {!showForgotForm && (
+            <AuthToggle isLogin={isLogin} toggleMode={toggleMode} />
+          )}
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

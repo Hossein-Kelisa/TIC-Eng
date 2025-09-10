@@ -3,9 +3,12 @@
 }
 
 #RequestForm .header {
-  position: relative !important;
-  background: linear-gradient(to left, #e2ce6a8d, #dbd4ca5b) !important;
+  position: relative;
+  background: linear-gradient(to left, #e2ce6a8d, #dbd4ca5b);
   border-radius: 10px;
   margin: 0 1rem 2rem 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+#RequestForm .header .search {
+  display: none;
 }
