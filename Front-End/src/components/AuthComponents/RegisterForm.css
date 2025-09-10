@@ -17,15 +17,18 @@
 }
 
 .primary-btn {
-  background: #e61b1b;
-  color: white;
+  background-color: #007bff; /* primary blue */
+  color: #fff;
   border: none;
-  padding: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  width: auto; /* default */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .primary-btn:hover {
-  background: #b20202;
+  background: #0056b3;
 }
