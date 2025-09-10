@@ -5,7 +5,10 @@
 #RequestForm .header {
   position: relative !important;
   background: linear-gradient(to left, #e2ce6a8d, #dbd4ca5b) !important;
-  border-radius: 10px;
-  margin: 0 1rem 2rem 1rem;
+  border-radius: 10px !important;
+  margin: 0 1rem 2rem 1rem !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+#RequestForm .header .search {
+  display: none !important;
 }

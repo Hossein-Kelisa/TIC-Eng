@@ -45,7 +45,7 @@ export default function AuthPage() {
   };
 
   return (
-    <>
+    <div id="AuthPage">
       <Header />
       <main className="auth-page">
         <div className="auth-container">
@@ -66,6 +66,6 @@ export default function AuthPage() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
