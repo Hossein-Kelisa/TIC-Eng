@@ -14,12 +14,13 @@
 .auth-toggle-btn {
   background: none;
   border: none;
-  color: #e61b1b;
+  color: #007bff; /* primary blue */
   font-weight: bold;
   cursor: pointer;
   transition: color 0.2s ease;
 }
 
 .auth-toggle-btn:hover {
-  color: #b20202;
+  color: #0056b3;
+  text-decoration: underline;
 }

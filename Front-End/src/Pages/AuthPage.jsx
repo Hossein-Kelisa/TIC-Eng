@@ -61,8 +61,10 @@ export default function AuthPage() {
           ) : (
             <RegisterForm handleSubmit={handleSubmitWithLoading} />
           )}
-
-          <AuthToggle isLogin={isLogin} toggleMode={toggleMode} />
+          {/* Only show toggle if NOT on forgot password */}
+          {!showForgotForm && (
+            <AuthToggle isLogin={isLogin} toggleMode={toggleMode} />
+          )}
         </div>
       </main>
       <Footer />
