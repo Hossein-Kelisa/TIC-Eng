@@ -15,7 +15,7 @@ function DownloadForms() {
           </p>
         </Fades>
         <div className="download-buttons">
-          {/* <Fades animationType="fadeLeft">
+          <Fades animationType="fadeLeft">
             <a href="/Forms/1.pdf" download className="download-btn">
               Joosh form <FaFilePdf />
             </a>
@@ -24,7 +24,7 @@ function DownloadForms() {
             <a href="/Forms/2.pdf" download className="download-btn">
               Makhzan form <FaFilePdf />
             </a>
-          </Fades> */}
+          </Fades>
         </div>
       </div>
     </section>

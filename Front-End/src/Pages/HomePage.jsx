@@ -3,7 +3,7 @@ import Header from "../components/HomeComponents/Header";
 import Hero from "../components/HomeComponents/Hero";
 import Services from "../components/HomeComponents/Services";
 import About from "../components/HomeComponents/About";
-import DownloadForms from "../components/ServiceComponents/DownloadForms";
+import DownloadForms from "../components/HomeComponents/DownloadForms";
 import Industries from "../components/HomeComponents/Industries";
 import Team from "../components/HomeComponents/Team";
 import FAQ from "../components/HomeComponents/FAQ";

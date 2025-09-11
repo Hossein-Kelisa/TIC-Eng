@@ -1,7 +1,7 @@
 import { useState } from "react";
-// import { useContext } from "react";
-// import AuthButton from "../AuthComponents/AuthButton";
-// import { AuthContext } from "../../contexts/AuthContext";
+import { useContext } from "react";
+import AuthButton from "../AuthComponents/AuthButton";
+import { AuthContext } from "../../contexts/AuthContext";
 import {
   FaFacebook,
   FaLinkedin,
@@ -12,7 +12,7 @@ import "./TopBar.css";
 
 export default function TopBar({ onLanguageChange }) {
   const [language, setLanguage] = useState("en");
-  // const { user, logout } = useContext(AuthContext); //  use global auth
+  const { user, logout } = useContext(AuthContext); //  use global auth
 
   const toggleLanguage = () => {
     const newLang = language === "en" ? "fa" : "en";
@@ -33,11 +33,11 @@ export default function TopBar({ onLanguageChange }) {
             className="flag-icon"
           />
         </button>
-          {/* <AuthButton
-            className="auth-button"
-            isLoggedIn={user !== null}
-            onLogout={logout}
-          /> */}
+        <AuthButton
+          className="auth-button"
+          isLoggedIn={user !== null}
+          onLogout={logout}
+        />
       </div>
 
       {/* Right: Social Icons */}
