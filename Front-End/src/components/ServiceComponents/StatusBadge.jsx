@@ -5,12 +5,19 @@ import "./StatusBadge.css";
 
 const DEFAULT_STATUSES = ["pending", "in-progress", "completed"];
 
-export default function StatusBadge({ status, onChange, editable = true, statuses = DEFAULT_STATUSES }) {
+export default function StatusBadge({
+  status,
+  onChange,
+  editable = true,
+  statuses = DEFAULT_STATUSES,
+}) {
   const [editing, setEditing] = useState(false);
   const [pending, setPending] = useState(false);
 
   const current = status || "Unknown";
-  const normalizedClass = (current || "unknown").toLowerCase().replace(/\s+/g, "-");
+  const normalizedClass = (current || "unknown")
+    .toLowerCase()
+    .replace(/\s+/g, "-");
 
   const handleSelectChange = async (e) => {
     const newStatus = e.target.value;
@@ -22,9 +29,7 @@ export default function StatusBadge({ status, onChange, editable = true, statuse
       setPending(true);
       // if onChange returns a promise we await it; otherwise treat as sync
       const maybePromise = onChange(newStatus);
-      if (maybePromise && maybePromise.then) {
-        await maybePromise;
-      }
+      await Promise.resolve(maybePromise);
       setEditing(false);
     } catch (err) {
       // let parent show error; keep editing so user can retry

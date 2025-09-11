@@ -1,6 +1,9 @@
 // src/components/ServiceComponents/RequestList.jsx
 import { useEffect, useState } from "react";
-import { getRequests, updateRequestStatus } from "../../services/requestService";
+import {
+  getRequests,
+  updateRequestStatus,
+} from "../../services/requestService";
 import RequestTable from "./RequestTable";
 import Swal from "sweetalert2";
 import "./RequestList.css";
@@ -31,7 +34,8 @@ export default function RequestList() {
   // handle status change from child components
   const handleStatusChange = async (requestId, newStatus) => {
     // find old status to revert if needed
-    const oldStatus = requests.find((r) => r._id === requestId)?.status || "Unknown";
+    const oldStatus =
+      requests.find((r) => r._id === requestId)?.status || "Unknown";
 
     // optimistic UI update
     setRequests((prev) =>
@@ -55,7 +59,7 @@ export default function RequestList() {
       Swal.fire({
         icon: "error",
         title: "Update failed",
-        text: err.response?.data?.message || err.message || "Could not update status.",
+        text: err.message || "Could not update status.",
       });
     }
   };
