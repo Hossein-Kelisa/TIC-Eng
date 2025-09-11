@@ -44,6 +44,6 @@
   .request-form__button {
     width: 100%; /* full width on small screens */
     padding: 1rem;
-    font-size: 0.8rem
+    font-size: 0.8rem;
   }
 }

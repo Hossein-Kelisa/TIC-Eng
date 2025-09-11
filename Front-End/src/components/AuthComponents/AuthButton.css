@@ -5,7 +5,7 @@
   padding: 6px 12px;
   border: none;
   border-radius: 12px;
-  color: #c81f1f; /* dark red */
+  color: #000000; 
   font-weight: 500;
   transition: 0.2s;
   background: none;
@@ -14,6 +14,7 @@
 .Auth-Login:hover {
   cursor: pointer;
   transform: scale(1.05);
+  color: #c81f1f; 
 }
 
 .Auth-Logout {
@@ -23,7 +24,7 @@
   padding: 6px 12px;
   border: none;
   border-radius: 12px;
-  color: #17971c; /* dark green */
+  color: #17971c; 
   font-weight: 500;
   transition: 0.2s;
   background: none;
@@ -35,7 +36,11 @@
 }
 
 .UserIcon-Login {
-  color: #c81f1f; /* red */
+  color: #000000; /* black */
+}
+
+.UserIcon-Login:hover {
+  color: #c81f1f; /* darker red on hover */
 }
 
 .UserIcon-Logout {
