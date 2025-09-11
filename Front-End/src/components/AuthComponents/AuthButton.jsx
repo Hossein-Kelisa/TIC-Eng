@@ -1,4 +1,4 @@
-import { LogIn, LogOut } from "lucide-react";
+import { User2 } from "lucide-react";
 import "./AuthButton.css";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -13,17 +13,29 @@ function AuthButton({ isLoggedIn, onLogout }) {
       icon: "warning",
       showCancelButton: true,
       confirmButtonText: "Yes, logout",
-      cancelButtonText: "No, stay logged in",
+      cancelButtonText: "Stay logged in",
       reverseButtons: true,
+      confirmButtonColor: "#1f7840ff", // green
+      cancelButtonColor: "#aa1d1dff",  // red
+      background: "#fefce8",          // light background
+      color: "#111827",               // dark text
     }).then((result) => {
       if (result.isConfirmed) {
         onLogout();
         navigate("/"); // go to home page after logout
-        Swal.fire(
-          "Logged out!",
-          "You have successfully logged out.",
-          "success"
-        );
+
+        // non-blocking toast instead of modal
+        Swal.fire({
+          toast: true,
+          position: "top-end",
+          icon: "success",
+          title: "Logged out successfully",
+          showConfirmButton: false,
+          timer: 1800,
+          timerProgressBar: true,
+          background: "#f0fdf4",
+          color: "#166534",
+        });
       }
     });
   };
@@ -36,7 +48,7 @@ function AuthButton({ isLoggedIn, onLogout }) {
           className="Auth-Logout"
           aria-label="Logout from your account"
         >
-          <LogOut size={22} aria-hidden="true" />
+          <User2 size={22} className="UserIcon-Logout" aria-hidden="true" />
           Logout
         </button>
       ) : (
@@ -45,7 +57,7 @@ function AuthButton({ isLoggedIn, onLogout }) {
           className="Auth-Login"
           aria-label="Login to your account"
         >
-          <LogIn size={22} aria-hidden="true" />
+          <User2 size={22} className="UserIcon-Login" aria-hidden="true" />
           Login
         </button>
       )}

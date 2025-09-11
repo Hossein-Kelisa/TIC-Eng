@@ -46,10 +46,14 @@ export default function RequestList() {
       await updateRequestStatus(requestId, newStatus);
       // optional small success toast
       Swal.fire({
+        toast: true,
+        position: "top-end",
         icon: "success",
-        title: "Status updated",
+        title: `Status updated to "${newStatus}"`,
         showConfirmButton: false,
-        timer: 900,
+        timer: 2000,
+        background: "#f0fdf4",
+        color: "#166534",
       });
     } catch (err) {
       // revert on error
@@ -60,6 +64,10 @@ export default function RequestList() {
         icon: "error",
         title: "Update failed",
         text: err.message || "Could not update status.",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#dc2626",
+        background: "#fef2f2",
+        color: "#991b1b",
       });
     }
   };
@@ -69,7 +77,7 @@ export default function RequestList() {
 
   return (
     <div className="request-list">
-      <h2 className="request-list__title">Service Requests</h2>
+      <h2 className="request-list__title">All Services</h2>
       <RequestTable requests={requests} onStatusChange={handleStatusChange} />
     </div>
   );

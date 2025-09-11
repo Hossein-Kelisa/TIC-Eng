@@ -28,10 +28,14 @@ export default function AuthPage() {
       Swal.close();
 
       await Swal.fire({
-        title: "Success!",
-        text: result.message,
+        title: result.message,
         icon: "success",
         confirmButtonText: "OK",
+        showConfirmButton: false,
+        timer: 1800,
+        timerProgressBar: true,
+        background: "#f0fdf4", // light green
+        color: "#166534", // dark green
       });
     } catch (err) {
       Swal.close();
@@ -40,6 +44,9 @@ export default function AuthPage() {
         text: err.message || "Something went wrong.",
         icon: "error",
         confirmButtonText: "OK",
+        confirmButtonColor: "#dc2626",
+        background: "#fef2f2",
+        color: "#991b1b",
       });
     }
   };

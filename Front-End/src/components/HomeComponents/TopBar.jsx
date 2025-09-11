@@ -1,5 +1,7 @@
 import { useState } from "react";
-// import { Sun, Moon } from "lucide-react";
+// import { useContext } from "react";
+// import AuthButton from "../AuthComponents/AuthButton";
+// import { AuthContext } from "../../contexts/AuthContext";
 import {
   FaFacebook,
   FaLinkedin,
@@ -9,13 +11,8 @@ import {
 import "./TopBar.css";
 
 export default function TopBar({ onLanguageChange }) {
-//   const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState("en");
-
-//   const toggleDarkMode = () => {
-//     setDarkMode(!darkMode);
-//     document.documentElement.classList.toggle("dark");
-//   };
+  // const { user, logout } = useContext(AuthContext); //  use global auth
 
   const toggleLanguage = () => {
     const newLang = language === "en" ? "fa" : "en";
@@ -27,7 +24,7 @@ export default function TopBar({ onLanguageChange }) {
 
   return (
     <div className="top-bar">
-      {/* Left: Language & Dark Mode */}
+      {/* Left: Language and Auth */}
       <div className="top-bar-left">
         <button onClick={toggleLanguage} className="lang-btn">
           <img
@@ -36,9 +33,11 @@ export default function TopBar({ onLanguageChange }) {
             className="flag-icon"
           />
         </button>
-        {/* <button onClick={toggleDarkMode} className="dark-btn">
-          {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-        </button> */}
+          {/* <AuthButton
+            className="auth-button"
+            isLoggedIn={user !== null}
+            onLogout={logout}
+          /> */}
       </div>
 
       {/* Right: Social Icons */}

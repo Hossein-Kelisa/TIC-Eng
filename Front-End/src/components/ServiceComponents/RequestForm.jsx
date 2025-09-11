@@ -56,7 +56,7 @@ export default function RequestForm() {
         lastName: "",
         email: "",
         company: "",
-        service: "testing",
+        service: "",
         message: "",
         phone: "",
         file: null,
@@ -64,11 +64,18 @@ export default function RequestForm() {
 
       // Close loading and show success
       Swal.close();
-      await Swal.fire({
-        title: "Success!",
-        text: "Your request has been submitted successfully.",
+
+      // Success toast (non-blocking)
+      Swal.fire({
+        toast: true,
+        position: "top-end",
         icon: "success",
-        confirmButtonText: "OK",
+        title: "Request submitted successfully",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        background: "#f0fdf4", // light green
+        color: "#166534",      // dark green text
       });
 
       navigate("/"); // Go to home after OK
@@ -76,11 +83,14 @@ export default function RequestForm() {
       console.error("Request submission error:", err);
 
       Swal.close();
-      await Swal.fire({
+      Swal.fire({
+        icon: "error",
         title: "Error!",
         text: err.message || "Failed to submit request.",
-        icon: "error",
         confirmButtonText: "OK",
+        confirmButtonColor: "#dc2626",
+        background: "#fef2f2",
+        color: "#991b1b",
       });
     } finally {
       setLoading(false);
