@@ -52,3 +52,31 @@ export async function getRequests() {
     throw new Error(err.message || "Network error. Please try again later.");
   }
 }
+
+export async function updateRequestStatus(requestId, status) {
+  const token = localStorage.getItem("token");
+  if (!token) throw new Error("No admin token found");
+
+  try {
+    const response = await fetch(`${API_URL}/requests/${requestId}/status`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+        Accept: "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify({ status }),
+    });
+
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      throw new Error(result.message || "Failed to update request status.");
+    }
+
+    return result;
+  } catch (err) {
+    throw new Error(err.message || "Network error. Please try again later.");
+  }
+}

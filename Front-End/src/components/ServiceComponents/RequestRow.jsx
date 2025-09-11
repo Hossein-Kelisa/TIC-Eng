@@ -1,13 +1,24 @@
+// src/components/ServiceComponents/RequestRow.jsx
 import StatusBadge from "./StatusBadge";
+import { format } from "date-fns";
+import "./RequestRow.css";
 
-export default function RequestRow({ request }) {
+export default function RequestRow({ request, onStatusChange }) {
+  let dateLabel = "N/A";
+  if (request.createdAt) {
+    const d = new Date(request.createdAt);
+    if (!isNaN(d.getTime())) {
+      try {
+        dateLabel = format(d, "dd/MM/yyyy"); // consistent format
+      } catch {
+        dateLabel = d.toLocaleDateString();
+      }
+    }
+  }
+
   return (
     <tr>
-      <td>
-        {request.createdAt && !isNaN(new Date(request.createdAt).getTime())
-          ? new Date(request.createdAt).toLocaleDateString()
-          : "N/A"}
-      </td>
+      <td>{dateLabel}</td>
       <td>{request.firstName}</td>
       <td>{request.lastName}</td>
       <td>{request.email}</td>
@@ -15,7 +26,10 @@ export default function RequestRow({ request }) {
       <td>{request.phone}</td>
       <td>{request.message}</td>
       <td>
-        <StatusBadge status={request.status} />
+        <StatusBadge
+          status={request.status}
+          onChange={(newStatus) => onStatusChange(request._id, newStatus)}
+        />
       </td>
       <td>
         {request.fileUrl ? (

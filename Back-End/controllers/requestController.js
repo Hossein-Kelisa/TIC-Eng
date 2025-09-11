@@ -91,3 +91,40 @@ export const getRequests = async (req, res, next) => {
     return res.status(500).json({ message: "❌ Server error" });
   }
 };
+
+/** Update request status (Admin only)
+ * expects: status in body
+ */
+export const updateRequestStatus = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+
+    // ✅ validate status
+    const validStatuses = ["pending", "in-progress", "completed"];
+    if (!validStatuses.includes(status)) {
+      return res
+        .status(400)
+        .json({ message: `Status must be one of: ${validStatuses.join(", ")}` });
+    }
+
+    // ✅ find and update request
+    const updatedRequest = await Request.findByIdAndUpdate(
+      id,
+      { status },
+      { new: true }
+    );
+
+    if (!updatedRequest) {
+      return res.status(404).json({ message: "Request not found" });
+    }
+
+    return res.json({
+      message: "✅ Request status updated successfully",
+      data: updatedRequest,
+    });
+  } catch (err) {
+    if (next) return next(err);
+    return res.status(500).json({ message: "❌ Server error" });
+  }
+};

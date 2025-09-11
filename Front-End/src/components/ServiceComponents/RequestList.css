@@ -1,94 +1,17 @@
+/* RequestList.css */
 .request-list {
-  padding: 2rem;
-  background-color: #f9fafb;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
 }
 
 .request-list__title {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-  color: #1f2937;
-  text-align: center;
+  margin: 0 0 1rem 0;
+  font-size: 1.4rem;
+  color: #222;
 }
 
 .request-list__loading,
-.request-list__error,
-.request-list__empty {
-  text-align: center;
-  padding: 1rem;
-  font-size: 1rem;
-  color: #6b7280;
-}
-
 .request-list__error {
-  color: #dc2626;
-  font-weight: bold;
-}
-
-.request-list__table-container {
-  overflow-x: auto;
-}
-
-.request-list__table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.request-list__table th,
-.request-list__table td {
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #e5e7eb;
-  text-align: left;
-  font-size: 0.95rem;
-  color: #374151;
-}
-
-.request-list__table th {
-  background-color: #f3f4f6;
-  font-weight: 600;
-}
-
-.request-list__link {
-  color: #2563eb;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.request-list__link:hover {
-  text-decoration: underline;
-}
-
-.request-list__no-file {
-  color: #9ca3af;
-  font-style: italic;
-}
-
-/* Status badges */
-.status {
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  display: inline-block;
-  text-transform: capitalize;
-}
-
-.status--pending {
-  background-color: #fef3c7;
-  color: #92400e;
-}
-
-.status--approved {
-  background-color: #d1fae5;
-  color: #065f46;
-}
-
-.status--rejected {
-  background-color: #fee2e2;
-  color: #991b1b;
+  padding: 1rem;
+  text-align: center;
+  color: #666;
 }
