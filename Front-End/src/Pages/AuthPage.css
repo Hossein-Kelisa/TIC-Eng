@@ -39,7 +39,7 @@
   .auth-page {
     padding: 1.5rem;
     gap: 0.9rem;
-    margin: 1.5rem 0.5rem;
+    margin: 4rem 1rem;
     max-width: 100%;
   }
 
@@ -51,6 +51,7 @@
   .auth-page {
     padding: 1rem;
     gap: 0.8rem;
+    margin: 3rem 0.5rem;
   }
 
   .auth-title {

@@ -1,0 +1,24 @@
+/* RequestRow.css */
+tr {
+  transition: background-color 120ms ease;
+}
+
+tr:hover {
+  background: #fcfcfc;
+}
+
+.request-list__link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.request-list__link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.request-list__no-file {
+  color: #888;
+  font-style: italic;
+}

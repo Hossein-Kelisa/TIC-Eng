@@ -1,0 +1,43 @@
+/* StatusBadge.css */
+.status {
+  display: inline-block;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1;
+  min-width: 64px;
+  text-align: center;
+}
+
+/* color variants */
+.status--active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status--pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status--failed,
+.status--error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status--unknown {
+  background-color: #e2e3e5;
+  color: #6c757d;
+}
+
+/* select for editing */
+.status-select {
+  padding: 0.25rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  border: 1px solid #d1d1d1;
+  background: white;
+}

@@ -49,3 +49,40 @@
 .secondary-btn:hover {
   background: #0056b3;
 }
+
+@media (max-width: 768px) {
+  .forgot-pass-form {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .primary-btn2 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .secondary-btn {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .form-input2 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .forgot-pass-form {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .primary-btn2 {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .secondary-btn {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .form-input2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}

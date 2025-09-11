@@ -1,6 +1,8 @@
+// src/components/ServiceComponents/RequestTable.jsx
 import RequestRow from "./RequestRow";
+import "./RequestTable.css";
 
-export default function RequestTable({ requests }) {
+export default function RequestTable({ requests, onStatusChange }) {
   return (
     <div className="request-list__table-container">
       <table className="request-list__table">
@@ -19,10 +21,16 @@ export default function RequestTable({ requests }) {
         </thead>
         <tbody>
           {requests.length > 0 ? (
-            requests.map((req) => <RequestRow key={req._id} request={req} />)
+            requests.map((req) => (
+              <RequestRow
+                key={req._id}
+                request={req}
+                onStatusChange={onStatusChange}
+              />
+            ))
           ) : (
             <tr>
-              <td colSpan="7" className="request-list__empty">
+              <td colSpan="9" className="request-list__empty">
                 No requests found.
               </td>
             </tr>

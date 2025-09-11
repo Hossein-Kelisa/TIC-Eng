@@ -24,3 +24,16 @@
   color: #0056b3;
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .auth-toggle {
+    flex-direction: column;
+    gap: 4px;
+}
+}
+@media (max-width: 480px) {
+  .auth-toggle {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+}
