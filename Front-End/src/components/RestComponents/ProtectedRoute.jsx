@@ -55,7 +55,8 @@ const ProtectedRoute = ({ children }) => {
 
         // Token valid → render children
         setChecking(false);
-      } catch {
+      } catch (error) {
+        console.error("Auth verification failed:", error);
         logout();
         Swal.close();
         MySwal.fire({
