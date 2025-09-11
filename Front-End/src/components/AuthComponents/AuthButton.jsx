@@ -13,17 +13,29 @@ function AuthButton({ isLoggedIn, onLogout }) {
       icon: "warning",
       showCancelButton: true,
       confirmButtonText: "Yes, logout",
-      cancelButtonText: "No, stay logged in",
+      cancelButtonText: "Stay logged in",
       reverseButtons: true,
+      confirmButtonColor: "#1f7840ff", // green
+      cancelButtonColor: "#aa1d1dff",  // red
+      background: "#fefce8",          // light background
+      color: "#111827",               // dark text
     }).then((result) => {
       if (result.isConfirmed) {
         onLogout();
         navigate("/"); // go to home page after logout
-        Swal.fire(
-          "Logged out!",
-          "You have successfully logged out.",
-          "success"
-        );
+
+        // non-blocking toast instead of modal
+        Swal.fire({
+          toast: true,
+          position: "top-end",
+          icon: "success",
+          title: "Logged out successfully",
+          showConfirmButton: false,
+          timer: 1800,
+          timerProgressBar: true,
+          background: "#f0fdf4",
+          color: "#166534",
+        });
       }
     });
   };
