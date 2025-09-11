@@ -4,7 +4,8 @@
   border-radius: 8px;
   background: #fff;
   padding: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  border: 0.5px solid #e9e8e894;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .request-list__table {
@@ -21,10 +22,12 @@
   vertical-align: middle;
   font-size: 0.95rem;
   color: #333;
+  white-space: normal; /* allow wrapping */
+  word-break: break-word; /* break long words if needed */
 }
 
 .request-list__table thead th {
-  background: #fafafa;
+  background: #f0efef;
   font-weight: 600;
   position: sticky;
   top: 0;
@@ -35,4 +38,27 @@
   padding: 1.25rem;
   text-align: center;
   color: #777;
+}
+
+@media (max-width: 768px) {
+  .request-list__table {
+    min-width: 600px; /* allow table to shrink on tablets */
+  }
+
+  .request-list__table th,
+  .request-list__table td {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 480px) {
+  .request-list__table {
+    min-width: 400px; /* allow table to shrink on mobile */
+  }
+
+  .request-list__table th,
+  .request-list__table td {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.45rem;
+  }
 }

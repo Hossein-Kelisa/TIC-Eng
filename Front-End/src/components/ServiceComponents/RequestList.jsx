@@ -69,7 +69,7 @@ export default function RequestList() {
 
   return (
     <div className="request-list">
-      <h2 className="request-list__title">Service Requests</h2>
+      <h2 className="request-list__title">All Services</h2>
       <RequestTable requests={requests} onStatusChange={handleStatusChange} />
     </div>
   );
