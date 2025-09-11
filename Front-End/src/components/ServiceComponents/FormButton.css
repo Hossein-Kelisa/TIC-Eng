@@ -34,7 +34,7 @@
 @media (max-width: 768px) {
   .request-form__button {
     padding: 0.9rem 1.8rem;
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     max-width: 100%; /* expand but not full */
   }
 }
@@ -44,6 +44,6 @@
   .request-form__button {
     width: 100%; /* full width on small screens */
     padding: 1rem;
-    font-size: 1.1rem;
+    font-size: 0.8rem
   }
 }
