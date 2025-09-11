@@ -48,7 +48,6 @@ function Hero() {
       </div>
       <div className="hero-right hero-content">
         <h2>Tic with certainty from test to trust</h2>
-        {/* <p>Connect with our TIC experts</p> */}
         <ShinyText
           text="Connect with our TIC experts"
           disabled={false}

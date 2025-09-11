@@ -61,6 +61,26 @@
   color: #7f1010;
 }
 
+.RequestService-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #d32f2f;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.RequestService-btn:hover {
+  background: #b71c1c;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
 @media (max-width: 1024px) {
   .industries-title {
     font-size: 4.5rem;
@@ -96,6 +116,10 @@
     aspect-ratio: 16 / 9;
     height: auto;
   }
+  .RequestService-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -116,5 +140,9 @@
   }
   .industry-card h4 {
     font-size: 1rem;
+  }
+  .RequestService-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
 }
