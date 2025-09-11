@@ -1,17 +1,13 @@
 import { useState } from "react";
-// import { useContext } from "react";
 import "./Header.css";
 import logo from "../../assets/Logo.png";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-// import AuthButton from "./AuthButton";
-// import { AuthContext } from "../contexts/AuthContext";
 import Search from "./Search";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  // const { user, logout } = useContext(AuthContext); //  use global auth
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -48,7 +44,7 @@ function Header() {
           <span className="highlight">C</span>ertification
         </span>
       </div>
-      
+
       <div className="search-container">
         <Search />
       </div>
@@ -71,15 +67,13 @@ function Header() {
         >
           ×
         </button>
-        {/* <AuthButton
-          className="auth-button"
-          isLoggedIn={user !== null}
-          onLogout={logout}
-        /> */}
+
         <div className="sidebar-nav">
           <button onClick={() => handleScroll("services")}>Services</button>
           <button onClick={() => handleScroll("about")}>About</button>
-          <button onClick={() => handleScroll("download-forms")}>Download Forms</button>
+          <button onClick={() => handleScroll("download-forms")}>
+            Download Forms
+          </button>
           <button onClick={() => handleScroll("industries")}>Industries</button>
           <button onClick={() => handleScroll("team")}>Team</button>
           <button onClick={() => handleScroll("contact")}>Contact</button>

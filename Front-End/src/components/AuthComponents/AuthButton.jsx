@@ -1,4 +1,4 @@
-import { LogIn, LogOut } from "lucide-react";
+import { User } from "lucide-react";
 import "./AuthButton.css";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -36,7 +36,7 @@ function AuthButton({ isLoggedIn, onLogout }) {
           className="Auth-Logout"
           aria-label="Logout from your account"
         >
-          <LogOut size={22} aria-hidden="true" />
+          <User size={22} className="UserIcon-Logout" aria-hidden="true" />
           Logout
         </button>
       ) : (
@@ -45,7 +45,7 @@ function AuthButton({ isLoggedIn, onLogout }) {
           className="Auth-Login"
           aria-label="Login to your account"
         >
-          <LogIn size={22} aria-hidden="true" />
+          <User size={22} className="UserIcon-Login" aria-hidden="true" />
           Login
         </button>
       )}

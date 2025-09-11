@@ -1,32 +1,43 @@
-.Auth-Login,
-.Auth-Logout {
-  color: #000000;
-  background: none;
+.Auth-Login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
   border: none;
-  font-size: 1.3rem;
+  border-radius: 12px;
+  color: #c81f1f; /* dark red */
   font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
-  margin-bottom: 3rem;
+  transition: 0.2s;
+  background: none;
+  margin-left: 5px;
 }
-.Auth-Login:hover,
-.Auth-Logout:hover {
-  color: #e61b1b;
-  transform: scale(1.2);
-  transition: color 0.3s, transform 0.3s;
+.Auth-Login:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-  .Auth-Login,
-  .Auth-Logout {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
+.Auth-Logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 12px;
+  color: #17971c; /* dark green */
+  font-weight: 500;
+  transition: 0.2s;
+  background: none;
+  margin-left: 5px;
 }
-@media (max-width: 480px) {
-  .Auth-Login,
-  .Auth-Logout {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
+.Auth-Logout:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.UserIcon-Login {
+  color: #c81f1f; /* red */
+}
+
+.UserIcon-Logout {
+  color: #23be29; /* green */
 }
