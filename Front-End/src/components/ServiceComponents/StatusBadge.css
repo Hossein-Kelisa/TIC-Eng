@@ -12,14 +12,14 @@
 }
 
 /* color variants */
-.status--active {
-  background-color: #d4edda;
-  color: #155724;
+.status--completed {
+  background: none;
+  color: #000000;
 }
 
 .status--pending {
   background-color: #fff3cd;
-  color: #856404;
+  color: #a06518;
 }
 
 .status--failed,
@@ -28,9 +28,9 @@
   color: #721c24;
 }
 
-.status--unknown {
-  background-color: #e2e3e5;
-  color: #6c757d;
+.status--in-progress {
+  background-color: #d4edda;
+  color: #155724;
 }
 
 /* select for editing */
