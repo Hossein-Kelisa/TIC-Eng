@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import "./StatusBadge.css";
 
-const DEFAULT_STATUSES = ["Active", "Pending", "Failed", "Unknown"];
+const DEFAULT_STATUSES = ["pending", "in-progress", "completed"];
 
 export default function StatusBadge({ status, onChange, editable = true, statuses = DEFAULT_STATUSES }) {
   const [editing, setEditing] = useState(false);

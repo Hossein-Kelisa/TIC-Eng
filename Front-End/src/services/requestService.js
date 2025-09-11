@@ -58,7 +58,7 @@ export async function updateRequestStatus(requestId, status) {
   if (!token) throw new Error("No admin token found");
 
   try {
-    const response = await fetch(`${API_URL}/requests/${requestId}`, {
+    const response = await fetch(`${API_URL}/requests/${requestId}/status`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
