@@ -124,6 +124,7 @@ export default function RequestForm() {
         placeholder="Company"
         value={formData.company}
         onChange={handleChange}
+        required
       />
 
       <FormSelect
@@ -135,6 +136,7 @@ export default function RequestForm() {
           { value: "inspection", label: "Inspection" },
           { value: "certification", label: "Certification" },
         ]}
+        required
       />
 
       <FormTextarea
