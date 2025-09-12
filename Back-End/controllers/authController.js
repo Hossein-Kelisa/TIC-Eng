@@ -52,7 +52,7 @@ export const loginUser = async (req, res) => {
 
   try {
     // 1️⃣ Find user by email
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email: email.toLowerCase() });
 
     // 2️⃣ Check password
     if (user && await user.matchPassword(password)) {
