@@ -3,12 +3,15 @@ const API_URL = import.meta.env.VITE_API_URL;
 /**
  * Create a new request (with PDF file).
  */
-export async function createRequest(formData) {
+export async function createRequest(formData, token) {
   try {
     const response = await fetch(`${API_URL}/requests`, {
       method: "POST",
       body: formData, // FormData includes file + fields
       credentials: "include",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
 
     const result = await response.json().catch(() => ({}));

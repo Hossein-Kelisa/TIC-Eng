@@ -8,13 +8,13 @@ import FormFileUpload from "./FormFileUpload";
 import FormButton from "./FormButton";
 import Swal from "sweetalert2";
 import "./RequestForm.css";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export default function RequestForm() {
   const navigate = useNavigate();
+  const { user, token } = useContext(AuthContext);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
     company: "",
     service: "",
     message: "",
@@ -36,6 +36,10 @@ export default function RequestForm() {
     setLoading(true);
 
     const data = new FormData();
+    data.append("firstName", user?.firstName || "");
+    data.append("lastName", user?.lastName || "");
+    data.append("email", user?.email || "");
+
     Object.entries(formData).forEach(([key, value]) => {
       if (value !== null) data.append(key, value);
     });
@@ -48,13 +52,10 @@ export default function RequestForm() {
         didOpen: () => Swal.showLoading(),
       });
 
-      await createRequest(data);
+      await createRequest(data, token);
 
       // Clear form
       setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
         company: "",
         service: "",
         message: "",
@@ -75,7 +76,7 @@ export default function RequestForm() {
         timer: 2000,
         timerProgressBar: true,
         background: "#f0fdf4", // light green
-        color: "#166534",      // dark green text
+        color: "#166534", // dark green text
       });
 
       navigate("/"); // Go to home after OK
@@ -104,29 +105,18 @@ export default function RequestForm() {
       <FormInput
         type="text"
         name="firstName"
-        placeholder="First Name"
-        value={formData.firstName}
-        onChange={handleChange}
-        required
+        value={user?.firstName || ""}
+        readOnly
       />
 
       <FormInput
         type="text"
         name="lastName"
-        placeholder="Last Name"
-        value={formData.lastName}
-        onChange={handleChange}
-        required
+        value={user?.lastName || ""}
+        readOnly
       />
 
-      <FormInput
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
+      <FormInput type="email" name="email" value={user?.email || ""} readOnly />
 
       <FormInput
         type="text"
@@ -134,6 +124,7 @@ export default function RequestForm() {
         placeholder="Company"
         value={formData.company}
         onChange={handleChange}
+        required
       />
 
       <FormSelect
@@ -145,6 +136,7 @@ export default function RequestForm() {
           { value: "inspection", label: "Inspection" },
           { value: "certification", label: "Certification" },
         ]}
+        required
       />
 
       <FormTextarea

@@ -2,9 +2,15 @@
 import { body, validationResult } from "express-validator";
 
 export const validateRegister = [
-  body("userName").trim().notEmpty().withMessage("userName is required"),
-  body("email").isEmail().withMessage("Valid email is required").normalizeEmail(),
-  body("password").isLength({ min: 6 }).withMessage("Password must be at least 6 characters"),
+  body("firstName").trim().notEmpty().withMessage("First Name is required"),
+  body("lastName").trim().notEmpty().withMessage("Last Name is required"),
+  body("email")
+    .isEmail()
+    .withMessage("Valid email is required")
+    .customSanitizer((value) => value.toLowerCase()),
+  body("password")
+    .isLength({ min: 6 })
+    .withMessage("Password must be at least 6 characters"),
   body("confirmPassword").custom((value, { req }) => {
     if (value !== req.body.password) throw new Error("Passwords do not match");
     return true;
