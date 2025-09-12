@@ -19,7 +19,8 @@ authRouter.get("/verify", protect, (req, res) => {
     valid: true,
     user: {
       _id: req.user._id,
-      userName: req.user.userName,
+      firstName: req.user.firstName,
+      lastName: req.user.lastName,
       email: req.user.email,
     },
   });

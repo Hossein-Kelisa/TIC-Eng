@@ -3,9 +3,9 @@ import User from '../models/userModel.js';
 import generateToken from '../utils/generateToken.js';
 
 export const registerUser = async (req, res) => {
-  const { userName, email, password, confirmPassword } = req.body;
+  const { firstName, lastName, email, password, confirmPassword } = req.body;
   // Validate required fields
-  if (!userName || !email || !password || !confirmPassword) {
+  if (!firstName || !lastName || !email || !password || !confirmPassword) {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
@@ -22,7 +22,7 @@ export const registerUser = async (req, res) => {
     }
 
     // 2️⃣ Create new user
-    const newUsers = await User.create({ userName, email, password });
+    const newUsers = await User.create({ firstName, lastName, email, password });
 
     // 3️⃣ Generate JWT token
     const token = generateToken(newUsers._id);
@@ -36,7 +36,8 @@ export const registerUser = async (req, res) => {
     // JSON response with token for Postman testing
     res.status(201).json({
       _id: newUsers._id,
-      userName: newUsers.userName,
+      firstName: newUsers.firstName,
+      lastName: newUsers.lastName,
       email: newUsers.email,
       token
     });
@@ -65,7 +66,8 @@ export const loginUser = async (req, res) => {
       // Send JSON with token
       res.json({
         _id: user._id,
-        userName: user.userName,
+        firstName: user.firstName,
+        lastName: user.lastName,
         email: user.email,
         token
       });

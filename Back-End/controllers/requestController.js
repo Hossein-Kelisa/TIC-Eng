@@ -17,13 +17,13 @@ export const uploadMiddleware = upload.single("file");
  */
 export const createRequest = async (req, res, next) => {
   try {
-    const { firstName, lastName, email, company, service, message, phone } =
-      req.body;
+    const { company, service, message, phone } = req.body;
+    const { _id: userId, firstName, lastName, email } = req.user;
 
     // ✅ check required fields
-    if (!firstName || !lastName || !email || !service || !phone) {
+    if (!company || !service || !phone) {
       return res.status(400).json({
-        message: "firstName, lastName, email, service, phone are required",
+        message: "company, service, phone are required",
       });
     }
 
@@ -50,6 +50,7 @@ export const createRequest = async (req, res, next) => {
 
     // ✅ save request in database
     const savedRequest = await Request.create({
+      user: userId,
       firstName,
       lastName,
       email: String(email).toLowerCase(),
@@ -105,7 +106,9 @@ export const updateRequestStatus = async (req, res, next) => {
     if (!validStatuses.includes(status)) {
       return res
         .status(400)
-        .json({ message: `Status must be one of: ${validStatuses.join(", ")}` });
+        .json({
+          message: `Status must be one of: ${validStatuses.join(", ")}`,
+        });
     }
 
     // ✅ find and update request

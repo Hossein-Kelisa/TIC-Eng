@@ -19,7 +19,8 @@ export const useAuth = () => {
           password: e.target.password.value,
         }
       : {
-          userName: e.target.userName.value,
+          firstName: e.target.firstName.value,
+          lastName: e.target.lastName.value,
           email: e.target.email.value,
           password: e.target.password.value,
           confirmPassword: e.target.confirmPassword.value,
