@@ -8,7 +8,7 @@ function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const preloadImages = async () => {
@@ -51,7 +51,6 @@ function Hero() {
       </div>
       <div
         className="hero-right hero-content"
-        dir={i18n.language === "fa" ? "rtl" : "ltr"}
       >
         <h2>{t("HeroSubtitle")}</h2>
         <ShinyText

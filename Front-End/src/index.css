@@ -1,3 +1,6 @@
+/* Import Vazir font */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.0.0/dist/font-face.css');
+
 :root {
   font-family: PT Serif, Arial, Helvetica, sans-serif;
   line-height: 1.5;
@@ -32,4 +35,11 @@ button {
     color: #333;
     background-color: #ffffff;
   }
+}
+
+/* ===== Farsi Language Styles ===== */
+html[lang="fa"] {
+  font-family: 'Vazir', sans-serif;
+  direction: rtl;
+  text-align: right;
 }
