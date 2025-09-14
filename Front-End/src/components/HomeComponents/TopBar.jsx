@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import "./TopBar.css";
 import { useTranslation } from "react-i18next";
+import DashboardButton from "./Dashboard";
 
 export default function TopBar() {
   const { i18n } = useTranslation();
@@ -52,6 +53,7 @@ export default function TopBar() {
         <FaLinkedin />
         <FaInstagram />
         <FaWhatsapp />
+        <DashboardButton />
       </div>
     </div>
   );
