@@ -32,7 +32,7 @@ function Header() {
   };
 
   return (
-    <header className="header" dir="ltr">
+    <header className="header">
       {/* Logo */}
       <div className="logo-container">
         <Link to="/" className="logo-link">
