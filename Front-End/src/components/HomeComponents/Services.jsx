@@ -30,7 +30,7 @@ function Services() {
     <div className="services-container">
       <section id="services" className="services-section">
         <Fades animationType="slideFade">
-          <h3 className="services-title">Our Services</h3>
+          <h3 className="services-title">{t("services.Title")}</h3>
         </Fades>
         <div className="services-grid">
           {services.map((service, index) => (

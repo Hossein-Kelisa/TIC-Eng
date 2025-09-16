@@ -1,5 +1,14 @@
 {
   "HeroSubtitle": "Tic with certainty from test to trust",
   "HeroTitle": "Connect with our TIC experts",
-  "GetinTouch": "Get in Touch"
+  "GetinTouch": "Get in Touch",
+  "services": {
+    "Title": "Our Services",
+    "test": "Test",
+    "test.description": "Ensure your projects and compliance standards.",
+    "inspection": "Inspection",
+    "inspection.description": "Trusted inspection services to meet global standards and regulations.",
+    "certification": "Certification",
+    "certification.description": "We provide certificates to show your products meet standards."
+  }
 }
