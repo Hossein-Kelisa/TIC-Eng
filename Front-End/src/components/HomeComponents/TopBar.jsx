@@ -30,7 +30,7 @@ export default function TopBar() {
   }, [i18n]);
 
   return (
-    <div className="top-bar" dir="ltr">
+    <div className="top-bar">
       {/* Left: Language and Auth */}
       <div className="top-bar-left">
         <button onClick={toggleLanguage} className="lang-btn">

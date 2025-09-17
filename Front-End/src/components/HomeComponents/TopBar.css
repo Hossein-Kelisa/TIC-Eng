@@ -10,12 +10,6 @@
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-.dark .top-bar {
-  background: #1f2937; /* Dark Gray */
-  color: #e4ebbc;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .top-bar-left {
   display: flex;
   gap: 12px;
@@ -44,22 +38,6 @@
   object-fit: cover;
 }
 
-/* Dark Mode Button */
-.dark-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-  padding: 2px;
-  display: flex;
-  align-items: center;
-  transition: transform 0.2s ease;
-}
-
-.dark-btn:hover {
-  transform: rotate(25deg);
-}
-
 /* Social Icons */
 .social-icons {
   display: flex;
@@ -79,4 +57,17 @@
 .social-icons svg:hover {
   color: #007bff; /* Professional blue */
   transform: scale(1.2);
+}
+@media (max-width: 600px) {
+  .top-bar-left {
+    margin-left: 0.5rem;
+  }
+  .lang-btn {
+    padding: 1px;
+  }
+  .social-icons {
+  gap: 10px;
+  font-size: 16px;
+  align-items: center;
+}
 }

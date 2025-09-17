@@ -46,3 +46,13 @@
 .UserIcon-Logout {
   color: #23be29; /* green */
 }
+@media (max-width: 600px) {
+  .Auth-Login, .Auth-Logout {
+    padding: 4px 1px;
+    font-size: 14px;
+    gap: 6px;
+  }
+  .UserIcon-Login, .UserIcon-Logout {
+    font-size: 18px;
+  }
+}
