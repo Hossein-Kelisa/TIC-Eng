@@ -38,5 +38,11 @@
         "description": "Our processes follow international standards for guaranteed quality."
       }
     }
+  },
+  "download_forms": {
+    "title": "Download Services Request Forms",
+    "subtitle": "Download the forms you need for our services.",
+    "first_form": "First form",
+    "second_form": "Second form"
   }
 }
