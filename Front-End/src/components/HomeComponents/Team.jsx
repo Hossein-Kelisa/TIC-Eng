@@ -1,30 +1,33 @@
 import './Team.css';
 import Fades from '../RestComponents/Fades';
+import { useTranslation } from "react-i18next";
+
+function Team() {
+  const { t } = useTranslation();
 
 const teamMembers = [
   {
-    name: 'Hossein',
-    role: 'Founder & CEO',
+    name: t('team.hossein.name'),
+    role: t('team.hossein.role'),
     photo: 'https://randomuser.me/api/portraits/men/1.jpg',
   },
   {
-    name: 'Sara',
-    role: 'Leader',
+    name: t('team.sara.name'),
+    role: t('team.sara.role'),
     photo: 'https://randomuser.me/api/portraits/women/2.jpg',
   },
   {
-    name: 'Adel',
-    role: 'Designer',
+    name: t('team.adel.name'),
+    role: t('team.adel.role'),
     photo: 'https://randomuser.me/api/portraits/men/3.jpg',
   },
 ];
 
-function Team() {
   return (
     <section id="team" className="team-section">
       <div className="container">
         <Fades animationType="fadeZoom">
-          <h3 className="team-title">Meet Our Team</h3>
+          <h3 className="team-title">{t('team.title')}</h3>
         </Fades>
 
         <div className="team-grid">

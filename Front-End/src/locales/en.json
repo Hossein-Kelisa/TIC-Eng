@@ -54,5 +54,20 @@
     "manufacturing": "Manufacturing",
     "safety_inspection": "Safety & Inspection",
     "button": "Request Service"
+  },
+  "team": {
+    "title": "Meet Our Team",
+    "hossein": {
+      "name": "Hossein",
+      "role": "Founder & CEO"
+    },
+    "sara": {
+      "name": "Sara",
+      "role": "Leader"
+    },
+    "adel": {
+      "name": "Adel",
+      "role": "Designer"
+    }
   }
 }
