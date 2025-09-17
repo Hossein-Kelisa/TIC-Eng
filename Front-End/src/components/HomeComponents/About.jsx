@@ -1,36 +1,35 @@
 import "./About.css";
 import { FaUsers, FaRocket, FaGlobe } from "react-icons/fa";
 import Fades from "../RestComponents/Fades";
+import { useTranslation } from "react-i18next";
 
 function About() {
+  const { t } = useTranslation();
+
   const points = [
     {
       icon: <FaUsers />,
-      title: "Experienced Team",
-      description:
-        "Our expert team has many years of experience to deliver the best service.",
+      title: t("about.points.experienced_team.title"),
+      description: t("about.points.experienced_team.description"),
     },
     {
       icon: <FaRocket />,
-      title: "Fast & Reliable",
-      description:
-        "We provide quick turnaround times without compromising quality.",
+      title: t("about.points.fast_delivery.title"),
+      description: t("about.points.fast_delivery.description"),
     },
     {
       icon: <FaGlobe />,
-      title: "Global Standards",
-      description:
-        "Our processes follow international standards for guaranteed quality.",
+      title: t("about.points.global_standards.title"),
+      description: t("about.points.global_standards.description"),
     },
   ];
 
   return (
     <section id="about" className="about-section">
       <Fades animationType="fadeZoom">
-        <h3 className="about-title">Why Choose Us?</h3>
+        <h3 className="about-title">{t("about.title")}</h3>
         <p className="about-subtitle">
-          We deliver top-quality services with a strong focus on customer
-          satisfaction.
+          {t("about.subtitle")}
         </p>
       </Fades>
 

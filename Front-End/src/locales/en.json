@@ -20,5 +20,23 @@
       "title": "Certification",
       "description": "We provide certificates to show your products meet standards."
     }
+  },
+  "about": {
+    "title": "Why Choose Us?",
+    "subtitle": "We deliver top-quality services with a strong focus on customer satisfaction.",
+    "points": {
+      "experienced_team": {
+        "title": "Experienced Team",
+        "description": "Our expert team has many years of experience to deliver the best service."
+      },
+      "fast_delivery": {
+        "title": "Fast & Reliable",
+        "description": "We provide quick turnaround times without compromising quality."
+      },
+      "global_standards": {
+        "title": "Global Standards",
+        "description": "Our processes follow international standards for guaranteed quality."
+      }
+    }
   }
 }
