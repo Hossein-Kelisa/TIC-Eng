@@ -16,7 +16,7 @@
 
 html[lang="fa"] body {
   font-family: "Vazir", sans-serif;
-  direction: ltr;
+  direction: rtl;
   text-align: right;
 }
 html[lang="en"] body {

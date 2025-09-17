@@ -10,6 +10,7 @@
   border-radius: 2px;
   min-height: 130px;
   font-family: "PT Serif", serif;
+  direction: ltr;
 }
 
 .logo-container {
@@ -135,7 +136,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1000; /* sidebar is 1001, overlay is 1000 */
 }
 @media (max-width: 900px) {
@@ -168,8 +169,8 @@
     margin-left: 5rem;
   }
   .highlight {
-  font-size: 0.8rem;
-}
+    font-size: 0.8rem;
+  }
 
   .hamburger {
     display: block;
