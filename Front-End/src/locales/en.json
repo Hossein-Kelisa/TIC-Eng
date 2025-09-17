@@ -1,9 +1,7 @@
 {
   "hero": {
     "subtitle": "Tic with certainty from test to trust",
-    "title": "Connect with our TIC experts"
-  },
-  "buttons": {
+    "title": "Connect with our TIC experts",
     "get_in_touch": "Get in Touch"
   },
   "services": {
@@ -78,5 +76,14 @@
     "answer2": "We offer a full refund within 30 days if you are not satisfied.",
     "question3": "Do you offer custom services?",
     "answer3": "Yes, please contact us to discuss your needs."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We'd love to hear from you! Reach out with questions, projects, or partnership opportunities.",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "address.details": "TIC Engineering, Address...",
+    "send_email": "Send Us an Email"
   }
 }

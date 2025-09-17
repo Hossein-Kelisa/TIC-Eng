@@ -60,7 +60,7 @@ function Hero() {
           className="hero-title"
         />
         <a href="#contact" className="button-primary">
-          {t("buttons.get_in_touch")}
+          {t("hero.get_in_touch")}
         </a>
       </div>
     </section>
