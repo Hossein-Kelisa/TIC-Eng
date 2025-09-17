@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "subtitle": "Tic with certainty from test to trust",
+    "title": "Connect with our TIC experts",
+    "get_in_touch": "Get in Touch"
+  },
+  "services": {
+    "title": "Our Services",
+    "test": {
+      "title": "Test",
+      "description": "Ensure your projects and compliance standards."
+    },
+    "inspection": {
+      "title": "Inspection",
+      "description": "Trusted inspection services to meet global standards and regulations."
+    },
+    "certification": {
+      "title": "Certification",
+      "description": "We provide certificates to show your products meet standards."
+    }
+  },
+  "about": {
+    "title": "Why Choose Us?",
+    "subtitle": "We deliver top-quality services with a strong focus on customer satisfaction.",
+    "points": {
+      "experienced_team": {
+        "title": "Experienced Team",
+        "description": "Our expert team has many years of experience to deliver the best service."
+      },
+      "fast_delivery": {
+        "title": "Fast & Reliable",
+        "description": "We provide quick turnaround times without compromising quality."
+      },
+      "global_standards": {
+        "title": "Global Standards",
+        "description": "Our processes follow international standards for guaranteed quality."
+      }
+    }
+  },
+  "download_forms": {
+    "title": "Download Services Request Forms",
+    "subtitle": "Download the forms you need for our services.",
+    "first_form": "First form",
+    "second_form": "Second form"
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "description": "We provide professional certification, inspection, and testing services across various sectors — helping businesses maintain quality, safety, and compliance.",
+    "automotive": "Automotive",
+    "welding": "Welding",
+    "construction": "Construction",
+    "manufacturing": "Manufacturing",
+    "safety_inspection": "Safety & Inspection",
+    "button": "Request Service"
+  },
+  "team": {
+    "title": "Meet Our Team",
+    "hossein": {
+      "name": "Hossein",
+      "role": "Founder & CEO"
+    },
+    "sara": {
+      "name": "Sara",
+      "role": "Leader"
+    },
+    "adel": {
+      "name": "Adel",
+      "role": "Designer"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "question1": "How can I contact support?",
+    "answer1": "You can contact us through the contact form or email.",
+    "question2": "What is your refund policy?",
+    "answer2": "We offer a full refund within 30 days if you are not satisfied.",
+    "question3": "Do you offer custom services?",
+    "answer3": "Yes, please contact us to discuss your needs."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "We'd love to hear from you! Reach out with questions, projects, or partnership opportunities.",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "address.details": "TIC Engineering, Address...",
+    "send_email": "Send Us an Email"
+  }
+}

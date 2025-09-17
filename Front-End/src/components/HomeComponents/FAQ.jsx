@@ -1,23 +1,10 @@
 import { useState } from "react";
 import "./FAQ.css";
-
-const faqs = [
-  {
-    question: "How can I contact support?",
-    answer: "You can contact us through the contact form or email.",
-  },
-  {
-    question: "What is your refund policy?",
-    answer: "We offer a full refund within 30 days if you are not satisfied.",
-  },
-  {
-    question: "Do you offer custom services?",
-    answer: "Yes, please contact us to discuss your needs.",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
+  const { t } = useTranslation();
 
   const toggleFAQ = (index) => {
     if (openIndex === index) {
@@ -27,9 +14,24 @@ function FAQ() {
     }
   };
 
+  const faqs = [
+    {
+      question: t('faq.question1'),
+      answer: t('faq.answer1'),
+    },
+    {
+      question: t('faq.question2'),
+      answer: t('faq.answer2'),
+    },
+    {
+      question: t('faq.question3'),
+      answer: t('faq.answer3'),
+    },
+  ];
+
   return (
     <section id="faq" className="faq-section">
-      <h3 className="faq-title">Frequently Asked Questions</h3>
+      <h3 className="faq-title">{t('faq.title')}</h3>
       <div className="faq-list">
         {faqs.map((faq, index) => (
           <div

@@ -7,6 +7,7 @@
   padding: 1rem 1rem;
   position: relative;
   overflow: hidden;
+  direction: ltr;
 }
 
 .hero-left,

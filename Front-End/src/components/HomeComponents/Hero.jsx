@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import heroImages from "../../Data/heroImages";
 import ShinyText from "../RestComponents/ShinyText";
+import { useTranslation } from "react-i18next";
 import "./Hero.css";
 
 function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const preloadImages = async () => {
@@ -46,16 +49,18 @@ function Hero() {
           />
         )}
       </div>
-      <div className="hero-right hero-content">
-        <h2>Tic with certainty from test to trust</h2>
+      <div
+        className="hero-right hero-content"
+      >
+        <h2>{t("hero.subtitle")}</h2>
         <ShinyText
-          text="Connect with our TIC experts"
+          text={t("hero.title")}
           disabled={false}
           speed={3}
           className="hero-title"
         />
         <a href="#contact" className="button-primary">
-          Get in Touch
+          {t("hero.get_in_touch")}
         </a>
       </div>
     </section>

@@ -35,7 +35,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  text-align: center;
   margin-top: 2rem;
   max-width: 500px;
   margin-bottom: 2rem;
