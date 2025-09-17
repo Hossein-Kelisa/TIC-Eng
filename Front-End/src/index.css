@@ -20,7 +20,7 @@ html[lang="fa"] body {
   text-align: right;
 }
 html[lang="en"] body {
-  font-family: "Inter, Arial, Helvetica, sans-serif";
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   direction: ltr;
 }
 

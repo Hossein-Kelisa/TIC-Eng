@@ -18,7 +18,7 @@ function Contact() {
 
         <div className="contact-info" role="list">
           <p className="contact-detail" role="listitem">
-            📧 <strong>{t('contact.email')}</strong>{" "}
+            📧 <strong>{t('contact.email')}: </strong>{" "}
             <a
               href="mailto:contact@tic-eng.com"
               aria-label="Send email to contact@tic-eng.com"
@@ -27,10 +27,10 @@ function Contact() {
             </a>
           </p>
           <p className="contact-detail" role="listitem">
-            📞 <strong>{t('contact.phone')}</strong> +98 xxx xxx xxxx
+            📞 <strong>{t('contact.phone')}: </strong> +98 xxx xxx xxxx
           </p>
           <p className="contact-detail" role="listitem">
-            📍 <strong>{t('contact.address')}</strong>{t('contact.address.details')}
+            📍 <strong>{t('contact.address')}: </strong>{t('contact.address.details')}
           </p>
         </div>
 
