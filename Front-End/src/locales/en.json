@@ -44,5 +44,15 @@
     "subtitle": "Download the forms you need for our services.",
     "first_form": "First form",
     "second_form": "Second form"
+  },
+  "industries": {
+    "title": "Industries We Serve",
+    "description": "We provide professional certification, inspection, and testing services across various sectors — helping businesses maintain quality, safety, and compliance.",
+    "automotive": "Automotive",
+    "welding": "Welding",
+    "construction": "Construction",
+    "manufacturing": "Manufacturing",
+    "safety_inspection": "Safety & Inspection",
+    "button": "Request Service"
   }
 }
