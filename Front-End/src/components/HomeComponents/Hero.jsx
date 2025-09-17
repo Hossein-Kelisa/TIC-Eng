@@ -52,15 +52,15 @@ function Hero() {
       <div
         className="hero-right hero-content"
       >
-        <h2>{t("HeroSubtitle")}</h2>
+        <h2>{t("hero.subtitle")}</h2>
         <ShinyText
-          text={t("HeroTitle")}
+          text={t("hero.title")}
           disabled={false}
           speed={3}
           className="hero-title"
         />
         <a href="#contact" className="button-primary">
-          {t("GetinTouch")}
+          {t("buttons.get_in_touch")}
         </a>
       </div>
     </section>

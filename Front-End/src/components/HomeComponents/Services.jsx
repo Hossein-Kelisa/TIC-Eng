@@ -7,19 +7,19 @@ function Services() {
 
   const services = [
     {
-      title: t("services.test"),
+      title: t("services.test.title"),
       description: t("services.test.description"),
       image:
         "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/65cdbc34b9d510ec993c0cb6_654c9fb1fbfb300821c1a860_manual_20inspection-min_angb56.jpg",
     },
     {
-      title: t("services.inspection"),
+      title: t("services.inspection.title"),
       description: t("services.inspection.description"),
       image:
         "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/inspectionn_xttqa2.jpg",
     },
     {
-      title: t("services.certification"),
+      title: t("services.certification.title"),
       description: t("services.certification.description"),
       image:
         "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/testing_fc326x.jpg",
@@ -30,7 +30,7 @@ function Services() {
     <div className="services-container">
       <section id="services" className="services-section">
         <Fades animationType="slideFade">
-          <h3 className="services-title">{t("services.Title")}</h3>
+          <h3 className="services-title">{t("services.title")}</h3>
         </Fades>
         <div className="services-grid">
           {services.map((service, index) => (
