@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 /* Import Vazir font */
-@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.0.0/dist/font-face.css');
+@import url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.0.0/dist/font-face.css");
 
 :root {
   /* font-family: PT Serif, Arial, Helvetica, sans-serif; */
@@ -15,16 +15,17 @@
 }
 
 html[lang="fa"] body {
-  font-family: 'Vazir', sans-serif;
+  font-family: "Vazir", sans-serif;
   direction: ltr;
-  text-align: left;
+  text-align: right;
 }
 html[lang="en"] body {
-  font-family: 'Inter, Arial, Helvetica, sans-serif';
+  font-family: "Inter, Arial, Helvetica, sans-serif";
   direction: ltr;
 }
 
 body {
+  font-family: "Vazir", "Inter", Arial, Helvetica, sans-serif;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
