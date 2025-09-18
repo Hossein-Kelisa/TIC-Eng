@@ -6,19 +6,19 @@ export const registerUser = async (req, res) => {
   const { firstName, lastName, email, password, confirmPassword } = req.body;
   // Validate required fields
   if (!firstName || !lastName || !email || !password || !confirmPassword) {
-    return res.status(400).json({ message: 'All fields are required' });
+    return res.status(400).json({  message: res.__("auth.all_fields_required") });
   }
 
   // Check if passwords match
   if (password !== confirmPassword) {
-    return res.status(400).json({ message: 'Passwords do not match' });
+    return res.status(400).json({ message: res.__("auth.passwords_no_match") });
   }
 
   try {
     // 1️⃣ Check if user already exists
     const exists = await User.findOne({ email });
     if (exists) {
-      return res.status(400).json({ message: 'User already exists' });
+      return res.status(400).json({ message: res.__("auth.user_exists") });
     }
 
     // 2️⃣ Create new user
@@ -72,7 +72,7 @@ export const loginUser = async (req, res) => {
         token
       });
     } else {
-      res.status(401).json({ message: 'Invalid email or password' });
+      res.status(401).json({ message: res.__("auth.invalid_credentials") });
     }
 
   } catch (error) {

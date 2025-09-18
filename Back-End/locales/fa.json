@@ -6,7 +6,11 @@
     "route_not_found": "مسیر پیدا نشد"
   },
   "auth": {
-    "token_valid": "توکن معتبر است"
+    "token_valid": "توکن معتبر است",
+    "all_fields_required": "پر کردن همه فیلدها الزامی است",
+    "passwords_no_match": "رمزهای عبور یکسان نیستند",
+    "user_exists": "کاربر از قبل وجود دارد",
+    "invalid_credentials": "ایمیل یا رمز عبور نامعتبر است"
   },
   "requests": {
     "missing_fields": "شرکت، سرویس، تلفن الزامی است",

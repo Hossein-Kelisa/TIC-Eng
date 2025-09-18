@@ -6,7 +6,11 @@
     "route_not_found": "Route not found"
   },
   "auth": {
-    "token_valid": "Token is valid"
+    "token_valid": "Token is valid",
+    "all_fields_required": "All fields are required",
+    "passwords_no_match": "Passwords do not match",
+    "user_exists": "User already exists",
+    "invalid_credentials": "Invalid email or password"
   },
   "requests": {
     "missing_fields": "company, service, phone are required",
