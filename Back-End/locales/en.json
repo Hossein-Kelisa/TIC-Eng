@@ -4,5 +4,8 @@
   "errors": {
     "server_error": "Something went wrong!",
     "route_not_found": "Route not found"
+  },
+  "auth": {
+    "token_valid": "Token is valid"
   }
 }

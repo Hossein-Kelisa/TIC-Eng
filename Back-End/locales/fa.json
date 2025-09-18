@@ -4,5 +4,8 @@
   "errors": {
     "server_error": "مشکلی پیش آمده!",
     "route_not_found": "مسیر پیدا نشد"
+  },
+  "auth": {
+    "token_valid": "توکن معتبر است"
   }
 }
