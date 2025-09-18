@@ -49,7 +49,7 @@ app.get("/api/health", (req, res) => {
 
 // Handle 404 errors (don't find any routes)
 app.use((req, res, next) => {
-  next(new AppError(`Route not found: ${req.originalUrl}`, 404));
+  next(new AppError(req.__("errors.route_not_found"), 404));
 });
 
 // Global error handling middleware

@@ -1,4 +1,8 @@
 {
   "welcome": "Backend is running ✅",
-  "health_ok": "Server is running 🚀"
+  "health_ok": "Server is running 🚀",
+  "errors": {
+    "server_error": "Something went wrong!",
+    "route_not_found": "Route not found"
+  }
 }
