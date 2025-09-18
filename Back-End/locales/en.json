@@ -7,5 +7,14 @@
   },
   "auth": {
     "token_valid": "Token is valid"
+  },
+  "requests": {
+    "missing_fields": "company, service, phone are required",
+    "submitted": "✅ Request submitted successfully!",
+    "fetched": "✅ Requests fetched successfully",
+    "status_invalid": "Status must be one of: {{statuses}}",
+    "not_found": "Request not found",
+    "status_updated": "✅ Request status updated successfully",
+    "server_error": "❌ Server error"
   }
 }
