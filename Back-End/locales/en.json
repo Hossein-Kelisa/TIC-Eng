@@ -27,6 +27,7 @@
     "valid_email_required": "Valid email is required",
     "password_min_length": "Password must be at least 6 characters",
     "passwords_no_match": "Passwords do not match",
-    "validation_failed": "Validation failed"
+    "validation_failed": "Validation failed",
+    "password_required": "Password is required"
   }
 }

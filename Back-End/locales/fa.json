@@ -27,6 +27,7 @@
     "valid_email_required": "ایمیل معتبر الزامی است",
     "password_min_length": "رمز عبور باید حداقل ۶ کاراکتر باشد",
     "passwords_no_match": "رمزهای عبور مطابقت ندارند",
-    "validation_failed": "اعتبارسنجی ناموفق بود"
+    "validation_failed": "اعتبارسنجی ناموفق بود",
+    "password_required": "رمز عبور الزامی است"
   }
 }
