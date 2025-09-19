@@ -29,5 +29,9 @@
     "passwords_no_match": "Passwords do not match",
     "validation_failed": "Validation failed",
     "password_required": "Password is required"
+  },
+  "user": {
+    "not_found": "User not found",
+    "promoted_admin": "User promoted to admin"
   }
 }

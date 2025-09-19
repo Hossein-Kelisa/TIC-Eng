@@ -29,5 +29,9 @@
     "passwords_no_match": "رمزهای عبور مطابقت ندارند",
     "validation_failed": "اعتبارسنجی ناموفق بود",
     "password_required": "رمز عبور الزامی است"
+  },
+  "user": {
+    "not_found": "کاربر یافت نشد",
+    "promoted_admin": "کاربر به مدیر ارتقا یافت"
   }
 }
