@@ -20,5 +20,13 @@
     "not_found": "Request not found",
     "status_updated": "✅ Request status updated successfully",
     "server_error": "❌ Server error"
+  },
+  "validation": {
+    "first_name_required": "First Name is required",
+    "last_name_required": "Last Name is required",
+    "valid_email_required": "Valid email is required",
+    "password_min_length": "Password must be at least 6 characters",
+    "passwords_no_match": "Passwords do not match",
+    "validation_failed": "Validation failed"
   }
 }

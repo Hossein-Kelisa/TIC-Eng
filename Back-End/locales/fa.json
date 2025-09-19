@@ -20,5 +20,13 @@
     "not_found": "درخواست پیدا نشد",
     "status_updated": "✅ وضعیت درخواست با موفقیت به‌روزرسانی شد",
     "server_error": "❌ خطای سرور"
+  },
+  "validation": {
+    "first_name_required": "نام الزامی است",
+    "last_name_required": "نام خانوادگی الزامی است",
+    "valid_email_required": "ایمیل معتبر الزامی است",
+    "password_min_length": "رمز عبور باید حداقل ۶ کاراکتر باشد",
+    "passwords_no_match": "رمزهای عبور مطابقت ندارند",
+    "validation_failed": "اعتبارسنجی ناموفق بود"
   }
 }
