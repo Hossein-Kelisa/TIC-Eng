@@ -4,7 +4,9 @@
   "errors": {
     "server_error": "Something went wrong!",
     "route_not_found": "Route not found",
-    "access_denied": "❌ Access denied: Admins only"
+    "access_denied": "❌ Access denied: Admins only",
+    "not_authorized_no_token": "❌ Not authorized, no token",
+    "user_not_found": "❌ Not authorized, user not found"
   },
   "auth": {
     "token_valid": "Token is valid",

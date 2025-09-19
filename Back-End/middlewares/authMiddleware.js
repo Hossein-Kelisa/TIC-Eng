@@ -14,7 +14,7 @@ export const protect = async (req, res, next) => {
 
   // If no token, return 401
   if (!token) {
-    return res.status(401).json({ message: "Not authorized, no token" });
+    return res.status(401).json({ message: req.__("errors.not_authorized_no_token") });
   }
 
   try {
@@ -24,12 +24,12 @@ export const protect = async (req, res, next) => {
     // Attach user to request (without password)
     req.user = await User.findById(decoded.id).select("-password");
     if (!req.user) {
-      return res.status(401).json({ message: "Not authorized, user not found" });
+      return res.status(401).json({ message: req.__("errors.user_not_found") });
     }
 
     next(); // allow access
   } catch (error) {
-    res.status(401).json({ message: "Not authorized, token failed" });
+    res.status(401).json({ message: req.__("errors.not_authorized_no_token") });
   }
 };
 
@@ -38,5 +38,5 @@ export const adminOnly = (req, res, next) => {
   if (req.user && req.user.role === "admin") {
     return next();
   }
-  return res.status(403).json({ message: "Access denied, admins only" });
+  return res.status(403).json({ message: req.__("errors.access_denied") });
 };
