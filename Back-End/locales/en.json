@@ -3,7 +3,8 @@
   "health_ok": "Server is running 🚀",
   "errors": {
     "server_error": "Something went wrong!",
-    "route_not_found": "Route not found"
+    "route_not_found": "Route not found",
+    "access_denied": "❌ Access denied: Admins only"
   },
   "auth": {
     "token_valid": "Token is valid",
