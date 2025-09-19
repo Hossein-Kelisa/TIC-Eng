@@ -1,0 +1,40 @@
+{
+  "welcome": "بک‌اند در حال اجراست ✅",
+  "health_ok": "سرور در حال اجراست 🚀",
+  "errors": {
+    "server_error": "مشکلی پیش آمده!",
+    "route_not_found": "مسیر پیدا نشد",
+    "access_denied": "❌ دسترسی ممنوع: فقط برای مدیران",
+    "not_authorized_no_token": "❌ غیرمجاز، توکن وجود ندارد",
+    "user_not_found": "❌ غیرمجاز، کاربر پیدا نشد"
+  },
+  "auth": {
+    "token_valid": "توکن معتبر است",
+    "all_fields_required": "پر کردن همه فیلدها الزامی است",
+    "passwords_no_match": "رمزهای عبور یکسان نیستند",
+    "user_exists": "کاربر از قبل وجود دارد",
+    "invalid_credentials": "ایمیل یا رمز عبور نامعتبر است"
+  },
+  "requests": {
+    "missing_fields": "شرکت، سرویس، تلفن الزامی است",
+    "submitted": "✅ درخواست با موفقیت ارسال شد!",
+    "fetched": "✅ درخواست‌ها با موفقیت بازیابی شدند",
+    "status_invalid": "وضعیت باید یکی از موارد زیر باشد: {{وضعیت‌ها}}",
+    "not_found": "درخواست پیدا نشد",
+    "status_updated": "✅ وضعیت درخواست با موفقیت به‌روزرسانی شد",
+    "server_error": "❌ خطای سرور"
+  },
+  "validation": {
+    "first_name_required": "نام الزامی است",
+    "last_name_required": "نام خانوادگی الزامی است",
+    "valid_email_required": "ایمیل معتبر الزامی است",
+    "password_min_length": "رمز عبور باید حداقل ۶ کاراکتر باشد",
+    "passwords_no_match": "رمزهای عبور مطابقت ندارند",
+    "validation_failed": "اعتبارسنجی ناموفق بود",
+    "password_required": "رمز عبور الزامی است"
+  },
+  "user": {
+    "not_found": "کاربر یافت نشد",
+    "promoted_admin": "کاربر به مدیر ارتقا یافت"
+  }
+}

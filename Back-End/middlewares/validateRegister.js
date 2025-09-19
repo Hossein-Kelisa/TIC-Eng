@@ -2,17 +2,24 @@
 import { body, validationResult } from "express-validator";
 
 export const validateRegister = [
-  body("firstName").trim().notEmpty().withMessage("First Name is required"),
-  body("lastName").trim().notEmpty().withMessage("Last Name is required"),
+  body("firstName")
+    .trim()
+    .notEmpty()
+    .withMessage((value, { req }) => req.__("validation.first_name_required")),
+  body("lastName")
+    .trim()
+    .notEmpty()
+    .withMessage((value, { req }) => req.__("validation.last_name_required")),
   body("email")
     .isEmail()
-    .withMessage("Valid email is required")
+    .withMessage((value, { req }) => req.__("validation.valid_email_required"))
     .customSanitizer((value) => value.toLowerCase()),
   body("password")
     .isLength({ min: 6 })
-    .withMessage("Password must be at least 6 characters"),
+    .withMessage((value, { req }) => req.__("validation.password_min_length")),
   body("confirmPassword").custom((value, { req }) => {
-    if (value !== req.body.password) throw new Error("Passwords do not match");
+    if (value !== req.body.password)
+      throw new Error(req.__("validation.passwords_no_match"));
     return true;
   }),
 
@@ -21,7 +28,7 @@ export const validateRegister = [
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({
-        message: "Validation failed",
+        message: req.__("validation.validation_failed"),
         errors: errors.array(),
       });
     }

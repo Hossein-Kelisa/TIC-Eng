@@ -17,6 +17,7 @@ authRouter.get("/verify", protect, (req, res) => {
   // token valid → return user info
   res.json({
     valid: true,
+    message: req.__("auth.token_valid"),
     user: {
       _id: req.user._id,
       firstName: req.user.firstName,

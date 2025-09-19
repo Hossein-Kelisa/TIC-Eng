@@ -10,6 +10,8 @@ import errorHandler from "./middlewares/errorHandler.js";
 import AppError from "./utils/AppError.js";
 import adminRouter from "./routes/adminRoutes.js";
 import userRouter from "./routes/userRouter.js";
+import i18n from "./config/i18n.js";
+
 
 dotenv.config();
 connectDB();
@@ -23,6 +25,9 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 
+// Internationalization
+app.use(i18n.init);
+
 //static files for uploads
 app.use("/uploads", express.static("uploads"));
 
@@ -34,17 +39,17 @@ app.use("/api/users", userRouter);
 
 // Root route (for Render health check or quick test)
 app.get("/", (req, res) => {
-  res.send("Backend is running ✅");
+  res.send(req.__("welcome"));
 });
 
 // Health check route
 app.get("/api/health", (req, res) => {
-  res.json({ status: "ok", message: "Server is running 🚀" });
+  res.json({ status: "ok", message: req.__("health_ok") });
 });
 
 // Handle 404 errors (don't find any routes)
 app.use((req, res, next) => {
-  next(new AppError(`Route not found: ${req.originalUrl}`, 404));
+  next(new AppError(req.__("errors.route_not_found"), 404));
 });
 
 // Global error handling middleware
