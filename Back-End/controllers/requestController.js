@@ -105,7 +105,7 @@ export const updateRequestStatus = async (req, res, next) => {
     const validStatuses = ["pending", "in-progress", "completed"];
     if (!validStatuses.includes(status)) {
       return res.status(400).json({
-        message: res.__("requests.status_invalid", {
+        message: req.__("requests.status_invalid", {
           statuses: validStatuses.join(", "),
         }),
       });
