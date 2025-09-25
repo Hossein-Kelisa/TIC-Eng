@@ -7,6 +7,7 @@
     "access_denied": "❌ Access denied: Admins only",
     "not_authorized_no_token": "❌ Not authorized, no token",
     "not_authorized_user_not_found": "❌ Not authorized, user not found",
+    "not_authorized_token_failed": "❌ Not authorized, token verification failed",
     "file_type_invalid": "❌ Invalid file type, only PDFs are allowed"
   },
   "auth": {

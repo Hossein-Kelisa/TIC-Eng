@@ -7,6 +7,7 @@
     "access_denied": "❌ دسترسی ممنوع: فقط برای مدیران",
     "not_authorized_no_token": "❌ غیرمجاز، توکن وجود ندارد",
     "not_authorized_user_not_found": "❌ غیرمجاز، کاربر پیدا نشد",
+    "not_authorized_token_failed": "❌ غیرمجاز، تأیید توکن ناموفق بود",
     "file_type_invalid": "❌ نوع فایل نامعتبر است"
   },
   "auth": {

@@ -29,7 +29,7 @@ export const protect = async (req, res, next) => {
 
     next(); // allow access
   } catch (error) {
-    res.status(401).json({ message: req.__("errors.not_authorized_no_token") });
+    res.status(401).json({ message: req.__("errors.not_authorized_token_failed") });
   }
 };
 
