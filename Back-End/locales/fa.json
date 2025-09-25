@@ -6,7 +6,8 @@
     "route_not_found": "مسیر پیدا نشد",
     "access_denied": "❌ دسترسی ممنوع: فقط برای مدیران",
     "not_authorized_no_token": "❌ غیرمجاز، توکن وجود ندارد",
-    "user_not_found": "❌ غیرمجاز، کاربر پیدا نشد"
+    "user_not_found": "❌ غیرمجاز، کاربر پیدا نشد",
+    "file_type_invalid": "❌ نوع فایل نامعتبر است"
   },
   "auth": {
     "token_valid": "توکن معتبر است",

@@ -8,7 +8,7 @@ const errorHandler = (err, req, res, next) => {
     status,
     message: err.message 
       ? err.message // Use the error message if available
-      : req.t("errors.server_error"), // Use i18n for default error message
+      : req.__("errors.server_error"), // Use i18n for default error message
     //just show stack in development
     stack: process.env.NODE_ENV === "development" ? err.stack : undefined,
   });
