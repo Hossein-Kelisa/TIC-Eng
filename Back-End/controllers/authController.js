@@ -6,12 +6,12 @@ export const registerUser = async (req, res) => {
   const { firstName, lastName, email, password, confirmPassword } = req.body;
   // Validate required fields
   if (!firstName || !lastName || !email || !password || !confirmPassword) {
-    return res.status(400).json({  message: res.__("auth.all_fields_required") });
+    return res.status(400).json({ message: req.__("auth.all_fields_required") });
   }
 
   // Check if passwords match
   if (password !== confirmPassword) {
-    return res.status(400).json({ message: res.__("auth.passwords_no_match") });
+    return res.status(400).json({ message: req.__("auth.passwords_no_match") });
   }
 
   try {
