@@ -89,7 +89,7 @@ export const getRequests = async (req, res, next) => {
     });
   } catch (err) {
     if (next) return next(err);
-    return res.status(500).json({ message: res.__("requests.server_error") });
+    return res.status(500).json({ message: req.__("requests.server_error") });
   }
 };
 
