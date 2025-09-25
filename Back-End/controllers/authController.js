@@ -18,7 +18,7 @@ export const registerUser = async (req, res) => {
     // 1️⃣ Check if user already exists
     const exists = await User.findOne({ email });
     if (exists) {
-      return res.status(400).json({ message: res.__("auth.user_exists") });
+      return res.status(400).json({ message: req.__("auth.user_exists") });
     }
 
     // 2️⃣ Create new user
@@ -72,7 +72,7 @@ export const loginUser = async (req, res) => {
         token
       });
     } else {
-      res.status(401).json({ message: res.__("auth.invalid_credentials") });
+      res.status(401).json({ message: req.__("auth.invalid_credentials") });
     }
 
   } catch (error) {
