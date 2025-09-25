@@ -119,11 +119,11 @@ export const updateRequestStatus = async (req, res, next) => {
     );
 
     if (!updatedRequest) {
-      return res.status(404).json({ message: res.__("requests.not_found") });
+      return res.status(404).json({ message: req.__("requests.not_found") });
     }
 
     return res.json({
-      message: res.__("requests.status_updated"),
+      message: req.__("requests.status_updated"),
       data: updatedRequest,
     });
   } catch (err) {
