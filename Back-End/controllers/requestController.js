@@ -66,7 +66,7 @@ export const createRequest = async (req, res, next) => {
 
     // ✅ return response
     return res.status(201).json({
-      message: res.__("requests.submitted"),
+      message: req.__("requests.submitted"),
       data: savedRequest,
     });
   } catch (err) {
@@ -83,7 +83,7 @@ export const getRequests = async (req, res, next) => {
     const requests = await Request.find().sort({ createdAt: -1 });
 
     return res.json({
-      message: res.__("requests.fetched"),
+      message: req.__("requests.fetched"),
       count: requests.length,
       data: requests,
     });
