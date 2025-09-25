@@ -23,7 +23,7 @@ export const createRequest = async (req, res, next) => {
     // ✅ check required fields
     if (!company || !service || !phone) {
       return res.status(400).json({
-        message: "company, service, phone are required",
+        message: req.__("requests.missing_fields"),
       });
     }
 
@@ -66,12 +66,12 @@ export const createRequest = async (req, res, next) => {
 
     // ✅ return response
     return res.status(201).json({
-      message: "✅ Request submitted successfully!",
+      message: req.__("requests.submitted"),
       data: savedRequest,
     });
   } catch (err) {
     if (next) return next(err);
-    return res.status(500).json({ message: "❌ Server error" });
+    return res.status(500).json({ message: req.__("requests.server_error") });
   }
 };
 
@@ -83,13 +83,13 @@ export const getRequests = async (req, res, next) => {
     const requests = await Request.find().sort({ createdAt: -1 });
 
     return res.json({
-      message: "✅ Requests fetched successfully",
+      message: req.__("requests.fetched"),
       count: requests.length,
       data: requests,
     });
   } catch (err) {
     if (next) return next(err);
-    return res.status(500).json({ message: "❌ Server error" });
+    return res.status(500).json({ message: req.__("requests.server_error") });
   }
 };
 
@@ -104,11 +104,11 @@ export const updateRequestStatus = async (req, res, next) => {
     // ✅ validate status
     const validStatuses = ["pending", "in-progress", "completed"];
     if (!validStatuses.includes(status)) {
-      return res
-        .status(400)
-        .json({
-          message: `Status must be one of: ${validStatuses.join(", ")}`,
-        });
+      return res.status(400).json({
+        message: req.__("requests.status_invalid", {
+          statuses: validStatuses.join(", "),
+        }),
+      });
     }
 
     // ✅ find and update request
@@ -119,15 +119,15 @@ export const updateRequestStatus = async (req, res, next) => {
     );
 
     if (!updatedRequest) {
-      return res.status(404).json({ message: "Request not found" });
+      return res.status(404).json({ message: req.__("requests.not_found") });
     }
 
     return res.json({
-      message: "✅ Request status updated successfully",
+      message: req.__("requests.status_updated"),
       data: updatedRequest,
     });
   } catch (err) {
     if (next) return next(err);
-    return res.status(500).json({ message: "❌ Server error" });
+    return res.status(500).json({ message: req.__("requests.server_error") });
   }
 };
