@@ -58,14 +58,14 @@ function Hero() {
           speed={3}
           className="hero-title"
         />
-        {/* <div className="hero-buttons"> */}
+        <div className="hero-buttons">
           <a href="#contact" className="button-primary">
             {t("hero.get_in_touch")}
           </a>
           <Link to="/request" className="RequestService-btn1">
             {t("industries.button")}
           </Link>
-        {/* </div> */}
+        </div>
       </div>
     </section>
   );

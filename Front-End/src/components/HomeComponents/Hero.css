@@ -61,7 +61,16 @@
   color: #72bd67a0;
   text-shadow: 1px 1px 20px rgb(189, 178, 177);
 }
-.button-primary {
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.button-primary,
+.RequestService-btn1 {
   background-color: transparent;
   color: #ffffff;
   border: 1px solid #a0bea94a;
@@ -74,7 +83,8 @@
   margin-top: 1rem;
 }
 
-.button-primary:hover {
+.button-primary:hover,
+.RequestService-btn1:hover {
   transform: scale(1.05);
   color: #99ea99e8;
   border: 1px solid #c0c4c1a0;
@@ -107,8 +117,12 @@
     font-size: 2.4rem;
     margin-top: 3rem;
   }
+  .hero-buttons {
+    justify-content: center;
+  }
 
-  .button-primary {
+  .button-primary,
+  .RequestService-btn1 {
     margin: 0 auto 5rem;
   }
 }
@@ -133,8 +147,12 @@
     font-size: 1em;
     margin-bottom: 1rem;
   }
-
-  .button-primary {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .button-primary,
+  .RequestService-btn1 {
     width: 80%;
     padding: 0.7rem 1rem;
     font-size: 1rem;
