@@ -7,7 +7,6 @@ dotenv.config();
 
 // Set SendGrid API key from .env
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-console.log("SendGrid API Key set:", !!process.env.SENDGRID_API_KEY?.slice(0,3));
 
 // Extract S3 key from public URL
 function extractS3KeyFromUrl(urlString) {
