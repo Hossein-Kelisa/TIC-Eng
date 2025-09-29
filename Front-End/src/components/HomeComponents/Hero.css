@@ -63,6 +63,7 @@
 }
 
 .hero-buttons {
+  margin-top: 2rem;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -148,6 +149,8 @@
     margin-bottom: 1rem;
   }
   .hero-buttons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     flex-direction: column;
     gap: 0.5rem;
   }
@@ -156,7 +159,7 @@
     width: 80%;
     padding: 0.7rem 1rem;
     font-size: 1rem;
-    margin: 10px auto 3rem;
+    margin: 10px auto 1rem;
   }
 
   .hero-image {
