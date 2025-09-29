@@ -3,6 +3,7 @@ import heroImages from "../../Data/heroImages";
 import ShinyText from "../RestComponents/ShinyText";
 import { useTranslation } from "react-i18next";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
 function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,9 +50,7 @@ function Hero() {
           />
         )}
       </div>
-      <div
-        className="hero-right hero-content"
-      >
+      <div className="hero-right hero-content">
         <h2>{t("hero.subtitle")}</h2>
         <ShinyText
           text={t("hero.title")}
@@ -59,9 +58,14 @@ function Hero() {
           speed={3}
           className="hero-title"
         />
-        <a href="#contact" className="button-primary">
-          {t("hero.get_in_touch")}
-        </a>
+        {/* <div className="hero-buttons"> */}
+          <a href="#contact" className="button-primary">
+            {t("hero.get_in_touch")}
+          </a>
+          <Link to="/request" className="RequestService-btn1">
+            {t("industries.button")}
+          </Link>
+        {/* </div> */}
       </div>
     </section>
   );
