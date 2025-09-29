@@ -50,7 +50,7 @@ function Hero() {
           />
         )}
       </div>
-      <div className="hero-right hero-content">
+      <div className="hero-right">
         <h2>{t("hero.subtitle")}</h2>
         <ShinyText
           text={t("hero.title")}
