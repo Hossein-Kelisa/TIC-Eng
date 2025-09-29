@@ -1,32 +1,22 @@
-import nodemailer from "nodemailer";
-import { env } from "../config/env.js";
+import sgMail from "@sendgrid/mail";
+import { getObjectBuffer } from "./s3Download.js";
 import path from "path";
-import { getObjectBuffer } from "./s3Download.js"; // helper to download S3 file
+import dotenv from "dotenv";
 
-// create transporter (SMTP)
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT) || 587,
-  secure: process.env.SMTP_SECURE === "true",
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
+dotenv.config();
 
-// extract S3 key from public URL
+// Set SendGrid API key from .env
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+// Extract S3 key from public URL
 function extractS3KeyFromUrl(urlString) {
   const bucketHost = `${process.env.S3_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com`;
-  if (typeof urlString !== "string" || !urlString.includes(bucketHost)) {
+  if (typeof urlString !== "string" || !urlString.includes(bucketHost))
     return null;
-  }
   const parts = urlString.split(`${bucketHost}/`);
-  if (parts.length < 2 || !parts[1] || parts[1].trim() === "") {
-    return null;
-  }
-  // Optionally, remove any query string or fragment from the key
-  const key = parts[1].split(/[?#]/)[0];
-  return key;
+  if (!parts[1]) return null;
+  const key = parts[1].split(/[?#]/)[0].trim();
+  return key.length > 0 ? key : null;
 }
 
 /**
@@ -42,17 +32,18 @@ export async function sendNewRequestEmail(savedRequest, fileUrl) {
       if (key) {
         const fileBuffer = await getObjectBuffer(key);
         attachments.push({
+          content: fileBuffer.toString("base64"),
           filename: path.basename(key) || "attachment.pdf",
-          content: fileBuffer,
-          contentType: "application/pdf",
+          type: "application/pdf",
+          disposition: "attachment",
         });
       }
     }
 
-    const mailOptions = {
-      from: process.env.MAIL_FROM, // ✅ matches .env
-      to: process.env.MAIL_TO, // ✅ matches .env
-      subject: `📩New service request from ${savedRequest.firstName} ${savedRequest.lastName}`,
+    const msg = {
+      to: process.env.MAIL_TO,
+      from: process.env.MAIL_FROM,
+      subject: `📩 New service request from ${savedRequest.firstName} ${savedRequest.lastName}`,
       text: `New request: ${savedRequest.service}\n\nMessage: ${
         savedRequest.message || "-"
       }`,
@@ -74,9 +65,13 @@ export async function sendNewRequestEmail(savedRequest, fileUrl) {
       attachments,
     };
 
-    const info = await transporter.sendMail(mailOptions);
-    console.log("Email sent:", info.messageId);
+    const info = await sgMail.send(msg);
+    console.log("✅ Email sent:", info[0].statusCode);
   } catch (err) {
-    console.error("Error sending new request email:", err);
+    if (err.response) {
+      console.error("❌ SendGrid error response:", err.response.body);
+    } else {
+      console.error("❌ Error sending email:", err.message);
+    }
   }
 }
