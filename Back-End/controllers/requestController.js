@@ -67,8 +67,6 @@ export const createRequest = async (req, res, next) => {
         error: emailErr,
         requestId: savedRequest._id,
         userId: savedRequest.user,
-        userEmail: savedRequest.email,
-        fileUrl: savedRequest.fileUrl,
         service: savedRequest.service,
         company: savedRequest.company,
       });
