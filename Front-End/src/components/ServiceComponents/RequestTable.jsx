@@ -11,6 +11,7 @@ export default function RequestTable({ requests, onStatusChange }) {
             <th>Date</th>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Company</th>
             <th>Email</th>
             <th>Service</th>
             <th>Phone</th>

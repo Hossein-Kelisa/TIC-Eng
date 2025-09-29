@@ -21,6 +21,7 @@ export default function RequestRow({ request, onStatusChange }) {
       <td>{dateLabel}</td>
       <td>{request.firstName}</td>
       <td>{request.lastName}</td>
+      <td>{request.company}</td>
       <td>{request.email}</td>
       <td>{request.service}</td>
       <td>{request.phone}</td>
