@@ -11,9 +11,12 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 // Extract S3 key from public URL
 function extractS3KeyFromUrl(urlString) {
   const bucketHost = `${process.env.S3_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com`;
-  if (typeof urlString !== "string" || !urlString.includes(bucketHost)) return null;
+  if (typeof urlString !== "string" || !urlString.includes(bucketHost))
+    return null;
   const parts = urlString.split(`${bucketHost}/`);
-  return parts[1] ? parts[1].split(/[?#]/)[0] : null;
+  if (!parts[1]) return null;
+  const key = parts[1].split(/[?#]/)[0].trim();
+  return key.length > 0 ? key : null;
 }
 
 /**
@@ -41,15 +44,23 @@ export async function sendNewRequestEmail(savedRequest, fileUrl) {
       to: process.env.MAIL_TO,
       from: process.env.MAIL_FROM,
       subject: `📩 New service request from ${savedRequest.firstName} ${savedRequest.lastName}`,
-      text: `New request: ${savedRequest.service}\n\nMessage: ${savedRequest.message || "-"}`,
+      text: `New request: ${savedRequest.service}\n\nMessage: ${
+        savedRequest.message || "-"
+      }`,
       html: `
-        <p>New request from <b>${savedRequest.firstName} ${savedRequest.lastName}</b></p>
+        <p>New request from <b>${savedRequest.firstName} ${
+        savedRequest.lastName
+      }</b></p>
         <p>Company: ${savedRequest.company || "-"}</p>
         <p>Service: ${savedRequest.service}</p>
         <p>Message: ${savedRequest.message || "-"}</p>
         <p>Phone: ${savedRequest.phone}</p>
         <p>Email: ${savedRequest.email}</p>
-        ${fileUrl ? `<p>File: <a href="${fileUrl}" target="_blank">Download PDF</a></p>` : "<p>No file uploaded</p>"}
+        ${
+          fileUrl
+            ? `<p>File: <a href="${fileUrl}" target="_blank">Download PDF</a></p>`
+            : "<p>No file uploaded</p>"
+        }
       `,
       attachments,
     };
