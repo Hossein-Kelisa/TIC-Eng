@@ -63,7 +63,13 @@ export const createRequest = async (req, res, next) => {
     try {
       await sendNewRequestEmail(savedRequest, savedRequest.fileUrl);
     } catch (emailErr) {
-      console.error("❌ Email sending failed:", emailErr);
+      console.error("❌ Email sending failed:", {
+        error: emailErr,
+        requestId: savedRequest._id,
+        userId: savedRequest.user,
+        service: savedRequest.service,
+        company: savedRequest.company,
+      });
     }
 
     return res.status(201).json({
