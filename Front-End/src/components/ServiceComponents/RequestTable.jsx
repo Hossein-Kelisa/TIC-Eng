@@ -6,7 +6,7 @@ export default function RequestTable({ requests, onStatusChange }) {
   return (
     <div className="request-list__table-container">
       {requests.length === 0 ? (
-        <p className="request-list__empty">No requests found.</p>
+        <p className="request-list__empty">No requests found</p>
       ) : (
         <table className="request-list__table">
           <thead>
