@@ -43,9 +43,9 @@
 
 .industry-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .industry-image {
