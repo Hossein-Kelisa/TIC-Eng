@@ -24,3 +24,12 @@
   text-align: center;
   color: #666;
 }
+@media (max-width: 600px) {
+  .request-list {
+    padding: 5px;
+  }
+  .request-list__title {
+  margin: 1rem 0 0 0;
+  font-size: 1.5rem;
+  }
+}
