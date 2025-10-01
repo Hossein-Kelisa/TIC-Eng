@@ -1,64 +1,89 @@
-/* RequestTable.css */
+/* src/components/ServiceComponents/RequestTable.css */
+
 .request-list__table-container {
-  overflow-x: auto;
-  border-radius: 8px;
-  background: #fff;
-  padding: 0.5rem;
-  border: 0.5px solid #e9e8e894;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  overflow-x: auto; /* horizontal scroll on small screens */
 }
 
 .request-list__table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 900px; /* keep table readable */
+  min-width: 900px; /* keep table readable on desktop */
 }
 
 .request-list__table th,
 .request-list__table td {
-  padding: 0.6rem 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e5e7eb;
   text-align: left;
-  border-bottom: 1px solid #eaeaea;
-  vertical-align: middle;
-  font-size: 0.95rem;
-  color: #333;
-  white-space: normal; /* allow wrapping */
-  word-break: break-word; /* break long words if needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.request-list__table thead th {
-  background: #f0efef;
-  font-weight: 600;
-  position: sticky;
-  top: 0;
-  z-index: 1;
+.request-list__table th {
+  background-color: #f3f4f6;
 }
 
 .request-list__empty {
-  padding: 1.25rem;
   text-align: center;
-  color: #777;
+  padding: 1rem;
+  color: #6b7280;
 }
-
+/* Tablet stack cards */
 @media (max-width: 768px) {
-  .request-list__table {
-    min-width: 600px; /* allow table to shrink on tablets */
-  }
-
+  .request-list__table,
+  .request-list__table thead,
+  .request-list__table tbody,
   .request-list__table th,
-  .request-list__table td {
-    padding: 0.5rem 0.6rem;
-    font-size: 0.7rem;
+  .request-list__table td,
+  .request-list__table tr {
+    padding: 0.5rem;
+    font-size: 0.85rem;
   }
 }
-@media (max-width: 480px) {
-  .request-list__table {
-    min-width: 400px; /* allow table to shrink on mobile */
+
+/* Mobile stack cards */
+@media (max-width: 500px) {
+  .request-list__table,
+  .request-list__table thead,
+  .request-list__table tbody,
+  .request-list__table th,
+  .request-list__table td,
+  .request-list__table tr {
+    display: block;
+    min-width: 220px;
+    font-size: 0.75rem;
+    text-align: center;
   }
 
-  .request-list__table th,
+  .request-list__table thead {
+    display: none;
+  }
+
+  .request-list__table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #8e9197;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+
   .request-list__table td {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.45rem;
+    padding-left: 5px;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: normal;
+    text-overflow: clip;
+  }
+
+  .request-list__table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    font-weight: 600;
+    padding-left: 0.5rem;
+    text-align: left;
   }
 }
