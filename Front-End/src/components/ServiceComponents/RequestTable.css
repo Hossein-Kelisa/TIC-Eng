@@ -30,8 +30,7 @@
   padding: 1rem;
   color: #6b7280;
 }
-
-/* Mobile stack cards */
+/* Tablet stack cards */
 @media (max-width: 768px) {
   .request-list__table,
   .request-list__table thead,
@@ -39,7 +38,23 @@
   .request-list__table th,
   .request-list__table td,
   .request-list__table tr {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile stack cards */
+@media (max-width: 500px) {
+  .request-list__table,
+  .request-list__table thead,
+  .request-list__table tbody,
+  .request-list__table th,
+  .request-list__table td,
+  .request-list__table tr {
     display: block;
+    min-width: 220px;
+    font-size: 0.75rem;
+    text-align: center;
   }
 
   .request-list__table thead {
@@ -48,13 +63,13 @@
 
   .request-list__table tr {
     margin-bottom: 1rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #8e9197;
     border-radius: 0.5rem;
     padding: 0.5rem;
   }
 
   .request-list__table td {
-    padding-left: 50%;
+    padding-left: 5px;
     position: relative;
     border: none;
     border-bottom: 1px solid #e5e7eb;
