@@ -94,6 +94,12 @@
     "confirmPassword": "Confirm Password",
     "signUp": "Sign Up",
     "signIn": "Sign In",
-    "forgotPassword": "Forgot password?"
+    "forgotPassword": "Forgot password?",
+    "sendResetLink": "Send Reset Link",
+    "backToLogin": "Back to login",
+    "dontHaveAccount": "Don’t have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "logout": "Logout",
+    "login": "Login"
   }
 }

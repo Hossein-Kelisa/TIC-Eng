@@ -94,6 +94,12 @@
     "confirmPassword": "تأیید رمز عبور",
     "signUp": "ثبت نام",
     "signIn": "ورود",
-    "forgotPassword": "رمز عبور را فراموش کرده‌اید؟"
+    "forgotPassword": "رمز عبور را فراموش کرده‌اید؟",
+    "sendResetLink": "ارسال لینک بازنشانی",
+    "backToLogin": "بازگشت به ورود",
+    "dontHaveAccount": "حساب کاربری ندارید؟",
+    "alreadyHaveAccount": "قبلاً حساب کاربری دارید؟",
+    "logout": "خروج",
+    "login": "ورود"
   }
 }
