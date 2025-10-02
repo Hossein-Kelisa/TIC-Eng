@@ -3,8 +3,10 @@ import PropTypes from "prop-types";
 import Swal from "sweetalert2";
 import axios from "axios";
 import "./ForgotPass.css";
+import { useTranslation } from "react-i18next";
 
 export default function ForgotPass({ handleBack }) {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
 
   const handleSubmit = async (e) => {
@@ -29,7 +31,7 @@ export default function ForgotPass({ handleBack }) {
   return (
     <form className="auth-form forgot-pass-form" onSubmit={handleSubmit}>
       <label htmlFor="forgot-email" className="form-label2">
-        Enter your email
+        {t("auth.email")}
       </label>
       <input
         id="forgot-email"
@@ -42,11 +44,11 @@ export default function ForgotPass({ handleBack }) {
       />
 
       <button type="submit" className="primary-btn2">
-        Send Reset Link
+        {t("auth.sendResetLink")}
       </button>
 
       <button type="button" className="secondary-btn" onClick={handleBack}>
-        Back to login
+        {t("auth.backToLogin")}
       </button>
     </form>
   );

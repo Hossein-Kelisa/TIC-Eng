@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./FormFileUpload.css";
+import { useTranslation } from "react-i18next";
 
 export default function FormFileUpload({ name, onChange, accept }) {
   const [dragActive, setDragActive] = useState(false);
   const [fileName, setFileName] = useState("");
+  const { t } = useTranslation();
 
   const handleDrag = (e) => {
     e.preventDefault();
@@ -55,7 +57,7 @@ export default function FormFileUpload({ name, onChange, accept }) {
         {fileName ? (
           <span>{fileName}</span>
         ) : (
-          <span>Drag & drop your file here or <u>click to browse</u></span>
+          <span> {t("serviceRequest.dragAndDrop")} <u>{t("serviceRequest.clickToBrowse")}</u></span>
         )}
       </label>
     </div>

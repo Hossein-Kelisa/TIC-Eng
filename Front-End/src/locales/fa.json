@@ -85,5 +85,39 @@
     "address": "آدرس",
     "address.details": " آدرس شرکت مهندسی تیک...",
     "send_email": "برای ما ایمیل بفرستید"
+  },
+  "auth": {
+    "firstName": "نام",
+    "lastName": "نام خانوادگی",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "confirmPassword": "تأیید رمز عبور",
+    "signUp": "ثبت نام",
+    "signIn": "ورود",
+    "forgotPassword": "رمز عبور را فراموش کرده‌اید؟",
+    "sendResetLink": "ارسال لینک بازنشانی",
+    "backToLogin": "بازگشت به ورود",
+    "dontHaveAccount": "حساب کاربری ندارید؟",
+    "alreadyHaveAccount": "قبلاً حساب کاربری دارید؟",
+    "logout": "خروج",
+    "login": "ورود"
+  },
+  "serviceRequest": {
+    "dragAndDrop": "فایل خود را بکشید و رها کنید و یا",
+    "clickToBrowse": "برای آپلود کلیک کنید",
+    "submit": "ارسال",
+    "submitLoading": "...در حال ارسال",
+    "submitSuccess": "درخواست با موفقیت ارسال شد!",
+    "submitErrorTitle": "خطا در ارسال درخواست",
+    "submitErrorDefault": "ارسال درخواست ناموفق بود.",
+    "submitErrorConfirm": "باشه",
+    "formTitle": "فرم درخواست خدمات",
+    "formCompany": "شرکت",
+    "formTesting": "تست",
+    "formInspection": "بازرسی",
+    "formCertification": "صدور گواهینامه",
+    "formMessage": "پیام",
+    "formPhone": "تلفن",
+    "formSelectService": "انتخاب سرویس"
   }
 }

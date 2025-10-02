@@ -10,10 +10,12 @@ import Swal from "sweetalert2";
 import "./RequestForm.css";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import { useTranslation } from "react-i18next";
 
 export default function RequestForm() {
   const navigate = useNavigate();
   const { user, token } = useContext(AuthContext);
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     company: "",
     service: "",
@@ -47,7 +49,7 @@ export default function RequestForm() {
     try {
       // Show SweetAlert2 loading
       Swal.fire({
-        title: "Submitting...",
+        title: t("serviceRequest.submitLoading"),
         allowOutsideClick: false,
         didOpen: () => Swal.showLoading(),
       });
@@ -71,7 +73,7 @@ export default function RequestForm() {
         toast: true,
         position: "top-end",
         icon: "success",
-        title: "Request submitted successfully",
+        title: t("serviceRequest.submitSuccess"),
         showConfirmButton: false,
         timer: 2000,
         timerProgressBar: true,
@@ -86,9 +88,9 @@ export default function RequestForm() {
       Swal.close();
       Swal.fire({
         icon: "error",
-        title: "Error!",
-        text: err.message || "Failed to submit request.",
-        confirmButtonText: "OK",
+        title: t("serviceRequest.submitErrorTitle"),
+        text: err.message || t("serviceRequest.submitErrorDefault"),
+        confirmButtonText: t("serviceRequest.submitErrorConfirm"),
         confirmButtonColor: "#dc2626",
         background: "#fef2f2",
         color: "#991b1b",
@@ -100,7 +102,7 @@ export default function RequestForm() {
 
   return (
     <form onSubmit={handleSubmit} className="request-form">
-      <h2 className="request-form__title">Service Request Form</h2>
+      <h2 className="request-form__title">{t("serviceRequest.formTitle")}</h2>
 
       <FormInput
         type="text"
@@ -121,7 +123,7 @@ export default function RequestForm() {
       <FormInput
         type="text"
         name="company"
-        placeholder="Company"
+        placeholder={t("serviceRequest.formCompany")}
         value={formData.company}
         onChange={handleChange}
         required
@@ -132,16 +134,16 @@ export default function RequestForm() {
         value={formData.service}
         onChange={handleChange}
         options={[
-          { value: "testing", label: "Testing" },
-          { value: "inspection", label: "Inspection" },
-          { value: "certification", label: "Certification" },
+          { value: "testing", label: t("serviceRequest.formTesting") },
+          { value: "inspection", label: t("serviceRequest.formInspection") },
+          { value: "certification", label: t("serviceRequest.formCertification") },
         ]}
         required
       />
 
       <FormTextarea
         name="message"
-        placeholder="Message"
+        placeholder={t("serviceRequest.formMessage")}
         value={formData.message}
         onChange={handleChange}
       />
@@ -149,7 +151,7 @@ export default function RequestForm() {
       <FormInput
         type="text"
         name="phone"
-        placeholder="Phone"
+        placeholder={t("serviceRequest.formPhone")}
         value={formData.phone}
         onChange={handleChange}
         required

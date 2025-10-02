@@ -2,9 +2,11 @@ import { User2 } from "lucide-react";
 import "./AuthButton.css";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { useTranslation } from "react-i18next";
 
 function AuthButton({ isLoggedIn, onLogout }) {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleLogout = () => {
     Swal.fire({
@@ -49,7 +51,7 @@ function AuthButton({ isLoggedIn, onLogout }) {
           aria-label="Logout from your account"
         >
           <User2 size={22} className="UserIcon-Logout" aria-hidden="true" />
-          Logout
+          {t("auth.logout")}
         </button>
       ) : (
         <button
@@ -58,7 +60,7 @@ function AuthButton({ isLoggedIn, onLogout }) {
           aria-label="Login to your account"
         >
           <User2 size={22} className="UserIcon-Login" aria-hidden="true" />
-          Login
+          {t("auth.login")}
         </button>
       )}
     </div>
