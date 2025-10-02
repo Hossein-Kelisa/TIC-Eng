@@ -92,6 +92,8 @@
     "email": "ایمیل",
     "password": "رمز عبور",
     "confirmPassword": "تأیید رمز عبور",
-    "signUp": "ثبت نام"
+    "signUp": "ثبت نام",
+    "signIn": "ورود",
+    "forgotPassword": "رمز عبور را فراموش کرده‌اید؟"
   }
 }

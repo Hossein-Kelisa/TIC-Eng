@@ -92,6 +92,8 @@
     "email": "Email",
     "password": "Password",
     "confirmPassword": "Confirm Password",
-    "signUp": "Sign Up"
+    "signUp": "Sign Up",
+    "signIn": "Sign In",
+    "forgotPassword": "Forgot password?"
   }
 }
