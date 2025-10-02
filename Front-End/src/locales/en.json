@@ -85,5 +85,13 @@
     "address": "Address",
     "address.details": "TIC Engineering, Address...",
     "send_email": "Send Us an Email"
+  },
+  "auth": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "signUp": "Sign Up"
   }
 }
