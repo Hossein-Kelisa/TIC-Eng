@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
 import "./RegisterForm.css";
+import { useTranslation } from "react-i18next";
 
 export default function RegisterForm({ handleSubmit }) {
+  const { t } = useTranslation();
+
   return (
     <form className="auth-form register-form" onSubmit={handleSubmit}>
       <label htmlFor="firstName" className="form-label">
-        First Name
+        {t("auth.firstName")}
       </label>
       <input
         id="firstName"
@@ -16,7 +19,7 @@ export default function RegisterForm({ handleSubmit }) {
       />
 
       <label htmlFor="lastName" className="form-label">
-        Last Name
+        {t("auth.lastName")}
       </label>
       <input
         id="lastName"
@@ -27,7 +30,7 @@ export default function RegisterForm({ handleSubmit }) {
       />
 
       <label htmlFor="email" className="form-label">
-        Email
+        {t("auth.email")}
       </label>
       <input
         id="email"
@@ -38,7 +41,7 @@ export default function RegisterForm({ handleSubmit }) {
       />
 
       <label htmlFor="password" className="form-label">
-        Password
+        {t("auth.password")}
       </label>
       <input
         id="password"
@@ -48,7 +51,7 @@ export default function RegisterForm({ handleSubmit }) {
         required
       />
       <label htmlFor="confirmPassword" className="form-label">
-        Confirm Password
+        {t("auth.confirmPassword")}
       </label>
       <input
         id="confirmPassword"
@@ -59,7 +62,7 @@ export default function RegisterForm({ handleSubmit }) {
       />
 
       <button type="submit" className="primary-btn">
-        Sign up
+        {t("auth.signUp")}
       </button>
     </form>
   );
