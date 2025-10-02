@@ -106,6 +106,18 @@
     "dragAndDrop": "Drag & drop your file here or",
     "clickToBrowse": "click to browse",
     "submit": "Submit",
-    "submitLoading": "Submitting..."
+    "submitLoading": "Submitting...",
+    "submitSuccess": "Request submitted successfully!",
+    "submitErrorTitle": "Failed to submit request",
+    "submitErrorDefault": "Failed to submit request.",
+    "submitErrorConfirm": "OK",
+    "formTitle": "Service Request Form",
+    "formCompany": "Company",
+    "formTesting": "Testing",
+    "formInspection": "Inspection",
+    "formCertification": "Certification",
+    "formMessage": "Message",
+    "formPhone": "Phone",
+    "formSelectService": "Select Service"
   }
 }

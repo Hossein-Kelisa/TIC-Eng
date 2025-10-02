@@ -106,6 +106,18 @@
     "dragAndDrop": "فایل خود را بکشید و رها کنید و یا",
     "clickToBrowse": "برای آپلود کلیک کنید",
     "submit": "ارسال",
-    "submitLoading": "...در حال ارسال"
+    "submitLoading": "...در حال ارسال",
+    "submitSuccess": "درخواست با موفقیت ارسال شد!",
+    "submitErrorTitle": "خطا در ارسال درخواست",
+    "submitErrorDefault": "ارسال درخواست ناموفق بود.",
+    "submitErrorConfirm": "باشه",
+    "formTitle": "فرم درخواست خدمات",
+    "formCompany": "شرکت",
+    "formTesting": "تست",
+    "formInspection": "بازرسی",
+    "formCertification": "صدور گواهینامه",
+    "formMessage": "پیام",
+    "formPhone": "تلفن",
+    "formSelectService": "انتخاب سرویس"
   }
 }
