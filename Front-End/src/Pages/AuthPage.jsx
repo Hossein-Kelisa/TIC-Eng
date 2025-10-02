@@ -8,10 +8,12 @@ import { useAuth } from "../hooks/useAuth";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import "./AuthPage.css";
+import { useTranslation } from "react-i18next";
 
 export default function AuthPage() {
   const { isLogin, toggleMode, handleSubmit } = useAuth();
   const [showForgotForm, setShowForgotForm] = useState(false);
+  const { t } = useTranslation();
 
   // Wrap handleSubmit to show SweetAlert loading
   const handleSubmitWithLoading = async (e) => {
@@ -56,7 +58,7 @@ export default function AuthPage() {
       <Header />
       <main className="auth-page">
         <div className="auth-container">
-          <h2 className="auth-title">{isLogin ? "Login" : "Register"}</h2>
+          <h2 className="auth-title">{isLogin ? t("auth.login") : t("auth.signUp")}</h2>
 
           {showForgotForm ? (
             <ForgotPass handleBack={() => setShowForgotForm(false)} />
