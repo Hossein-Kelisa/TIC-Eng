@@ -85,5 +85,13 @@
     "address": "آدرس",
     "address.details": " آدرس شرکت مهندسی تیک...",
     "send_email": "برای ما ایمیل بفرستید"
+  },
+  "auth": {
+    "firstName": "نام",
+    "lastName": "نام خانوادگی",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "confirmPassword": "تأیید رمز عبور",
+    "signUp": "ثبت نام"
   }
 }
