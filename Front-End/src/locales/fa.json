@@ -101,5 +101,11 @@
     "alreadyHaveAccount": "قبلاً حساب کاربری دارید؟",
     "logout": "خروج",
     "login": "ورود"
+  },
+  "serviceRequest": {
+    "dragAndDrop": "فایل خود را بکشید و رها کنید و یا",
+    "clickToBrowse": "برای آپلود کلیک کنید",
+    "submit": "ارسال",
+    "submitLoading": "...در حال ارسال"
   }
 }

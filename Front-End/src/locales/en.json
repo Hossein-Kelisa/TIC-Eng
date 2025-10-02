@@ -101,5 +101,11 @@
     "alreadyHaveAccount": "Already have an account?",
     "logout": "Logout",
     "login": "Login"
+  },
+  "serviceRequest": {
+    "dragAndDrop": "Drag & drop your file here or",
+    "clickToBrowse": "click to browse",
+    "submit": "Submit",
+    "submitLoading": "Submitting..."
   }
 }
