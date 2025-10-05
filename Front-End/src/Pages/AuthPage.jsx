@@ -9,6 +9,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import "./AuthPage.css";
 import { useTranslation } from "react-i18next";
+import Fades from "../components/RestComponents/Fades";
 
 export default function AuthPage() {
   const { isLogin, toggleMode, handleSubmit } = useAuth();
@@ -56,6 +57,7 @@ export default function AuthPage() {
   return (
     <div id="AuthPage">
       <Header />
+      <Fades animationType="fadeDown">
       <main className="auth-page">
         <div className="auth-container">
           <h2 className="auth-title">{isLogin ? t("auth.login") : t("auth.signUp")}</h2>
@@ -76,6 +78,7 @@ export default function AuthPage() {
           )}
         </div>
       </main>
+      </Fades>
       <Footer />
     </div>
   );
