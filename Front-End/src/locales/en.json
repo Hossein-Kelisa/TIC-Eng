@@ -124,6 +124,11 @@
     "checkYourEmail": "Check Your Email",
     "resetLinkSent": "A reset link has been sent to",
     "error": "Error",
-    "failedToSendResetLink": "Failed to send reset link."
+    "failedToSendResetLink": "Failed to send reset link.",
+    "areYouSure": "Are you sure?",
+    "youWillLogout": "You will be logged out.",
+    "yesLogout": "Yes, logout",
+    "stayLoggedIn": "Stay logged in",
+    "loggedOut": "Logged out successfully"
   }
 }
