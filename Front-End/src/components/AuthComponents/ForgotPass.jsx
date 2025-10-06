@@ -15,15 +15,15 @@ export default function ForgotPass({ handleBack }) {
       await axios.post("/api/auth/forgot-password", { email });
       Swal.fire({
         icon: "success",
-        title: "Check your email",
-        text: `A reset link has been sent to ${email} (simulated)`,
+        title: t("sweetAlert.checkYourEmail"),
+        text: t("sweetAlert.resetLinkSent", { email }),
       });
       setEmail("");
     } catch (error) {
       Swal.fire({
         icon: "error",
-        title: "Error",
-        text: error.response?.data?.msg || "Failed to send reset link.",
+        title: t("sweetAlert.error"),
+        text: error.response?.data?.msg || t("sweetAlert.failedToSendResetLink"),
       });
     }
   };
