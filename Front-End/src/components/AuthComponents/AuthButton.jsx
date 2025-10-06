@@ -10,12 +10,12 @@ function AuthButton({ isLoggedIn, onLogout }) {
 
   const handleLogout = () => {
     Swal.fire({
-      title: "Are you sure?",
-      text: "You will be logged out.",
+      title: t("sweetAlert.areYouSure"),
+      text: t("sweetAlert.youWillLogout"),
       icon: "warning",
       showCancelButton: true,
-      confirmButtonText: "Yes, logout",
-      cancelButtonText: "Stay logged in",
+      confirmButtonText: t("sweetAlert.yesLogout"),
+      cancelButtonText: t("sweetAlert.stayLoggedIn"),
       reverseButtons: true,
       confirmButtonColor: "#1f7840ff", // green
       cancelButtonColor: "#aa1d1dff",  // red
@@ -31,7 +31,7 @@ function AuthButton({ isLoggedIn, onLogout }) {
           toast: true,
           position: "top-end",
           icon: "success",
-          title: "Logged out successfully",
+          title: t("sweetAlert.loggedOut"),
           showConfirmButton: false,
           timer: 1800,
           timerProgressBar: true,
