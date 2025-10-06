@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { AuthContext } from "../../contexts/AuthContext";
+import { useTranslation } from "react-i18next";
 
 const API_URL = import.meta.env.VITE_API_URL;
 const MySwal = withReactContent(Swal);
@@ -11,6 +12,7 @@ const ProtectedRoute = ({ children }) => {
   const { user, logout, loading: authLoading } = useContext(AuthContext); // need loading in context
   const navigate = useNavigate();
   const [checking, setChecking] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -20,8 +22,8 @@ const ProtectedRoute = ({ children }) => {
 
       // Show loading spinner
       MySwal.fire({
-        title: "Checking access...",
-        text: "Please wait",
+        title: t("sweetAlert.checkingAccess"),
+        text: t("sweetAlert.pleaseWait"),
         allowOutsideClick: false,
         allowEscapeKey: false,
         showConfirmButton: false,
@@ -33,8 +35,8 @@ const ProtectedRoute = ({ children }) => {
         Swal.close();
         MySwal.fire({
           icon: "info",
-          title: "You must be logged in",
-          text: "Redirecting to login...",
+          title: t("sweetAlert.mustBeLoggedIn"),
+          text: t("sweetAlert.redirectingToLogin"),
           timer: 1500,
           showConfirmButton: false,
         });
@@ -61,8 +63,8 @@ const ProtectedRoute = ({ children }) => {
         Swal.close();
         MySwal.fire({
           icon: "warning",
-          title: "Session expired",
-          text: "Redirecting to login...",
+          title: t("sweetAlert.sessionExpired"),
+          text: t("sweetAlert.redirectingToLogin"),
           timer: 1800,
           showConfirmButton: false,
         });
@@ -71,7 +73,7 @@ const ProtectedRoute = ({ children }) => {
     };
 
     checkAuth();
-  }, [user, authLoading, navigate, logout]);
+  }, [user, authLoading, navigate, logout, t]);
 
   if (authLoading || checking) return null; // wait until all checks done
 
