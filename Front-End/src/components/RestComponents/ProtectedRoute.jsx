@@ -12,7 +12,7 @@ const ProtectedRoute = ({ children }) => {
   const { user, logout, loading: authLoading } = useContext(AuthContext); // need loading in context
   const navigate = useNavigate();
   const [checking, setChecking] = useState(true);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation(); // include i18n
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -73,7 +73,7 @@ const ProtectedRoute = ({ children }) => {
     };
 
     checkAuth();
-  }, [user, authLoading, navigate, logout, t]);
+  }, [user, authLoading, navigate, logout, i18n.language]); // include i18n.language
 
   if (authLoading || checking) return null; // wait until all checks done
 

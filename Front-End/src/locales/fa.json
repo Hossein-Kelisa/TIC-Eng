@@ -122,7 +122,7 @@
   },
   "sweetAlert": {
     "checkYourEmail": "ایمیل خود را بررسی کنید",
-    "resetLinkSent": "لینک بازنشانی ارسال شد به",
+    "resetLinkSent": " {{email}} لینک بازنشانی ارسال شد به",
     "error": "خطا",
     "failedToSendResetLink": "ارسال لینک بازنشانی ناموفق بود",
     "areYouSure": "آیا مطمئن هستید؟",

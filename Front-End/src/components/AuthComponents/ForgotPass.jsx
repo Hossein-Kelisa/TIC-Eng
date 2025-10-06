@@ -23,7 +23,8 @@ export default function ForgotPass({ handleBack }) {
       Swal.fire({
         icon: "error",
         title: t("sweetAlert.error"),
-        text: error.response?.data?.msg || t("sweetAlert.failedToSendResetLink"),
+        text:
+          error.response?.data?.msg || t("sweetAlert.failedToSendResetLink"),
       });
     }
   };
