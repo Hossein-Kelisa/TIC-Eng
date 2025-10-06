@@ -129,6 +129,11 @@
     "youWillLogout": "شما خارج خواهید شد",
     "yesLogout": "بله، خارج شو",
     "stayLoggedIn": "در سیستم بمانید",
-    "loggedOut": "با موفقیت خارج شدید"
+    "loggedOut": "با موفقیت خارج شدید",
+    "checkingAccess": "...در حال بررسی دسترسی",
+    "pleaseWait": "لطفاً صبر کنید",
+    "mustBeLoggedIn": "ابتدا باید وارد شوید",
+    "redirectingToLogin": "در حال هدایت به صفحه ورود",
+    "sessionExpired": "جلسه شما منقضی شده است"
   }
 }
