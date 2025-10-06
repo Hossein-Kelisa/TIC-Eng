@@ -119,5 +119,11 @@
     "formMessage": "پیام",
     "formPhone": "تلفن",
     "formSelectService": "انتخاب سرویس"
+  },
+  "sweetAlert": {
+    "checkYourEmail": "ایمیل خود را بررسی کنید",
+    "resetLinkSent": "لینک بازنشانی ارسال شد به",
+    "error": "خطا",
+    "failedToSendResetLink": "ارسال لینک بازنشانی ناموفق بود"
   }
 }
