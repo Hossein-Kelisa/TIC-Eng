@@ -1,6 +1,6 @@
 {
   "hero": {
-    "subtitle": "TIC با اطمینان از آزمون تا اعتماد",
+    "subtitle": " با اطمینان از آزمون تا اعتماد TIC ",
     "title": "با کارشناسان ما ارتباط برقرار کنید یا درخواست خدمات دهید",
     "get_in_touch": "تماس با ما"
   },
@@ -119,5 +119,21 @@
     "formMessage": "پیام",
     "formPhone": "تلفن",
     "formSelectService": "انتخاب سرویس"
+  },
+  "sweetAlert": {
+    "checkYourEmail": "ایمیل خود را بررسی کنید",
+    "resetLinkSent": " {{email}} لینک بازنشانی ارسال شد به",
+    "error": "خطا",
+    "failedToSendResetLink": "ارسال لینک بازنشانی ناموفق بود",
+    "areYouSure": "آیا مطمئن هستید؟",
+    "youWillLogout": "شما خارج خواهید شد",
+    "yesLogout": "بله، خارج شو",
+    "stayLoggedIn": "در سیستم بمانید",
+    "loggedOut": "با موفقیت خارج شدید",
+    "checkingAccess": "...در حال بررسی دسترسی",
+    "pleaseWait": "لطفاً صبر کنید",
+    "mustBeLoggedIn": "ابتدا باید وارد شوید",
+    "redirectingToLogin": "در حال هدایت به صفحه ورود",
+    "sessionExpired": "جلسه شما منقضی شده است"
   }
 }

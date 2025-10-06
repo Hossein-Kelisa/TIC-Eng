@@ -119,5 +119,21 @@
     "formMessage": "Message",
     "formPhone": "Phone",
     "formSelectService": "Select Service"
+  },
+  "sweetAlert": {
+    "checkYourEmail": "Check Your Email",
+    "resetLinkSent": "A reset link has been sent to {{email}}",
+    "error": "Error",
+    "failedToSendResetLink": "Failed to send reset link.",
+    "areYouSure": "Are you sure?",
+    "youWillLogout": "You will be logged out.",
+    "yesLogout": "Yes, logout",
+    "stayLoggedIn": "Stay logged in",
+    "loggedOut": "Logged out successfully",
+    "checkingAccess": "Checking access...",
+    "pleaseWait": "Please wait",
+    "mustBeLoggedIn": "You must be logged in to access this page.",
+    "redirectingToLogin": "Redirecting to login...",
+    "sessionExpired": "Your session has expired."
   }
 }
