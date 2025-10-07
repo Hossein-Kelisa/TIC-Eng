@@ -13,9 +13,7 @@ function DownloadForms() {
           <h4>{t("download_forms.title")}</h4>
         </Fades>
         <Fades animationType="fadeUp">
-          <p className="download-subtitle">
-            {t("download_forms.subtitle")}
-          </p>
+          <p className="download-subtitle">{t("download_forms.subtitle")}</p>
         </Fades>
         <div className="download-buttons">
           <Fades animationType="fadeLeft">

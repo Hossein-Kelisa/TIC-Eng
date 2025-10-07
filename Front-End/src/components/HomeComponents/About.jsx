@@ -28,9 +28,7 @@ function About() {
     <section id="about" className="about-section">
       <Fades animationType="fadeZoom">
         <h3 className="about-title">{t("about.title")}</h3>
-        <p className="about-subtitle">
-          {t("about.subtitle")}
-        </p>
+        <p className="about-subtitle">{t("about.subtitle")}</p>
       </Fades>
 
       <div className="about-content">

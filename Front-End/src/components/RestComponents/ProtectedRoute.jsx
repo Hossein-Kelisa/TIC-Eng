@@ -73,7 +73,7 @@ const ProtectedRoute = ({ children }) => {
     };
 
     checkAuth();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, authLoading, navigate, logout, i18n.language]); // include i18n.language
 
   if (authLoading || checking) return null; // wait until all checks done
