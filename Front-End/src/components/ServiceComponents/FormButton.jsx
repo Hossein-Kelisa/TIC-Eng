@@ -5,11 +5,7 @@ export default function FormButton({ loading }) {
   const { t } = useTranslation();
 
   return (
-    <button
-      type="submit"
-      disabled={loading}
-      className="request-form__button"
-    >
+    <button type="submit" disabled={loading} className="request-form__button">
       {loading ? t("serviceRequest.submitLoading") : t("serviceRequest.submit")}
     </button>
   );
