@@ -5,6 +5,7 @@ import RequestPage from "./Pages/RequestPage";
 import { AuthProvider } from "./contexts/AuthContext";
 import DashboardPage from "./Pages/DashboardPage";
 import ProtectedRoute from "./components/RestComponents/ProtectedRoute";
+import HosseinPage from "./Pages/team/HosseinPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/request" element={<ProtectedRoute><RequestPage /></ProtectedRoute>} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/team/hossein" element={<HosseinPage />} />
         </Routes>
       </Router>
     </AuthProvider>
