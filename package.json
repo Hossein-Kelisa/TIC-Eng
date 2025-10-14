@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "scripts": {
+    "dev": "concurrently -n B,F -c green,blue \"npm run dev --prefix Back-End\" \"npm run dev --prefix Front-End\""
+  }
+}
