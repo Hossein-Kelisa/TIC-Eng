@@ -1,9 +1,11 @@
 import "./Team.css";
 import Fades from "../RestComponents/Fades";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function Team() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const teamMembers = [
     {
@@ -23,6 +25,10 @@ function Team() {
     },
   ];
 
+  const handleClick = (id) => {
+    navigate(`/team/${id}`);
+  };
+
   return (
     <section id="team" className="team-section">
       <div className="container">
@@ -33,7 +39,9 @@ function Team() {
         <div className="team-grid">
           {teamMembers.map((member, index) => (
             <Fades animationType="fadeRotate" key={index}>
-              <div className="team-card">
+              <div className="team-card"
+                onClick={() => handleClick(member.name)}
+              >
                 <img
                   src={member.photo}
                   alt={member.name}
