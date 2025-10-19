@@ -14,9 +14,16 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/auth" element={<AuthPage />} />
-          <Route path="/request" element={<ProtectedRoute><RequestPage /></ProtectedRoute>} />
+          <Route
+            path="/request"
+            element={
+              <ProtectedRoute>
+                <RequestPage />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/team/hossein" element={<HosseinPage />} />
+          <Route path="/team/:id" element={<ProfilePage />} />
         </Routes>
       </Router>
     </AuthProvider>
