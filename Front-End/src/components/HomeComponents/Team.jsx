@@ -28,11 +28,11 @@ function Team() {
               >
                 <img
                   src={member.photo}
-                  alt={member.name}
+                  alt={t(member.nameKey)}
                   className="team-photo"
                 />
-                <h4 className="team-name">{member.name}</h4>
-                <p className="team-role">{member.role}</p>
+                <h4 className="team-name">{t(member.nameKey)}</h4>
+                <p className="team-role">{t(member.roleKey)}</p>
               </div>
             </Fades>
           ))}

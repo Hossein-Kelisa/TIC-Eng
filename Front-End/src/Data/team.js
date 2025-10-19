@@ -52,7 +52,7 @@ const teamMembers = [
     id: "ahmed",
     nameKey: "team.ahmed.name",
     roleKey: "team.ahmed.role",
-    photo: "https://randomuser .me/api/portraits/men/8.jpg",
+    photo: "https://randomuser.me/api/portraits/men/8.jpg",
     bio: "Ahmed is a DevOps engineer...",
   },
 ];
