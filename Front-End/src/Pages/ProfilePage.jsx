@@ -15,7 +15,6 @@ function TeamProfile() {
       <img src={member.photo} alt={t(member.nameKey)} />
       <h2>{t(member.nameKey)}</h2>
       <h4>{t(member.roleKey)}</h4>
-      <p>{member.bio}</p>
     </div>
   );
 }
