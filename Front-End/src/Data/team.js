@@ -4,7 +4,6 @@ const teamMembers = [
     nameKey: "team.hossein.name",
     roleKey: "team.hossein.role",
     photo: "https://randomuser.me/api/portraits/men/1.jpg",
-    bio: "Hossein is a web developer at Tic-eng...",
   },
   {
     id: "sara",
