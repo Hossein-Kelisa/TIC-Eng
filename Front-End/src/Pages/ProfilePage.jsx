@@ -1,17 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
-const teamData = [
-  { id: "hossein", nameKey: "team.hossein.name", roleKey: "team.hossein.role", photo: "https://randomuser.me/api/portraits/men/1.jpg", bio: "Hossein is a web developer at Tic-eng..." },
-  { id: "sara", nameKey: "team.sara.name", roleKey: "team.sara.role", photo: "https://randomuser.me/api/portraits/women/2.jpg", bio: "Sara is a project manager..." },
-  // ...and so on
-];
+import teamMembers from "../Data/team";
 
 function TeamProfile() {
   const { id } = useParams();
   const { t } = useTranslation();
 
-  const member = teamData.find((m) => m.id === id);
+  const member = teamMembers.find((m) => m.id === id);
 
   if (!member) return <p>Member not found</p>;
 

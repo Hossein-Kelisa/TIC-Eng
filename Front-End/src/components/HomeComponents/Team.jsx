@@ -2,61 +2,11 @@ import "./Team.css";
 import Fades from "../RestComponents/Fades";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import teamMembers from "../../Data/team";
 
 function Team() {
   const { t } = useTranslation();
   const navigate = useNavigate();
-
-  const teamMembers = [
-    {
-      id: "hossein",
-      name: t("team.hossein.name"),
-      role: t("team.hossein.role"),
-      photo: "https://randomuser.me/api/portraits/men/1.jpg",
-    },
-    {
-      id: "sara",
-      name: t("team.sara.name"),
-      role: t("team.sara.role"),
-      photo: "https://randomuser.me/api/portraits/women/2.jpg",
-    },
-    {
-      id: "adel",
-      name: t("team.adel.name"),
-      role: t("team.adel.role"),
-      photo: "https://randomuser.me/api/portraits/men/3.jpg",
-    },
-    {
-      id: "lina",
-      name: t("team.lina.name"),
-      role: t("team.lina.role"),
-      photo: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      id: "ali",
-      name: t("team.ali.name"),
-      role: t("team.ali.role"),
-      photo: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      id: "nora",
-      name: t("team.nora.name"),
-      role: t("team.nora.role"),
-      photo: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-    {
-      id: "mina",
-      name: t("team.mina.name"),
-      role: t("team.mina.role"),
-      photo: "https://randomuser.me/api/portraits/women/7.jpg",
-    },
-    {
-      id: "ahmed",
-      name: t("team.ahmed.name"),
-      role: t("team.ahmed.role"),
-      photo: "https://randomuser.me/api/portraits/men/8.jpg",
-    },
-  ];
 
   const handleClick = (id) => {
     navigate(`/team/${id}`);
