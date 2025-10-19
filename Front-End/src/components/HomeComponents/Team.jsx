@@ -39,8 +39,8 @@ function Team() {
       photo: "https://randomuser.me/api/portraits/women/6.jpg",
     },
     {
-      name: t("team.newMember.name"),
-      role: t("team.newMember.role"),
+      name: t("team.mina.name"),
+      role: t("team.mina.role"),
       photo: "https://randomuser.me/api/portraits/women/7.jpg",
     },
     {
