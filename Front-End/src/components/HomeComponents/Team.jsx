@@ -23,6 +23,31 @@ function Team() {
       role: t("team.adel.role"),
       photo: "https://randomuser.me/api/portraits/men/3.jpg",
     },
+    {
+      name: t("team.lina.name"),
+      role: t("team.lina.role"),
+      photo: "https://randomuser.me/api/portraits/women/4.jpg",
+    },
+    {
+      name: t("team.ali.name"),
+      role: t("team.ali.role"),
+      photo: "https://randomuser.me/api/portraits/men/5.jpg",
+    },
+    {
+      name: t("team.nora.name"),
+      role: t("team.nora.role"),
+      photo: "https://randomuser.me/api/portraits/women/6.jpg",
+    },
+    {
+      name: t("team.newMember.name"),
+      role: t("team.newMember.role"),
+      photo: "https://randomuser.me/api/portraits/women/7.jpg",
+    },
+    {
+      name: t("team.ahmed.name"),
+      role: t("team.ahmed.role"),
+      photo: "https://randomuser.me/api/portraits/men/8.jpg",
+    }
   ];
 
   const handleClick = (id) => {
