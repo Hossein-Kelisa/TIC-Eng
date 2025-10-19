@@ -5,8 +5,7 @@ import RequestPage from "./Pages/RequestPage";
 import { AuthProvider } from "./contexts/AuthContext";
 import DashboardPage from "./Pages/DashboardPage";
 import ProtectedRoute from "./components/RestComponents/ProtectedRoute";
-import HosseinPage from "./Pages/team/HosseinPage";
-
+import ProfilePage from "./Pages/ProfilePage.jsx";
 function App() {
   return (
     <AuthProvider>
