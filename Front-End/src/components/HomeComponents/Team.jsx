@@ -2,7 +2,7 @@ import "./Team.css";
 import Fades from "../RestComponents/Fades";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import teamMembers from "../../Data/team";
+import teamMembers from "../../Data/teamMembers";
 
 function Team() {
   const { t } = useTranslation();
