@@ -7,7 +7,7 @@
 
 .profile-banner img {
   width: 100%;
-  height: 250px;
+  height: 350px;
   object-fit: cover;
 }
 
@@ -16,14 +16,14 @@
   flex-direction: row;
   max-width: 1200px;
   margin: -80px auto 40px;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   overflow: hidden;
 }
 
 .profile-sidebar {
-  width: 280px;
+  width: 200px;
   background-color: #f1f5f9;
   padding: 30px 20px;
   display: flex;
@@ -37,7 +37,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-  border: 3px solid #0078d7;
+  border: 2px solid #27373c;
 }
 
 .profile-sidebar h2 {
@@ -64,30 +64,39 @@
   border: 2px solid transparent;
   color: #0078d7;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
-.tab-menu-team button:hover,
+.tab-menu-team button:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
 .tab-menu-team .active {
-  border-color: #0078d7;
-  background: #eef5ff;
+  font-weight: 999;
+  color: #005fa3;
+  transform: scale(1.05);
+  text-decoration: underline;
 }
 
 .back-button {
-  margin-top: 30px;
+  margin-top: 50px;
   text-decoration: none;
   color: #fff;
   background-color: #0078d7;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 8px 10px;
+  border-radius: 4px;
 }
 
 .profile-content {
   flex: 1;
   padding: 40px;
+}
+.tab-content {
+  white-space: pre-line;
+  word-wrap: break-word;
 }
 
 .tab-content h3 {

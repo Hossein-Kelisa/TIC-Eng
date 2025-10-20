@@ -15,7 +15,9 @@ function TeamProfile() {
     return (
       <div className="team-profile not-found">
         <p>Member not found</p>
-        <Link to="/" className="back-button">← Back to Home</Link>
+        <Link to="/" className="back-button">
+          ← Back to Home
+        </Link>
       </div>
     );
   }
@@ -30,7 +32,11 @@ function TeamProfile() {
       <div className="profile-container">
         {/* Sidebar */}
         <aside className="profile-sidebar">
-          <img src={member.photo} alt={t(member.nameKey)} className="sidebar-photo" />
+          <img
+            src={member.photo}
+            alt={t(member.nameKey)}
+            className="sidebar-photo"
+          />
           <h2>{t(member.nameKey)}</h2>
           <h4>{t(member.roleKey)}</h4>
 
@@ -61,7 +67,9 @@ function TeamProfile() {
             </button>
           </nav>
 
-          <Link to="/" className="back-button">← Back to Home</Link>
+          <Link to="/" className="back-button">
+            ← Back to Home
+          </Link>
         </aside>
 
         {/* Main Content */}
@@ -90,7 +98,12 @@ function TeamProfile() {
             <div className="tab-content">
               <h3>CV</h3>
               {member.cv ? (
-                <a href={member.cv} target="_blank" rel="noreferrer" className="cv-link">
+                <a
+                  href={member.cv}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cv-link"
+                >
                   View CV (PDF)
                 </a>
               ) : (
@@ -103,7 +116,14 @@ function TeamProfile() {
             <div className="tab-content">
               <h3>Contact</h3>
               <p>Email: {member.email || "Not available"}</p>
-              <p>LinkedIn: {member.linkedin ? <a href={member.linkedin}>Profile</a> : "Not available"}</p>
+              <p>
+                LinkedIn:{" "}
+                {member.linkedin ? (
+                  <a href={member.linkedin}>Profile</a>
+                ) : (
+                  "Not available"
+                )}
+              </p>
             </div>
           )}
         </main>
