@@ -20,9 +20,9 @@
 }
 
 .team-card {
-  background-color: #f9f9f100;
+  background-color: transparent;
   border-radius: 100px 10px 100px 10px / 10px 100px 10px 100px;
-  border: 0.1px solid #0d65231e;
+  border: 0.1px solid #c32a082c;
   overflow: hidden;
   transition: all 0.3s ease;
   padding: 2rem 1.5rem;
