@@ -13,7 +13,8 @@
 
 .profile-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 90%;
   max-width: 1200px;
   margin: -80px auto 40px;
   background: #ffffff;
@@ -23,12 +24,18 @@
 }
 
 .profile-sidebar {
-  width: 200px;
   background-color: #f1f5f9;
   padding: 30px 20px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-img-name {
+  display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 20px;
 }
 
 .sidebar-photo {
@@ -37,7 +44,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-  border: 2px solid #27373c;
+  border: 2px solid #cc5f0c;
 }
 
 .profile-sidebar h2 {
@@ -51,23 +58,27 @@
   color: #666;
   margin-bottom: 20px;
 }
-
+.sidebar-tab-menu {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
 .tab-menu-team {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
+  flex-direction: row;
+  gap: 70px;
 }
 
 .tab-menu-team button {
   background: none;
   border: 2px solid transparent;
-  color: #0078d7;
+  color: #1a82d7;
   padding: 10px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
   transition: all 0.3s ease;
+  font-size: 1rem;
 }
 
 .tab-menu-team button:hover {
