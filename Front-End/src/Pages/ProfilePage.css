@@ -134,3 +134,23 @@
 .cv-link:hover {
   background-color: #005fa3;
 }
+
+@media (max-width: 768px) {
+  .profile-container {
+    width: 95%;
+  }
+
+  .profile-sidebar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .sidebar-img-name {
+    margin-left: 0;
+  }
+  .tab-menu-team {
+    gap: 30px;
+    margin-top: 15px;
+  }
+}
+
