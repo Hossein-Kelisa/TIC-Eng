@@ -66,7 +66,7 @@
 .tab-menu-team {
   display: flex;
   flex-direction: row;
-  gap: 70px;
+  gap: 60px;
 }
 
 .tab-menu-team button {
