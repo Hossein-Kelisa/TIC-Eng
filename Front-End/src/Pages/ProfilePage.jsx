@@ -69,10 +69,6 @@ function TeamProfile() {
               </button>
             </nav>
           </div>
-          {/* 
-          <Link to="/" className="back-button">
-            ← Back to Home
-          </Link> */}
         </aside>
 
         {/* Main Content */}
@@ -80,10 +76,7 @@ function TeamProfile() {
           {activeTab === "info" && (
             <div className="tab-content">
               <h3>About {t(member.nameKey)}</h3>
-              <p>
-                {member.bio ||
-                  "No bio available."}
-              </p>
+              <p>{member.bio || "No bio available."}</p>
             </div>
           )}
 
@@ -134,6 +127,9 @@ function TeamProfile() {
           )}
         </main>
       </div>
+      <Link to="/" className="back-button">
+        ← Back to Home
+      </Link>
     </div>
   );
 }
