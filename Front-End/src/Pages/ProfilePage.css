@@ -138,6 +138,10 @@
 @media (max-width: 768px) {
   .profile-container {
     width: 95%;
+    margin: -60px auto 30px;
+  }
+  .profile-banner img {
+    height: 280px;
   }
 
   .profile-sidebar {
@@ -153,4 +157,66 @@
     margin-top: 15px;
   }
 }
+@media (max-width: 480px) {
+  .profile-container {
+    flex-direction: row;
+    width: auto;
+    margin: -40px auto 20px;
+  }
 
+  .profile-banner img {
+    height: 180px;
+  }
+  .profile-sidebar {
+    padding: 30px 20px;
+    align-items: flex-start;
+  }
+  .sidebar-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50% 100%;
+    margin-bottom: 2px;
+  }
+
+  .profile-sidebar h2 {
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+    color: #222;
+  }
+
+  .profile-sidebar h4 {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .sidebar-tab-menu {
+    align-items: flex-start;
+    margin-right: 0;
+  }
+  .tab-menu-team {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab-menu-team button {
+    font-size: 0.9rem;
+  }
+
+  .profile-content {
+    padding: 10px;
+  }
+
+  .tab-content p,
+  .tab-content li {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .cv-link {
+    padding: 5px 5px;
+  }
+
+  .cv-link:hover {
+    background-color: #005fa3;
+  }
+}
