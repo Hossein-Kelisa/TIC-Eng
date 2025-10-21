@@ -32,44 +32,47 @@ function TeamProfile() {
       <div className="profile-container">
         {/* Sidebar */}
         <aside className="profile-sidebar">
-          <img
-            src={member.photo}
-            alt={t(member.nameKey)}
-            className="sidebar-photo"
-          />
-          <h2>{t(member.nameKey)}</h2>
-          <h4>{t(member.roleKey)}</h4>
-
-          <nav className="tab-menu-team">
-            <button
-              className={activeTab === "info" ? "active" : ""}
-              onClick={() => setActiveTab("info")}
-            >
-              Info
-            </button>
-            <button
-              className={activeTab === "skills" ? "active" : ""}
-              onClick={() => setActiveTab("skills")}
-            >
-              Skills
-            </button>
-            <button
-              className={activeTab === "cv" ? "active" : ""}
-              onClick={() => setActiveTab("cv")}
-            >
-              CV
-            </button>
-            <button
-              className={activeTab === "contact" ? "active" : ""}
-              onClick={() => setActiveTab("contact")}
-            >
-              Contact
-            </button>
-          </nav>
-
+          <div className="sidebar-img-name">
+            <img
+              src={member.photo}
+              alt={t(member.nameKey)}
+              className="sidebar-photo"
+            />
+            <h2>{t(member.nameKey)}</h2>
+            <h4>{t(member.roleKey)}</h4>
+          </div>
+          <div className="sidebar-tab-menu">
+            <nav className="tab-menu-team">
+              <button
+                className={activeTab === "info" ? "active" : ""}
+                onClick={() => setActiveTab("info")}
+              >
+                Info
+              </button>
+              <button
+                className={activeTab === "skills" ? "active" : ""}
+                onClick={() => setActiveTab("skills")}
+              >
+                Skills
+              </button>
+              <button
+                className={activeTab === "cv" ? "active" : ""}
+                onClick={() => setActiveTab("cv")}
+              >
+                CV
+              </button>
+              <button
+                className={activeTab === "contact" ? "active" : ""}
+                onClick={() => setActiveTab("contact")}
+              >
+                Contact
+              </button>
+            </nav>
+          </div>
+          {/* 
           <Link to="/" className="back-button">
             ← Back to Home
-          </Link>
+          </Link> */}
         </aside>
 
         {/* Main Content */}
@@ -77,7 +80,10 @@ function TeamProfile() {
           {activeTab === "info" && (
             <div className="tab-content">
               <h3>About {t(member.nameKey)}</h3>
-              <p>{member.bio || "No bio available."}</p>
+              <p>
+                {member.bio ||
+                  "No bio availableaefefgrgtrg hhth thdthtdhtdhtd hthtd dthdth dth tdhdth dthdthtdhtd hdthdt hdt dth dthd hdt dthtdh dthtdhdt hdt dthtdhtd hdthtdhtdthhfdxhtxfjhyjr hfyhthsdthh tdhdthdtteh tedhtrhjtjh fht sthhms , dsuf sdfsdfkjuds hds ydsk fks fasu aesl;fuESfseFGSf,j,jbnsdkf hu hfskudhfsklughfs aesufheaskuh aeiu;hfkuh fkkuaehfkluhASku fHkua ."}
+              </p>
             </div>
           )}
 
