@@ -82,7 +82,7 @@ function TeamProfile() {
               <h3>About {t(member.nameKey)}</h3>
               <p>
                 {member.bio ||
-                  "No bio availableaefefgrgtrg hhth thdthtdhtdhtd hthtd dthdth dth tdhdth dthdthtdhtd hdthdt hdt dth dthd hdt dthtdh dthtdhdt hdt dthtdhtd hdthtdhtdthhfdxhtxfjhyjr hfyhthsdthh tdhdthdtteh tedhtrhjtjh fht sthhms , dsuf sdfsdfkjuds hds ydsk fks fasu aesl;fuESfseFGSf,j,jbnsdkf hu hfskudhfsklughfs aesufheaskuh aeiu;hfkuh fkkuaehfkluhASku fHkua ."}
+                  "No bio available."}
               </p>
             </div>
           )}
