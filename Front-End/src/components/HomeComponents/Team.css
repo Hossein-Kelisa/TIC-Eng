@@ -20,41 +20,44 @@
 }
 
 .team-card {
-  background-color: #f9f9f1;
-  border-radius: 16px;
+  background-color: transparent;
+  border-radius: 100px 10px 100px 10px / 10px 100px 10px 100px;
+  border: 0.1px solid #c32a082c;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   padding: 2rem 1.5rem;
   text-align: center;
 }
 
 .team-card:hover {
+  background-color: #f9f9f1ef;
   transform: translateY(-8px);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .team-photo {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
+  border-radius: 50% 100% 50% 50% / 50% 50% 100% 50%;
   object-fit: cover;
   margin-bottom: 1.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .team-name {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #111827;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a24d03;
   margin-bottom: 0.5rem;
+  font-family: Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgba(126, 125, 125, 0.28);
 }
 
 .team-role {
   font-size: 1rem;
-  color: #6b7280;
+  font-weight: 500;
+  color: #444d5a;
 }
 
 @media (max-width: 1024px) {

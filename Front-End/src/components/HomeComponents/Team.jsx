@@ -1,27 +1,16 @@
 import "./Team.css";
 import Fades from "../RestComponents/Fades";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import teamMembers from "../../Data/teamMembers";
 
 function Team() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
-  const teamMembers = [
-    {
-      name: t("team.hossein.name"),
-      role: t("team.hossein.role"),
-      photo: "https://randomuser.me/api/portraits/men/1.jpg",
-    },
-    {
-      name: t("team.sara.name"),
-      role: t("team.sara.role"),
-      photo: "https://randomuser.me/api/portraits/women/2.jpg",
-    },
-    {
-      name: t("team.adel.name"),
-      role: t("team.adel.role"),
-      photo: "https://randomuser.me/api/portraits/men/3.jpg",
-    },
-  ];
+  const handleClick = (id) => {
+    navigate(`/team/${id}`);
+  };
 
   return (
     <section id="team" className="team-section">
@@ -33,14 +22,17 @@ function Team() {
         <div className="team-grid">
           {teamMembers.map((member, index) => (
             <Fades animationType="fadeRotate" key={index}>
-              <div className="team-card">
+              <div
+                className="team-card"
+                onClick={() => handleClick(member.id)}
+              >
                 <img
                   src={member.photo}
-                  alt={member.name}
+                  alt={t(member.nameKey)}
                   className="team-photo"
                 />
-                <h4 className="team-name">{member.name}</h4>
-                <p className="team-role">{member.role}</p>
+                <h4 className="team-name">{t(member.nameKey)}</h4>
+                <p className="team-role">{t(member.roleKey)}</p>
               </div>
             </Fades>
           ))}

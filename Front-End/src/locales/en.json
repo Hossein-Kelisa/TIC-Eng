@@ -66,6 +66,26 @@
     "adel": {
       "name": "Adel",
       "role": "Designer"
+    },
+    "lina": {
+      "name": "Lina",
+      "role": "Developer"
+    },
+    "ali": {
+      "name": "Ali",
+      "role": "Tester"
+    },
+    "nora": {
+      "name": "Nora",
+      "role": "Project Manager"
+    },
+    "mina": {
+      "name": "Mina",
+      "role": "Intern"
+    },
+    "ahmed": {
+      "name": "Ahmed",
+      "role": "Marketing"
     }
   },
   "faq": {
