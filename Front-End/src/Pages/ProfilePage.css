@@ -86,7 +86,7 @@
   transform: scale(1.05);
 }
 .tab-menu-team .active {
-  font-weight: 999;
+  font-weight: 800;
   color: #005fa3;
   transform: scale(1.05);
   text-decoration: underline;
@@ -171,7 +171,7 @@
 }
 @media (max-width: 480px) {
   .profile-container {
-    flex-direction: row;
+    flex-direction: column;
     width: auto;
     margin: -40px auto 20px;
   }
