@@ -46,19 +46,18 @@
 }
 
 .team-name {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #1d2c4d;
-  text-shadow: 0 0 1px rgba(249, 4, 4, 0.311);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a24d03;
   margin-bottom: 0.5rem;
   font-family: Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgba(126, 125, 125, 0.28);
 }
 
 .team-role {
   font-size: 1rem;
-  font-weight: 600;
-  color: #4b5563;
-  text-shadow: 0 0 15px rgba(177, 183, 192, 0.779);
+  font-weight: 500;
+  color: #444d5a;
 }
 
 @media (max-width: 1024px) {
