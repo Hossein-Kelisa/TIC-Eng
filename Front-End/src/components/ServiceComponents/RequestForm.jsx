@@ -39,12 +39,24 @@ export default function RequestForm() {
     setLoading(true);
 
     const data = new FormData();
-    data.append("firstName", user?.firstName || "");
-    data.append("lastName", user?.lastName || "");
-    data.append("email", user?.email || "");
+
+    // ** when user : is logged in **
+    // data.append("firstName", user?.firstName || "");
+    // data.append("lastName", user?.lastName || "");
+    // data.append("email", user?.email || "");
+
+    // Object.entries(formData).forEach(([key, value]) => {
+    //   if (value !== null) data.append(key, value);
+
+    // ** when remove : user is logged in **
+    data.append("firstName", user?.firstName || formData.firstName || "");
+    data.append("lastName", user?.lastName || formData.lastName || "");
+    data.append("email", user?.email || formData.email || "");
 
     Object.entries(formData).forEach(([key, value]) => {
-      if (value !== null) data.append(key, value);
+      if (!["firstName", "lastName", "email"].includes(key) && value !== null) {
+        data.append(key, value);
+      }
     });
 
     try {

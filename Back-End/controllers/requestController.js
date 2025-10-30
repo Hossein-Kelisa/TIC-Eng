@@ -17,12 +17,12 @@ export const createRequest = async (req, res, next) => {
     // const { _id: userId, firstName, lastName, email } = req.user;  // if authentication is needed**
 
     const { company, service, message, phone, firstName, lastName, email } =
-      req.body;     // if authentication is no needed**
+      req.body; // if authentication is no needed**
 
-    const userId = req.user?._id || null;  // if authentication is no needed**
-    const userFirstName = req.user?.firstName || firstName || "Guest";  // if authentication is no needed**
-    const userLastName = req.user?.lastName || lastName || "";  // if authentication is no needed**
-    const userEmail = req.user?.email || email || "";   // if authentication is no needed**
+    const userId = req.user?._id || null; // if authentication is no needed**
+    const userFirstName = req.user?.firstName || firstName || "Guest"; // if authentication is no needed**
+    const userLastName = req.user?.lastName || lastName || ""; // if authentication is no needed**
+    const userEmail = req.user?.email || email || ""; // if authentication is no needed**
 
     // Validate required fields
     if (!company || !service || !phone) {
@@ -54,8 +54,10 @@ export const createRequest = async (req, res, next) => {
     // Save request in database
     const savedRequest = await Request.create({
       user: userId,
-      firstName,
-      lastName,
+      // firstName,  // firstName,    // if authentication is needed**
+      // lastName,   // lastName,      // if authentication is needed**
+      firstName: userFirstName,
+      lastName: userLastName,
       email: String(email).toLowerCase(),
       company,
       service,
