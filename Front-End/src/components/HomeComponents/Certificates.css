@@ -11,8 +11,8 @@
 }
 
 .certificates-title {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 4rem;
+  margin-bottom: 3rem;
   font-weight: 700;
   color: #872513;
   text-transform: uppercase;
@@ -20,15 +20,17 @@
 }
 
 .certificates-description {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
+  padding: 20px;
   margin-bottom: 2.5rem;
   color: #4b5563;
   line-height: 1.5;
+  border: #872513 2px solid;
 }
 
 @media (max-width: 768px) {
   .certificates-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .certificates-description {

@@ -1,7 +1,6 @@
 .contact-section {
   padding: 80px 20px;
-  background: linear-gradient(to bottom, #dbd4ca, #e2c26a);
-  /* background: linear-gradient(to bottom, #e2c26a, #dbd4ca); */
+  background: linear-gradient(to bottom, #dbd4ca, #dbd4ca);
   color: #1f2937;
   text-align: center;
 }
@@ -11,10 +10,10 @@
 }
 
 .contact-title {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 4rem;
+  margin-bottom: 4rem;
   font-weight: 700;
-  color: #872513;
+  color: #134f37;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -109,7 +108,7 @@
   }
 
   .contact-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .contact-description {
