@@ -31,8 +31,10 @@
   overflow: hidden;
   margin: 2rem auto;
   width: 80%;
-  height: 3px;
-  background-color: #631d0f;
+  height: 2px;
+  background-color: #631d0f62;
+  box-shadow: 0 0 10px #631d0f;
+  border: none;
 }
 
 

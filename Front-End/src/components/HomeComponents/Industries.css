@@ -64,12 +64,9 @@
 .industries-description2 {
   font-size: 1.3rem;
   color: #4b5563;
-  margin: 0 auto 4rem;
+  margin: 5rem auto;
   line-height: 2;
   max-width: 720px;
-}
-.industries-description2-text {
-  margin: 5rem auto;
 }
 
 .RequestService-btn {
@@ -131,9 +128,7 @@
   .industries-description2 {
     font-size: 1rem;
     max-width: 90%;
-  }
-  .industries-description2-text {
-    margin: 3rem auto;
+    margin: 4rem auto;
   }
   .RequestService-btn {
     padding: 0.5rem 1rem;
@@ -162,9 +157,7 @@
   }
   .industries-description2 {
     font-size: 0.9rem;
-  }
-  .industries-description2-text {
-    margin: 2rem auto;
+    margin: 3rem auto;
   }
   .RequestService-btn {
     padding: 0.4rem 0.8rem;
