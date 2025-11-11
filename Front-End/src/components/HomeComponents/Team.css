@@ -1,13 +1,14 @@
 .team-section {
   padding: 160px 20px 100px;
-  background: linear-gradient(to bottom, #dbd4ca, #e2c26a);
-  /* background: linear-gradient(to bottom, #e2c26a, #dbd4ca); */
+  /* background: linear-gradient(to bottom, #dbd4ca, #e2c26a); */
+  background: linear-gradient(to bottom, #e2c26a, #dbd4ca);
   text-align: center;
 }
 
 .team-title {
   font-size: 7rem;
   color: #872513;
+  animation: wave 4s infinite alternate;
 }
 
 .team-grid {
@@ -106,5 +107,13 @@
 
   .team-role {
     font-size: 0.9rem;
+  }
+}
+@keyframes wave {
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
   }
 }

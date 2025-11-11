@@ -1,0 +1,60 @@
+.certificates-container {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #dbd4ca, #e2c26a);
+  /* background: linear-gradient(to bottom, #e2c26a, #dbd4ca); */
+  color: #1f2937;
+  text-align: center;
+}
+
+.certificates-section {
+  margin: 0 auto;
+}
+
+.certificates-title {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #872513;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.certificates-description {
+  font-size: 1.5rem;
+  padding: 20px 0;
+  margin-bottom: 2.5rem;
+  color: #4b5563;
+  line-height: 1.5;
+  border-top: #872513 2px solid;
+  border-bottom: #872513 2px solid;
+  animation: scroll 50s linear infinite;
+}
+
+@media (max-width: 768px) {
+  .certificates-title {
+    font-size: 3rem;
+  }
+
+  .certificates-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificates-title {
+    font-size: 1.8rem;
+  }
+
+  .certificates-description {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
