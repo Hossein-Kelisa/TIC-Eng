@@ -25,10 +25,18 @@
   margin-bottom: 2.5rem;
   color: #4b5563;
   line-height: 1.5;
-  border-top: #872513 2px solid;
-  border-bottom: #872513 2px solid;
   animation: scroll 50s linear infinite;
 }
+.certificates-divider {
+  overflow: hidden;
+  margin: 2rem auto;
+  width: 80%;
+  height: 2px;
+  background-color: #631d0f62;
+  box-shadow: 0 0 10px #631d0f;
+  border: none;
+}
+
 
 @media (max-width: 768px) {
   .certificates-title {

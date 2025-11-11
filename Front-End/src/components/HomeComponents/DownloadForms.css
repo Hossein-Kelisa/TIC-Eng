@@ -30,10 +30,10 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #d32f2f;
+  background: #176143;
   color: white;
   padding: 0.7rem 1.2rem;
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -41,9 +41,10 @@
   transition: all 0.3s ease;
 }
 .download-btn:hover {
-  background: #b71c1c;
   transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  background-color: #23840b;
+  box-shadow: 0 6px 12px rgba(35, 132, 11, 0.5);
+  outline: none;
 }
 @media screen and (max-width: 768px) {
   .download-forms h4 {

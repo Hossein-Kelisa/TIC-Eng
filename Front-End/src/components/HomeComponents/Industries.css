@@ -61,15 +61,22 @@
   margin: 1.5rem;
   color: #7f1010;
 }
+.industries-description2 {
+  font-size: 1.3rem;
+  color: #4b5563;
+  margin: 5rem auto;
+  line-height: 2;
+  max-width: 720px;
+}
 
 .RequestService-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #d32f2f;
+  background: #176143;
   color: white;
-  padding: 0.7rem 1.2rem;
-  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -77,9 +84,10 @@
   transition: all 0.3s ease;
 }
 .RequestService-btn:hover {
-  background: #b71c1c;
   transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  background-color: #23840b;
+  box-shadow: 0 6px 12px rgba(35, 132, 11, 0.5);
+  outline: none;
 }
 
 @media (max-width: 1024px) {
@@ -117,6 +125,11 @@
     aspect-ratio: 16 / 9;
     height: auto;
   }
+  .industries-description2 {
+    font-size: 1rem;
+    max-width: 90%;
+    margin: 4rem auto;
+  }
   .RequestService-btn {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
@@ -141,6 +154,10 @@
   }
   .industry-card h4 {
     font-size: 1rem;
+  }
+  .industries-description2 {
+    font-size: 0.9rem;
+    margin: 3rem auto;
   }
   .RequestService-btn {
     padding: 0.4rem 0.8rem;

@@ -60,6 +60,13 @@ function Industries() {
             </Fades>
           ))}
         </div>
+        <div className="industries-description2">
+          <Fades animationType="fadeZoom">
+            <p className="industries-description2-text">
+              {t("industries.description2")}
+            </p>
+          </Fades>
+        </div>
         <Fades animationType="fadeZoom">
           <div className="industries-btn-wrapper">
             <Link to="/request" className="RequestService-btn">
