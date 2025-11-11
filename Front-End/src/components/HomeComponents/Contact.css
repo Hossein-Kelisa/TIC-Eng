@@ -1,8 +1,9 @@
 .contact-section {
   padding: 80px 20px;
-  background: linear-gradient(to bottom, #dbd4ca, #dbd4ca);
+  background: linear-gradient(to bottom, #1f2937, #1f2937);
   color: #1f2937;
   text-align: center;
+  border-bottom: #23840b 3px solid;
 }
 
 .contact-container {
@@ -13,7 +14,8 @@
   font-size: 4rem;
   margin-bottom: 4rem;
   font-weight: 700;
-  color: #134f37;
+  color: #d6d8d7d6;
+  text-shadow: 1px 1px 20px rgba(104, 194, 31, 0.199);
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -21,7 +23,7 @@
 .contact-description {
   font-size: 1.15rem;
   margin-bottom: 2.5rem;
-  color: #4b5563;
+  color: #a2a2a2;
   line-height: 1.5;
 }
 
@@ -35,14 +37,14 @@
 .contact-detail {
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  color: #374151;
+  color: #a2a2a2;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .contact-detail a {
-  color: #277016;
+  color: #d26464;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -66,6 +68,7 @@
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   max-width: 220px;
   user-select: none;
+  margin-bottom: 3rem;
 }
 
 .button-SendEmail:hover,
