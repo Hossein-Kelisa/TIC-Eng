@@ -21,11 +21,13 @@
 
 .certificates-description {
   font-size: 1.5rem;
-  padding: 20px;
+  padding: 20px 0;
   margin-bottom: 2.5rem;
   color: #4b5563;
   line-height: 1.5;
-  border: #872513 2px solid;
+  border-top: #872513 2px solid;
+  border-bottom: #872513 2px solid;
+  animation: scroll 50s linear infinite;
 }
 
 @media (max-width: 768px) {
@@ -45,5 +47,14 @@
 
   .certificates-description {
     font-size: 0.9rem;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
