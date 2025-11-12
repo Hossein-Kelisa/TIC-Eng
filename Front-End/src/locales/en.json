@@ -54,6 +54,10 @@
     "safety_inspection": "Safety & Inspection",
     "button": "Request Service"
   },
+  "certificates": {
+    "title": "Certificates",
+    "description": "A list of our certificates will be displayed here soon."
+  },
   "team": {
     "title": "Meet Our Team",
     "hossein": {

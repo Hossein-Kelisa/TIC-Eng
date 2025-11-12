@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Header.css";
 import logo from "../../assets/Logo.png";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import Search from "./Search";
+// import Search from "./Search";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +35,7 @@ function Header() {
     <header className="header">
       {/* Logo */}
       <div className="logo-container">
-        <Link to="/" className="logo-link">
+        <Link to="/" className="logo-link" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <img src={logo} alt="TIC Engineering Logo" className="logo" />
         </Link>
         <span className="logo-text">
@@ -45,9 +45,9 @@ function Header() {
         </span>
       </div>
 
-      <div className="search-container">
+      {/* <div className="search-container">
         <Search />
-      </div>
+      </div> */}
 
       {/* Hamburger always visible */}
       <button
@@ -75,6 +75,7 @@ function Header() {
             Download Forms
           </button>
           <button onClick={() => handleScroll("industries")}>Industries</button>
+          <button onClick={() => handleScroll("certificates")}>Certificates</button>
           <button onClick={() => handleScroll("team")}>Team</button>
           <button onClick={() => handleScroll("contact")}>Contact</button>
         </div>

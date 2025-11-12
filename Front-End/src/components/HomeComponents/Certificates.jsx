@@ -1,17 +1,20 @@
 import "./Certificates.css";
+import { useTranslation } from "react-i18next";
 
 const Certificates = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="certificates-container">
-      <section className="certificates-section">
-        <h2 className="certificates-title">Certificates</h2>
+    <section id="certificates" className="certificates-section">
+      <div className="certificates-container">
+        <h2 className="certificates-title">{t("certificates.title")}</h2>
         <hr className="certificates-divider" />
         <p className="certificates-description">
-          List of our certificates will be displayed here.
+          {t("certificates.description")}
         </p>
         <hr className="certificates-divider" />
-      </section>
-    </div>
+      </div>
+  </section>
   );
 };
 
