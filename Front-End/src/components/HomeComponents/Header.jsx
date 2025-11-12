@@ -35,7 +35,7 @@ function Header() {
     <header className="header">
       {/* Logo */}
       <div className="logo-container">
-        <Link to="/" className="logo-link">
+        <Link to="/" className="logo-link" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <img src={logo} alt="TIC Engineering Logo" className="logo" />
         </Link>
         <span className="logo-text">
