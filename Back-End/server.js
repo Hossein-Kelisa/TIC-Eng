@@ -12,7 +12,6 @@ import adminRouter from "./routes/adminRoutes.js";
 import userRouter from "./routes/userRouter.js";
 import i18n from "./config/i18n.js";
 
-
 dotenv.config();
 connectDB();
 
@@ -45,6 +44,31 @@ app.get("/", (req, res) => {
 // Health check route
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", message: req.__("health_ok") });
+});
+
+// Wake-up route for Render 1
+app.get("/api/wakeup", (req, res) => {
+  res.status(200).send("Backend is awake");
+  console.log("Wake-up request received");
+});
+
+// Ignore Vite and browser automatic requests 2
+app.get(["/__vite_ping", "/favicon.ico"], (req, res) => {
+  return res.status(204).end();
+});
+
+// Handle 404 (Not Found) 3
+app.use((req, res, next) => {
+  // Optional: log only in development 5
+  if (process.env.NODE_ENV === "development") {
+    console.log(`404 Not Found: ${req.method} ${req.originalUrl}`);
+  }
+
+  // Return a normal 404 JSON, not an error 6
+  return res.status(404).json({
+    status: "fail",
+    message: req.__("errors.route_not_found"),
+  });
 });
 
 // Handle 404 errors (don't find any routes)

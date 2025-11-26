@@ -1,6 +1,7 @@
 // config/corsOptions.js
 const allowedOrigins = [
   "http://localhost:5173",
+  "http://localhost:5174",
   "https://tic-eng.netlify.app",
   "https://tic-eng.com",
   "https://www.tic-eng.com",

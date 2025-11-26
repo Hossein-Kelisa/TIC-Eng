@@ -6,7 +6,15 @@ import { AuthProvider } from "./contexts/AuthContext";
 import DashboardPage from "./Pages/DashboardPage";
 import ProtectedRoute from "./components/RestComponents/ProtectedRoute";
 import ProfilePage from "./Pages/ProfilePage.jsx";
+import { useEffect } from "react";
+import { wakeupBackend } from "./utils/wakeupBackend";
+
 function App() {
+  useEffect(() => {
+    const API_URL = import.meta.env.VITE_API_URL;
+    wakeupBackend(API_URL);
+  }, []);
+
   return (
     <AuthProvider>
       <Router>
