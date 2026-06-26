@@ -6,17 +6,20 @@
   },
   "services": {
     "title": "خدمات ما",
-    "test": {
-      "title": "آزمایش",
-      "description": "اطمینان از پروژه‌ها و استانداردهای انطباق شما"
+    "Inspection": {
+      "title": "بازرسی"
     },
-    "inspection": {
-      "title": "بازرسی",
-      "description": "خدمات بازرسی مورد اعتماد برای رعایت استانداردها و مقررات جهانی"
+    "Technical Supervision": {
+      "title": "نظارت"
     },
-    "certification": {
-      "title": "صدور گواهینامه",
-      "description": "ما گواهی‌هایی ارائه می‌دهیم که نشان می‌دهد محصولات شما با استانداردها مطابقت دارند"
+    "Training": {
+      "title": "آموزش"
+    },
+    "Expert Assessment": {
+      "title": "کارشناسی"
+    },
+    "Standards Development": {
+      "title": "تدوین استاندارد"
     }
   },
   "about": {

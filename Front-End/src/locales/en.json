@@ -6,17 +6,20 @@
   },
   "services": {
     "title": "Our Services",
-    "test": {
-      "title": "Test",
-      "description": "Ensure your projects and compliance standards."
+    "Inspection": {
+      "title": "Inspection"
     },
-    "inspection": {
-      "title": "Inspection",
-      "description": "Trusted inspection services to meet global standards and regulations."
+    "Technical Supervision": {
+      "title": "Technical Supervision"
     },
-    "certification": {
-      "title": "Certification",
-      "description": "We provide certificates to show your products meet standards."
+    "Training": {
+      "title": "Training"
+    },
+    "Expert Assessment": {
+      "title": "Expert Assessment"
+    },
+    "Standards Development": {
+      "title": "Standards Development"
     }
   },
   "about": {
