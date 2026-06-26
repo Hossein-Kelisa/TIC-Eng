@@ -52,7 +52,7 @@
   max-width: 800px;
   height: 380px;
   object-fit: cover;
-  border-radius: none;
+  border-radius: 0;
   transition: 0.4s;
 }
 
