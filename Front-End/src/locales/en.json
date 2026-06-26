@@ -1,6 +1,6 @@
 {
   "hero": {
-    "subtitle": "Tic with certainty from test to trust",
+    "subtitle": "TIC with certainty from test to trust",
     "title": "Connect with our TIC experts or request a service",
     "get_in_touch": "Get in Touch"
   },
@@ -110,8 +110,9 @@
     "description": "We'd love to hear from you! Reach out with questions, projects, or partnership opportunities.",
     "email": "Email",
     "phone": "Phone",
+    "mobile": "Mobile",
     "address": "Address",
-    "address.details": "TIC Engineering, Address...",
+    "address.details": "Company Offices Complex - Fadak Street, Daneshkadeh Street, Urmia - IRAN",
     "send_email": "Send Us an Email"
   },
   "auth": {

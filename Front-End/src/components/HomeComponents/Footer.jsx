@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
       <p>
-        &copy; 2025 Tic-Eng.com - Made with ♥ by{" "}
+        &copy; 2025-2026 Tic-Eng.com - Made with ♥ by{" "}
         <a
           href="https://HosseinKelisa.com"
           target="_blank"

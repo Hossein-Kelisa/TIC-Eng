@@ -1,6 +1,6 @@
 .hero {
-  background: linear-gradient(to right, #010204, #031354);
-  height: 100vh;
+  background: linear-gradient(to right, #000000, #000000);
+  min-height: calc(100vh - 170px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,8 +51,8 @@
   font-size: 3.2em;
   margin-bottom: 3rem;
   line-height: 1.1;
-  color: #e2c26a;
-  text-shadow: 1.2px 1.2px 5px rgba(218, 62, 38, 0.431);
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(173, 36, 15, 0.92);
 }
 
 .hero-title {
