@@ -14,7 +14,8 @@ import { useTranslation } from "react-i18next";
 
 export default function RequestForm() {
   const navigate = useNavigate();
-  const { user, token } = useContext(AuthContext);
+  // const { user, token } = useContext(AuthContext);  // if authentication is needed**
+  const { user } = useContext(AuthContext);
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     company: "",
@@ -38,12 +39,24 @@ export default function RequestForm() {
     setLoading(true);
 
     const data = new FormData();
-    data.append("firstName", user?.firstName || "");
-    data.append("lastName", user?.lastName || "");
-    data.append("email", user?.email || "");
+
+    // ** when user : is logged in **
+    // data.append("firstName", user?.firstName || "");
+    // data.append("lastName", user?.lastName || "");
+    // data.append("email", user?.email || "");
+
+    // Object.entries(formData).forEach(([key, value]) => {
+    //   if (value !== null) data.append(key, value);
+
+    // ** when remove : user is logged in **
+    data.append("firstName", user?.firstName || formData.firstName || "");
+    data.append("lastName", user?.lastName || formData.lastName || "");
+    data.append("email", user?.email || formData.email || "");
 
     Object.entries(formData).forEach(([key, value]) => {
-      if (value !== null) data.append(key, value);
+      if (!["firstName", "lastName", "email"].includes(key) && value !== null) {
+        data.append(key, value);
+      }
     });
 
     try {
@@ -54,7 +67,8 @@ export default function RequestForm() {
         didOpen: () => Swal.showLoading(),
       });
 
-      await createRequest(data, token);
+      // await createRequest(data, token);    // if authentication is needed**
+      await createRequest(data);
 
       // Clear form
       setFormData({
@@ -104,7 +118,9 @@ export default function RequestForm() {
     <form onSubmit={handleSubmit} className="request-form">
       <h2 className="request-form__title">{t("serviceRequest.formTitle")}</h2>
 
-      <FormInput
+      {/* when user : is logged in ** */}
+
+      {/* <FormInput
         type="text"
         name="firstName"
         value={user?.firstName || ""}
@@ -118,7 +134,36 @@ export default function RequestForm() {
         readOnly
       />
 
-      <FormInput type="email" name="email" value={user?.email || ""} readOnly />
+      <FormInput type="email" name="email" value={user?.email || ""} readOnly /> */}
+
+      {/* when remove : user is logged in ** */}
+
+      <FormInput
+        type="text"
+        name="firstName"
+        placeholder={t("serviceRequest.formFirstName")}
+        value={user ? user.firstName : formData.firstName || ""}
+        onChange={!user ? handleChange : undefined}
+        readOnly={!!user}
+      />
+
+      <FormInput
+        type="text"
+        name="lastName"
+        placeholder={t("serviceRequest.formLastName")}
+        value={user ? user.lastName : formData.lastName || ""}
+        onChange={!user ? handleChange : undefined}
+        readOnly={!!user}
+      />
+
+      <FormInput
+        type="email"
+        name="email"
+        placeholder={t("serviceRequest.formEmail")}
+        value={user ? user.email : formData.email || ""}
+        onChange={!user ? handleChange : undefined}
+        readOnly={!!user}
+      />
 
       <FormInput
         type="text"
@@ -136,7 +181,10 @@ export default function RequestForm() {
         options={[
           { value: "testing", label: t("serviceRequest.formTesting") },
           { value: "inspection", label: t("serviceRequest.formInspection") },
-          { value: "certification", label: t("serviceRequest.formCertification") },
+          {
+            value: "certification",
+            label: t("serviceRequest.formCertification"),
+          },
         ]}
         required
       />
