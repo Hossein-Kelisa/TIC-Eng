@@ -1,5 +1,6 @@
 import "./Services.css";
 import Fades from "../RestComponents/Fades";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 function Services() {
@@ -7,48 +8,60 @@ function Services() {
 
   const services = [
     {
-      title: t("services.test.title"),
-      description: t("services.test.description"),
+      id: "inspection",
+      title: t("services.Inspection.title"),
       image:
         "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/65cdbc34b9d510ec993c0cb6_654c9fb1fbfb300821c1a860_manual_20inspection-min_angb56.jpg",
     },
     {
-      title: t("services.inspection.title"),
-      description: t("services.inspection.description"),
+      id: "technical-supervision",
+      title: t("services.Technical Supervision.title"),
       image:
         "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/inspectionn_xttqa2.jpg",
     },
     {
-      title: t("services.certification.title"),
-      description: t("services.certification.description"),
+      id: "training",
+      title: t("services.Training.title"),
       image:
         "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/testing_fc326x.jpg",
+    },
+    {
+      id: "expert-assessment",
+      title: t("services.Expert Assessment.title"),
+      image:
+        "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/65cdbc34b9d510ec993c0cb6_654c9fb1fbfb300821c1a860_manual_20inspection-min_angb56.jpg",
+    },
+    {
+      id: "standards-development",
+      title: t("services.Standards Development.title"),
+      image:
+        "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/65cdbc34b9d510ec993c0cb6_654c9fb1fbfb300821c1a860_manual_20inspection-min_angb56.jpg",
     },
   ];
 
   return (
-    <div className="services-container">
-      <section id="services" className="services-section">
-        <Fades animationType="slideFade">
-          <h3 className="services-title">{t("services.title")}</h3>
-        </Fades>
-        <div className="services-grid">
-          {services.map((service, index) => (
-            <Fades animationType="fadeRotate" key={index}>
-              <div className="service-card">
-                <div
-                  className="service-image"
-                  style={{ backgroundImage: `url(${service.image})` }}
-                ></div>
-                <div className="service-content">
-                  <h4>{service.title}</h4>
-                  <p>{service.description}</p>
-                </div>
-              </div>
-            </Fades>
-          ))}
-        </div>
-      </section>
+    <div className="services-section">
+      <Fades>
+        <h1 className="service-title">{t("services.title")}</h1>
+      </Fades>
+      <div className="services-list">
+        {services.map((service, index) => (
+          <div
+            className={`service-row ${index % 2 === 0 ? "normal" : "reverse"}`}
+            key={service.id}
+          >
+            <Link to={`/services/${service.id}`} className="service-text">
+              <Fades>
+                <h2>{service.title}</h2>
+              </Fades>
+            </Link>
+
+            <div className="service-image-container">
+              <img src={service.image} alt={service.title} />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

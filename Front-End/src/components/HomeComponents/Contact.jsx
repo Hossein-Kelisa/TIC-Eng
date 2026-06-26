@@ -25,7 +25,10 @@ function Contact() {
             </a>
           </p>
           <p className="contact-detail" role="listitem">
-            📞 <strong>{t("contact.phone")}: </strong> +98 xxx xxx xxxx
+            📞 <strong>{t("contact.phone")}: </strong> +98-4433444278
+          </p>
+          <p className="contact-detail" role="listitem">
+            📱 <strong>{t("contact.mobile")}: </strong> +98-9190129854
           </p>
           <p className="contact-detail" role="listitem">
             📍 <strong>{t("contact.address")}: </strong>

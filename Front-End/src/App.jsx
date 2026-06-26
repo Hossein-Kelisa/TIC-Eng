@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import HomePage from "./Pages/HomePage";
-// import AuthPage from "./Pages/AuthPage";
-// import RequestPage from "./Pages/RequestPage";
+import HomePage from "./Pages/HomePage";
+import AuthPage from "./Pages/AuthPage";
+import RequestPage from "./Pages/RequestPage";
 import { AuthProvider } from "./contexts/AuthContext";
-// import DashboardPage from "./Pages/DashboardPage";
-// import ProtectedRoute from "./components/RestComponents/ProtectedRoute";
-// import ProfilePage from "./Pages/ProfilePage.jsx";
+import DashboardPage from "./Pages/DashboardPage";
+import ProtectedRoute from "./components/RestComponents/ProtectedRoute";
+import ProfilePage from "./Pages/ProfilePage.jsx";
 import { useEffect } from "react";
 import { wakeupBackend } from "./utils/wakeupBackend";
-import TemporaryPage from "./Pages/TemporaryPage";
+// import TemporaryPage from "./Pages/TemporaryPage";
 
 function App() {
   useEffect(() => {
@@ -20,8 +20,8 @@ function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          <Route path="/" element={<TemporaryPage />} />
-          {/* <Route path="/" element={<HomePage />} />
+          {/* <Route path="/" element={<TemporaryPage />} /> */}
+          <Route path="/" element={<HomePage />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route
             path="/request"
@@ -32,7 +32,7 @@ function App() {
             }
           />
           <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="/team/:id" element={<ProfilePage />} /> */}
+          <Route path="/team/:id" element={<ProfilePage />} />
         </Routes>
       </Router>
     </AuthProvider>

@@ -1,6 +1,6 @@
 .hero {
-  background: linear-gradient(to right, #010204, #031354);
-  height: 100vh;
+  background: linear-gradient(to right, #000000, #000000);
+  min-height: calc(100vh - 170px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,8 +51,8 @@
   font-size: 3.2em;
   margin-bottom: 3rem;
   line-height: 1.1;
-  color: #e2c26a;
-  text-shadow: 1.2px 1.2px 5px rgba(218, 62, 38, 0.431);
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(173, 36, 15, 0.92);
 }
 
 .hero-title {
@@ -70,13 +70,12 @@
   align-items: center;
 }
 
-.button-primary,
-.RequestService-btn1 {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #a0bea94a;
+.button-primary {
+  background-color: #ffffff;
+  color: #030303;
+  border: 1px solid #ffffff;
   padding: 0.8rem 2rem;
-  border-radius: 8px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.2s, color 0.2s, transform 0.2s;
@@ -84,11 +83,30 @@
   margin-top: 1rem;
 }
 
-.button-primary:hover,
+.RequestService-btn1 {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #e2c26a;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.button-primary:hover{
+  background-color: transparent;
+    border: 1px solid #e2c26a;
+  color: #ffffff;
+  transform: scale(1.05);
+}
 .RequestService-btn1:hover {
   transform: scale(1.05);
-  color: #99ea99e8;
-  border: 1px solid #c0c4c1a0;
+  background-color: #ffffff;
+  color: #010204;
+  border: 1px solid #ffffff;
 }
 
 @media (max-width: 1024px) {
