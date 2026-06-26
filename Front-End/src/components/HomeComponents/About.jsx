@@ -50,7 +50,7 @@ function About() {
 
         <Fades animationType="fadeScale">
           <img
-            src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/4_ubycxu.jpg"
+            src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/33_v1l0ki.jpg"
             alt="TIC Engineering Team Working in Field"
             className="about-image"
           />
