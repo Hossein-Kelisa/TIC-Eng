@@ -17,25 +17,25 @@ function Services() {
       id: "technical-supervision",
       title: t("services.Technical Supervision.title"),
       image:
-        "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/inspectionn_xttqa2.jpg",
+        "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/service-technical-supervision_zjsylr.jpg",
     },
     {
       id: "training",
       title: t("services.Training.title"),
       image:
-        "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/testing_fc326x.jpg",
+        "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/service-training_koeu6e.jpg",
     },
     {
       id: "expert-assessment",
       title: t("services.Expert Assessment.title"),
       image:
-        "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/65cdbc34b9d510ec993c0cb6_654c9fb1fbfb300821c1a860_manual_20inspection-min_angb56.jpg",
+        "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/service-expert-assessment_mpyi2y.jpg",
     },
     {
       id: "standards-development",
       title: t("services.Standards Development.title"),
       image:
-        "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/65cdbc34b9d510ec993c0cb6_654c9fb1fbfb300821c1a860_manual_20inspection-min_angb56.jpg",
+        "https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/service-standard-developmnet_nwdbfv.jpg",
     },
   ];
 

@@ -1,13 +1,10 @@
 .certificates-container {
   padding: 80px 20px;
   background: linear-gradient(to bottom, #ffffff, #efeeec);
-  /* background: linear-gradient(to bottom, #e2c26a, #dbd4ca); */
   color: #1f2937;
   text-align: center;
-}
-
-.certificates-container {
   margin: 0 auto;
+  overflow: hidden; /* Important */
 }
 
 .certificates-title {
@@ -19,16 +16,15 @@
   letter-spacing: 1.5px;
 }
 
-.certificates-description {
+/* .certificates-description {
   font-size: 1.5rem;
   padding: 20px 0;
   margin-bottom: 2.5rem;
   color: #4b5563;
   line-height: 1.5;
   animation: scroll 50s linear infinite;
-}
+} */
 .certificates-divider {
-  overflow: hidden;
   margin: 2rem auto;
   width: 80%;
   height: 2px;
@@ -36,7 +32,31 @@
   box-shadow: 0 0 10px #631d0f;
   border: none;
 }
+.certificates-images {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
 
+.certificates-images:hover {
+  animation-play-state: paused;
+}
+
+.certificates-image {
+  flex-shrink: 0;
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.certificates-image:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
   .certificates-title {
@@ -59,10 +79,11 @@
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(100%);
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateX(-100%);
+
+  to {
+    transform: translateX(-50%);
   }
 }

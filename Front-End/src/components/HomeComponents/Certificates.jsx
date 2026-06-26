@@ -9,12 +9,44 @@ const Certificates = () => {
       <div className="certificates-container">
         <h2 className="certificates-title">{t("certificates.title")}</h2>
         <hr className="certificates-divider" />
-        <p className="certificates-description">
+        {/* <p className="certificates-description">
           {t("certificates.description")}
-        </p>
+        </p> */}
+        <div className="certificates-images">
+          <img
+            src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates2_dhzyct.jpg"
+            alt="TIC Engineering Certificates1"
+            className="certificates-image"
+          />
+          <img
+            src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_rluari.jpg"
+            alt="TIC Engineering Certificates2"
+            className="certificates-image"
+          />
+          <img
+            src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_3_yshdxc.jpg"
+            alt="TIC Engineering Certificates3"
+            className="certificates-image"
+          />
+          <img
+            src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates2_dhzyct.jpg"
+            alt="TIC Engineering Certificates1"
+            className="certificates-image"
+          />
+          <img
+            src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_rluari.jpg"
+            alt="TIC Engineering Certificates2"
+            className="certificates-image"
+          />
+          <img
+            src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_3_yshdxc.jpg"
+            alt="TIC Engineering Certificates3"
+            className="certificates-image"
+          />
+        </div>
         <hr className="certificates-divider" />
       </div>
-  </section>
+    </section>
   );
 };
 
