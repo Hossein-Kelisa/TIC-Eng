@@ -54,6 +54,8 @@
   object-fit: cover;
   border-radius: 0;
   transition: 0.4s;
+  border-radius: 5rem 0 5rem 0;
+  box-shadow: 2px 2px 30px rgba(216, 92, 92, 0.643);
 }
 
 /* .service-row:hover img {
