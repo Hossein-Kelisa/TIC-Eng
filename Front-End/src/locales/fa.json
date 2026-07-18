@@ -7,20 +7,26 @@
   "services": {
     "title": "خدمات ما",
     "Inspection": {
-      "title": "بازرسی"
+      "title": "بازرسی",
+      "shortExplain": "خدمات بازرسی جامع برای اطمینان از کیفیت و ایمنی"
     },
     "Technical Supervision": {
-      "title": "نظارت"
+      "title": "نظارت",
+      "shortExplain": "نظارت فنی حرفه‌ای برای اطمینان از انطباق و کیفیت"
     },
     "Training": {
-      "title": "آموزش"
+      "title": "آموزش",
+      "shortExplain": "برنامه‌های آموزشی جامع برای افزایش مهارت‌ها و دانش"
     },
     "Expert Assessment": {
-      "title": "کارشناسی"
+      "title": "کارشناسی",
+      "shortExplain": "خدمات کارشناسی برای تحلیل و ارزیابی دقیق"
     },
     "Standards Development": {
-      "title": "تدوین استاندارد"
-    }
+      "title": "تدوین استاندارد",
+      "shortExplain": "توسعه استانداردهای صنعتی و بهترین شیوه‌ها"
+    },
+    "readMore": "بیشتر بخوانید..."
   },
   "about": {
     "title": "چرا ما را انتخاب کنید؟",
