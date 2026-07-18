@@ -1,7 +1,8 @@
 import TopBar from "../components/HomeComponents/TopBar";
 import Header from "../components/HomeComponents/Header";
 import Hero from "../components/HomeComponents/Hero";
-import Services from "../components/HomeComponents/Services";
+// import Services from "../components/HomeComponents/Services";
+import Services2 from "../components/HomeComponents/Services2";
 import About from "../components/HomeComponents/About";
 // import DownloadForms from "../components/HomeComponents/DownloadForms";
 // import Industries from "../components/HomeComponents/Industries";
@@ -17,7 +18,7 @@ function HomePage() {
       <TopBar />
       <Header />
       <Hero />
-      <Services />
+      <Services2 />
       <About />
       {/* <DownloadForms /> */}
       {/* <Industries /> */}

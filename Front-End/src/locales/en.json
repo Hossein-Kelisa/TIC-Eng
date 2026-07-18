@@ -7,20 +7,26 @@
   "services": {
     "title": "Our Services",
     "Inspection": {
-      "title": "Inspection"
+      "title": "Inspection",
+      "shortExplain": "Comprehensive inspection services to ensure quality and safety."
     },
     "Technical Supervision": {
-      "title": "Technical Supervision"
+      "title": "Technical Supervision",
+      "shortExplain": "Professional technical supervision to ensure compliance and quality."
     },
     "Training": {
-      "title": "Training"
+      "title": "Training",
+      "shortExplain": "Comprehensive training programs to enhance skills and knowledge."
     },
     "Expert Assessment": {
-      "title": "Expert Assessment"
+      "title": "Expert Assessment",
+      "shortExplain": "Expert assessment services for detailed analysis and evaluation."
     },
     "Standards Development": {
-      "title": "Standards Development"
-    }
+      "title": "Standards Development",
+      "shortExplain": "Development of industry standards and best practices."
+    },
+    "readMore": "Read More..."
   },
   "about": {
     "title": "Why Choose Us?",
