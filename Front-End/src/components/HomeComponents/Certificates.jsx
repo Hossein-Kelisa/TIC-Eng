@@ -28,7 +28,12 @@ const Certificates = () => {
               className="certificates-image"
             />
             <img
-              src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_4_yw5ukd.jpg"
+              src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_4_baahyo.jpg"
+              alt="TIC Engineering Certificates4"
+              className="certificates-image"
+            />
+            <img
+              src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_5_dbmzek.jpg"
               alt="TIC Engineering Certificates4"
               className="certificates-image"
             />
@@ -50,7 +55,12 @@ const Certificates = () => {
               className="certificates-image"
             />
             <img
-              src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_4_yw5ukd.jpg"
+              src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_4_baahyo.jpg"
+              alt="TIC Engineering Certificates4"
+              className="certificates-image"
+            />
+            <img
+              src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_5_dbmzek.jpg"
               alt="TIC Engineering Certificates4"
               className="certificates-image"
             />
