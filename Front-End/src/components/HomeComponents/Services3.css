@@ -1,0 +1,269 @@
+/* =========================
+   SERVICES SECTION
+========================= */
+
+.services-section {
+  padding: 120px 0;
+  background: linear-gradient(to bottom, #ffffff, #efeeec);
+}
+
+.service-title {
+  text-align: center;
+  font-size: 5rem;
+  color: #872513;
+  margin-bottom: 4rem;
+}
+
+/* =========================
+   SWIPER
+========================= */
+
+.services-swiper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* =========================
+   SLIDE
+========================= */
+
+.service-slide {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.service-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  padding: 4rem;
+
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.267),
+    transparent
+  );
+
+  color: rgb(255, 255, 255);
+}
+/* =========================
+   TEXT
+========================= */
+
+.service-overlay h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.service-overlay p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.service-overlay a {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #ffffff;
+  color: #872513;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.service-overlay a:hover {
+  background: #872513;
+  color: #ffffff;
+}
+
+/* =========================
+   SWIPER ARROWS
+========================= */
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 55px;
+  height: 55px;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #872513;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* =========================
+   SWIPER PAGINATION
+========================= */
+
+.swiper-pagination {
+  bottom: 20px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+
+  background: #ffffff;
+  opacity: 0.6;
+
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #872513;
+  opacity: 1;
+
+  transform: scale(1.2);
+}
+
+/* =========================
+   TABLET (768px)
+========================= */
+
+@media (max-width: 768px) {
+
+  .service-title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .service-slide {
+    height: 500px;
+  }
+
+  .service-overlay {
+    padding: 2.5rem;
+  }
+
+  .service-overlay h2 {
+    font-size: 2.5rem;
+  }
+
+  .service-overlay p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .service-overlay a {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 45px;
+    height: 45px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   MOBILE (480px)
+========================= */
+
+@media (max-width: 480px) {
+
+  .services-section {
+    padding: 80px 0;
+  }
+
+  .service-title {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .services-swiper {
+    width: 95%;
+  }
+
+  .service-slide {
+    height: 350px;
+    border-radius: 18px;
+  }
+
+  .service-overlay {
+    padding: 1.5rem;
+  }
+
+  .service-overlay h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-overlay p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .service-overlay a {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 38px;
+    height: 38px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 16px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}

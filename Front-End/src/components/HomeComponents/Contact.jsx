@@ -17,12 +17,16 @@ function Contact() {
         <div className="contact-info" role="list">
           <p className="contact-detail" role="listitem">
             📧 <strong>{t("contact.email")}: </strong>{" "}
-            <a
+            <p
               href="mailto:contact@tic-eng.com"
               aria-label="Send email to contact@tic-eng.com"
             >
               contact@tic-eng.com
-            </a>
+              <br />
+              contact@tic-eng.ir
+              <br />
+              info@tic-eng.ir
+            </p>
           </p>
           <p className="contact-detail" role="listitem">
             📞 <strong>{t("contact.phone")}: </strong> +98-4433444278
