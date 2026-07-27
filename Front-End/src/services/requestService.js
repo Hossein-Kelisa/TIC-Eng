@@ -5,13 +5,23 @@ const API_URL = import.meta.env.VITE_API_URL;
  */
 export async function createRequest(formData, token) {
   try {
+    // **Need to Authorization header for protected route**
+    // const response = await fetch(`${API_URL}/requests`, {
+    //   method: "POST",
+    //   body: formData, // FormData includes file + fields
+    //   credentials: "include",
+    //   headers: {
+    //     Authorization: `Bearer ${token}`,
+    //   },
+
+    // ** no Need to Authorization header for protected route**
+    const headers = token ? { Authorization: `Bearer ${token}` } : {};
+
     const response = await fetch(`${API_URL}/requests`, {
       method: "POST",
-      body: formData, // FormData includes file + fields
+      body: formData,
       credentials: "include",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
+      headers,
     });
 
     const result = await response.json().catch(() => ({}));
