@@ -37,6 +37,11 @@ const Certificates = () => {
               alt="TIC Engineering Certificates4"
               className="certificates-image"
             />
+            <img
+              src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/iso9001_vs2lxt.jpg"
+              alt="TIC Engineering Certificates5"
+              className="certificates-image"
+            />
           </div>
           <div className="certificates-images">
             <img
@@ -62,6 +67,11 @@ const Certificates = () => {
             <img
               src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/certificates_5_dbmzek.jpg"
               alt="TIC Engineering Certificates4"
+              className="certificates-image"
+            />
+            <img
+              src="https://res.cloudinary.com/dk9rkpvhm/image/upload/f_auto,q_auto,w_600/iso9001_vs2lxt.jpg"
+              alt="TIC Engineering Certificates5"
               className="certificates-image"
             />
           </div>
