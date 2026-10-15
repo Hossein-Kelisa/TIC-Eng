@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import AuthPage from "./Pages/AuthPage";
-import RequestPage from "./Pages/RequestPage";
+import ServiceRequestPage from "./Pages/ServiceRequestPage";
 import { AuthProvider } from "./contexts/AuthContext";
 import DashboardPage from "./Pages/DashboardPage";
 import ProtectedRoute from "./components/RestComponents/ProtectedRoute";
@@ -27,7 +27,7 @@ function App() {
             path="/request"
             element={
               <ProtectedRoute>
-                <RequestPage />
+                <ServiceRequestPage />
               </ProtectedRoute>
             }
           />

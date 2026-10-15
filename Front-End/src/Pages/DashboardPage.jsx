@@ -1,4 +1,4 @@
-import RequestList from "../components/ServiceComponents/RequestList";
+import RequestList from "../components/ServiceRequestForm/RequestList";
 import Header from "../components/HomeComponents/Header";
 import Footer from "../components/HomeComponents/Footer";
 import "./DashboardPage.css";
