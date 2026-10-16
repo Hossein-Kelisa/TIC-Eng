@@ -1,6 +1,6 @@
 .about-section {
   padding: 100px 20px;
-  background: linear-gradient(to bottom, #ffffff, #efeeec);
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
   color: #872513;
   margin: 4rem 0;
 }
@@ -21,10 +21,9 @@
   display: inline-block;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-align: center;
   font-size: 5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #213c62;
   margin-bottom: 5rem;
 }
 
@@ -99,7 +98,7 @@
   padding: 12px 0;
   border: none;
   background: transparent;
-  color: #4e664e;
+  color: #213c62;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
@@ -126,13 +125,17 @@
   padding: 30px 25px;
   background: transparent;
   border-radius: 2px;
-  border: 1px solid rgba(135, 37, 19, 0.08);
+  border: 1px solid rgba(33, 60, 98, 0.08);
+}
+.about-highlight:hover {
+  background: rgba(135, 37, 19, 0.05);
+  border-color: rgba(135, 37, 19, 0.2);
 }
 
 .highlight-icon {
   flex-shrink: 0;
   font-size: 1.8rem;
-  color: #4e664e;
+  color: #213c62;
 }
 
 .about-highlight h4 {

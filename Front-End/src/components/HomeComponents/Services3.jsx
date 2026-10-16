@@ -55,7 +55,8 @@ function Services() {
   return (
     <div className="services-section" dir={dir}>
       <Fades>
-        <h1 className="service-title">{t("services.title")}</h1>
+        <span className="service-title">{t("services.title")}</span>
+        <p className="service-description">Tic-Eng is a leading specialist in technical inspection and conformity assessment. By combining the technical expertise of our engineers with a robust quality management system, we are committed to continuous improvement, achieving our objectives, and delivering the highest levels of customer and client satisfaction.</p> 
       </Fades>
       <Swiper
         key={dir} // Add key prop to force re-render on direction change
@@ -63,7 +64,7 @@ function Services() {
         navigation
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 5000,
+          delay: 10000,
           disableOnInteraction: false,
         }}
         loop={true}

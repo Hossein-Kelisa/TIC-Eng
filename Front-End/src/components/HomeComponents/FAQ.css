@@ -2,14 +2,14 @@
   padding: 80px 20px;
   margin: 0 auto;
   /* background: linear-gradient(to bottom, #e2c26a, #dbd4ca); */
-  background: linear-gradient(to bottom, #ffffff, #efeeec);
+  background:#ffffff;
 }
 
 .faq-title {
   text-align: center;
   font-size: 5rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #213c62;
   margin-bottom: 5rem;
 }
 

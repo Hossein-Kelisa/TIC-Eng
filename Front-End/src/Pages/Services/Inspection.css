@@ -1,0 +1,413 @@
+
+/* =========================
+   Inspection Page
+========================= */
+
+.inspection-page {
+  --inspection-primary: #872513;
+  --inspection-secondary: #4e664e;
+  --inspection-text: #374151;
+  --inspection-muted: #6b7280;
+  --inspection-background: #efeeec;
+
+  color: var(--inspection-text);
+  overflow: hidden;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.inspection-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+  padding: 100px 7%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(30, 35, 30, 0.88) 0%,
+      rgba(30, 35, 30, 0.68) 55%,
+      rgba(30, 35, 30, 0.3) 100%
+    ),
+    url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1800&q=85")
+      center / cover no-repeat;
+  color: #ffffff;
+}
+
+.inspection-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.inspection-eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #d9e2d5;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.inspection-hero h1 {
+  max-width: 700px;
+  margin: 0 0 24px;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.inspection-hero p {
+  max-width: 620px;
+  margin: 0 0 32px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   Buttons and Links
+========================= */
+
+.inspection-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 13px 24px;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  background: var(--inspection-primary);
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.inspection-cta:hover {
+  background: #6d1d0f;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.inspection-cta:focus-visible {
+  outline: 3px solid #a6b99f;
+  outline-offset: 4px;
+}
+
+.inspection-cta svg {
+  transition: transform 0.25s ease;
+}
+
+.inspection-cta:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================
+   Overview Section
+========================= */
+
+.inspection-overview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(35px, 6vw, 80px);
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 30px;
+}
+
+.inspection-overview-image {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #e5e7eb;
+}
+
+.inspection-overview-image img {
+  display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.inspection-overview-image:hover img {
+  transform: scale(1.035);
+}
+
+.inspection-overview-content {
+  min-width: 0;
+}
+
+.inspection-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--inspection-secondary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.inspection-overview-content h2,
+.inspection-section-heading h2,
+.inspection-contact h2 {
+  margin: 0 0 22px;
+  color: var(--inspection-primary);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.inspection-overview-content p {
+  margin: 0 0 20px;
+  color: var(--inspection-muted);
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+/* =========================
+   Benefits Section
+========================= */
+
+.inspection-benefits {
+  padding: 90px 30px 100px;
+  background: linear-gradient(
+    to bottom,
+    #f7f7f5,
+    var(--inspection-background)
+  );
+}
+
+.inspection-section-heading {
+  max-width: 760px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.inspection-section-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--inspection-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.inspection-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.inspection-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 25px;
+
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(135, 37, 19, 0.09);
+  border-radius: 10px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.025);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.inspection-benefit:hover {
+  transform: translateY(-4px);
+  border-color: rgba(78, 102, 78, 0.35);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.inspection-benefit svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--inspection-secondary);
+  font-size: 1.25rem;
+}
+
+.inspection-benefit p {
+  margin: 0;
+  color: var(--inspection-text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   Contact Section
+========================= */
+
+.inspection-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 30px;
+}
+
+.inspection-contact > div {
+  max-width: 680px;
+}
+
+.inspection-contact h2 {
+  margin-bottom: 14px;
+}
+
+.inspection-contact p {
+  margin: 0;
+  color: var(--inspection-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.inspection-contact .inspection-cta {
+  flex-shrink: 0;
+}
+
+/* =========================
+   Responsive: Tablet
+========================= */
+
+@media (max-width: 900px) {
+  .inspection-hero {
+    min-height: 420px;
+    padding: 80px 6%;
+  }
+
+  .inspection-overview {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 75px 30px;
+  }
+
+  .inspection-overview-image img {
+    height: 400px;
+  }
+
+  .inspection-contact {
+    padding: 65px 30px;
+  }
+}
+
+/* =========================
+   Responsive: Mobile
+========================= */
+
+@media (max-width: 600px) {
+  .inspection-hero {
+    min-height: 400px;
+    padding: 70px 24px;
+    background-position: 60% center;
+  }
+
+  .inspection-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 1.4px;
+  }
+
+  .inspection-hero h1 {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+
+  .inspection-hero p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .inspection-cta {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+
+  .inspection-overview {
+    gap: 28px;
+    padding: 60px 22px;
+  }
+
+  .inspection-overview-image img {
+    height: 280px;
+  }
+
+  .inspection-overview-content h2,
+  .inspection-section-heading h2,
+  .inspection-contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .inspection-overview-content p,
+  .inspection-section-heading p,
+  .inspection-contact p {
+    font-size: 0.98rem;
+  }
+
+  .inspection-benefits {
+    padding: 65px 22px;
+  }
+
+  .inspection-section-heading {
+    margin-bottom: 35px;
+  }
+
+  .inspection-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .inspection-benefit {
+    padding: 20px;
+  }
+
+  .inspection-contact {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+    padding: 60px 22px;
+  }
+}
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .inspection-cta,
+  .inspection-cta svg,
+  .inspection-overview-image img,
+  .inspection-benefit {
+    transition: none;
+  }
+
+  .inspection-cta:hover,
+  .inspection-benefit:hover {
+    transform: none;
+  }
+
+  .inspection-overview-image:hover img {
+    transform: none;
+  }
+}
