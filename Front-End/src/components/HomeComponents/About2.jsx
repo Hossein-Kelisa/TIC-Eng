@@ -52,9 +52,25 @@ function About2() {
             </h2>
 
             <p className="about-introduction">
-              An engineering and technical inspection company providing
-              professional inspection, testing, supervision, and conformity
-              assessment services.
+              Test, Inspection, Certification Engineering Company (TIC) was
+              established in 2024 to provide specialized technical services in
+              inspection, vehicle type approval, industrial inspection, pressure
+              vessel inspection, and Non-Destructive Testing (NDT). In 2025, as
+              part of its commitment to quality and continuous improvement, TIC
+              obtained accreditation from the National Accreditation Center of
+              Iran (NACI) in accordance with the requirements of ISO/IEC 17020.
+              This achievement reflects the company's commitment to technical
+              competence, effective inspection processes, and the delivery of
+              independent, impartial, and reliable inspection services. Driven
+              by technical expertise and supported by qualified professionals,
+              TIC is committed to maintaining the highest standards of
+              independence, impartiality, integrity, and quality. Our services
+              are delivered in accordance with applicable national and
+              international standards, helping enhance safety, quality, and
+              reliability across the industrial and transportation sectors. At
+              TIC, we believe that professional inspection is essential to
+              building trust, ensuring compliance, and supporting safer, more
+              reliable operations.
             </p>
           </div>
         </Fades>

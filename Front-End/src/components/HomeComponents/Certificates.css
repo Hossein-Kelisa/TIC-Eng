@@ -31,7 +31,14 @@
   color: #213c62;
   margin-bottom: 5rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.7px;
+}
+.certificates-description {
+  margin: 1rem auto 3rem;
+  max-width: 750px;
+  color: #6b7280;
+  font-size: 1.15rem;
+  line-height: 1.7;
 }
 
 .certificates-divider {

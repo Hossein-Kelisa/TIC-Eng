@@ -53,9 +53,9 @@ function Services() {
   ];
 
   return (
-    <div className="services-section" dir={dir}>
+    <div id="services" className="services-section" dir={dir}>
       <Fades>
-        <span className="service-title">{t("services.title")}</span>
+        <span className="service-title">Our Expertise</span>
         <p className="service-description">Tic-Eng is a leading specialist in technical inspection and conformity assessment. By combining the technical expertise of our engineers with a robust quality management system, we are committed to continuous improvement, achieving our objectives, and delivering the highest levels of customer and client satisfaction.</p> 
       </Fades>
       <Swiper

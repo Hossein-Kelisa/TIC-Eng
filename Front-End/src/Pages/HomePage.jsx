@@ -17,8 +17,8 @@ function HomePage() {
       <TopBar />
       <Header />
       <Hero />
-      <Services3 />
       <About2 />
+      <Services3 />
       {/* <DownloadForms /> */}
       {/* <Industries /> */}
       <Certificates />

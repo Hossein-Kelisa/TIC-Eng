@@ -70,9 +70,7 @@ function Header() {
         <Link
           to="/"
           className="logo-link"
-          onClick={() =>
-            window.scrollTo({ top: 0, behavior: "smooth" })
-          }
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <img src={logo} alt="TIC Engineering Logo" className="logo" />
         </Link>
@@ -104,8 +102,8 @@ function Header() {
         </button>
 
         <div className="sidebar-nav">
+          <button onClick={() => handleScroll("about")}>About TIC</button>
           <button onClick={() => handleScroll("services")}>Services</button>
-          <button onClick={() => handleScroll("about")}>About</button>
           {/* <button onClick={() => handleScroll("download-forms")}>
             Download Forms
           </button> */}
@@ -115,15 +113,13 @@ function Header() {
           <button onClick={() => handleScroll("certificates")}>
             Certificates
           </button>
-          <button onClick={() => handleScroll("team")}>Team</button>
+          <button onClick={() => handleScroll("faq")}>FAQ</button>
           <button onClick={() => handleScroll("contact")}>Contact</button>
         </div>
       </div>
 
       {/* ================= OVERLAY ================= */}
-      {isMenuOpen && (
-        <div className="overlay" onClick={toggleMenu}></div>
-      )}
+      {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
     </header>
   );
 }

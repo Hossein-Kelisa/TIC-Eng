@@ -1,4 +1,3 @@
-import { User2 } from "lucide-react";
 import "./AuthButton.css";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -26,7 +25,6 @@ function AuthButton({ isLoggedIn, onLogout }) {
         onLogout();
         navigate("/"); // go to home page after logout
 
-        // non-blocking toast instead of modal
         Swal.fire({
           toast: true,
           position: "top-end",
@@ -50,7 +48,12 @@ function AuthButton({ isLoggedIn, onLogout }) {
           className="Auth-Logout"
           aria-label="Logout from your account"
         >
-          <User2 size={22} className="UserIcon-Logout" aria-hidden="true" />
+          <img
+            src="/Images/logout.png"
+            alt=""
+            className="Auth-Icon"
+            aria-hidden="true"
+          />
           {t("auth.logout")}
         </button>
       ) : (
@@ -59,8 +62,13 @@ function AuthButton({ isLoggedIn, onLogout }) {
           className="Auth-Login"
           aria-label="Login to your account"
         >
-          <User2 size={22} className="UserIcon-Login" aria-hidden="true" />
-          {t("auth.login")}
+          <img
+            src="/Images/login.png"
+            alt=""
+            className="Auth-Icon"
+            aria-hidden="true"
+          />
+          {/* {t("auth.login")} */}
         </button>
       )}
     </div>
