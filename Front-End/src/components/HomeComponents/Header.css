@@ -49,10 +49,10 @@
   height: 120px;
   background-size: cover;
   margin-right: 0.5rem;
+  transition: transform 0.5s ease;
 }
 .logo:hover {
   transform: scale(1.15);
-  transition: transform 0.5s;
   cursor: pointer;
 }
 .logo-text {
@@ -83,15 +83,18 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #272727;
+  color: #213c62;
   text-shadow: 0.1px 0.1px 25px rgba(238, 238, 238, 0.822);
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
   padding: 1rem;
 }
 .hamburger:hover {
   color: #ca1e1e;
-  transform: scale(1.1);
-  transition: color 0.5s, transform 0.5s;
+  transition:
+    color 0.5s,
+    transform 0.5s;
 }
 .sidebar-menu {
   position: fixed;
@@ -100,7 +103,7 @@
   width: 300px;
   height: 100vh;
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: linear-gradient(135deg, #fafafa 40%, #d9b41fe9 100%);
+  background: linear-gradient(130deg, #fafafa 30%, #213c62 100%);
   box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   display: flex;
@@ -127,9 +130,11 @@
 }
 
 .close-button:hover {
-  color: #d31717;
+  color: #971e1e;
   transform: scale(1.2);
-  transition: color 0.3s, transform 0.3s;
+  transition:
+    color 0.3s,
+    transform 0.3s;
 }
 
 .sidebar-nav button {
@@ -144,14 +149,18 @@
   font-size: 1.05rem;
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
   padding: 0.5rem 1rem;
 }
 
 .sidebar-nav button:hover {
-  color: #e61b1b;
+  color: #b82323;
   transform: scale(1.1);
-  transition: color 0.3s, transform 0.3s;
+  transition:
+    color 0.3s,
+    transform 0.3s;
 }
 
 .overlay {

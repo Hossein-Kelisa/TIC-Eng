@@ -1,12 +1,12 @@
-import RequestForm from "../components/ServiceComponents/RequestForm";
+import RequestForm from "../components/ServiceRequestForm/RequestForm";
 import Header from "../components/HomeComponents/Header";
 import Footer from "../components/HomeComponents/Footer";
-import "./RequestPage.css";
+import "./ServiceRequestPage.css";
 import Fades from "../components/RestComponents/Fades";
 
-export default function RequestPage() {
+export default function ServiceRequestPage() {
   return (
-    <div id="RequestForm">
+    <div id="ServiceRequestPage">
       <Header />
       <Fades animationType="fadeDown">
         <RequestForm />

@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import AuthPage from "./Pages/AuthPage";
-import RequestPage from "./Pages/RequestPage";
+import ServiceRequestPage from "./Pages/ServiceRequestPage";
 import { AuthProvider } from "./contexts/AuthContext";
 import DashboardPage from "./Pages/DashboardPage";
 import ProtectedRoute from "./components/RestComponents/ProtectedRoute";
 import ProfilePage from "./Pages/ProfilePage.jsx";
+import Inspection from "./Pages/Services/Inspection.jsx";
 import { useEffect } from "react";
 import { wakeupBackend } from "./utils/wakeupBackend";
 // import TemporaryPage from "./Pages/TemporaryPage";
@@ -27,12 +28,13 @@ function App() {
             path="/request"
             element={
               <ProtectedRoute>
-                <RequestPage />
+                <ServiceRequestPage />
               </ProtectedRoute>
             }
           />
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/team/:id" element={<ProfilePage />} />
+          <Route path="/services/inspection" element={<Inspection />} />
         </Routes>
       </Router>
     </AuthProvider>

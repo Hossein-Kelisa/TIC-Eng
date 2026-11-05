@@ -17,6 +17,11 @@
   color: #c81f1f; 
 }
 
+.Auth-Icon {
+  width: 25px;
+  height: 25px;
+}
+
 .Auth-Logout {
   display: flex;
   align-items: center;
@@ -35,24 +40,14 @@
   transform: scale(1.05);
 }
 
-.UserIcon-Login {
-  color: #000000; /* black */
-}
-
-.UserIcon-Login:hover {
-  color: #c81f1f; /* darker red on hover */
-}
-
-.UserIcon-Logout {
-  color: #23be29; /* green */
-}
 @media (max-width: 600px) {
   .Auth-Login, .Auth-Logout {
     padding: 4px 1px;
     font-size: 14px;
     gap: 6px;
   }
-  .UserIcon-Login, .UserIcon-Logout {
-    font-size: 18px;
+  .Auth-Icon {
+    width: 20px;
+    height: 20px;
   }
 }

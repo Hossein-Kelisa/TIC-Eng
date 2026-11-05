@@ -1,61 +1,113 @@
+
 import { useState } from "react";
 import "./FAQ.css";
 import { useTranslation } from "react-i18next";
 
 function FAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
   const { t } = useTranslation();
 
-  const toggleFAQ = (index) => {
-    if (openIndex === index) {
-      setOpenIndex(null); // close if already open
-    } else {
-      setOpenIndex(index); // open new one
-    }
-  };
+  // Selected category
+  const [activeCategory, setActiveCategory] = useState("general");
 
-  const faqs = [
+  // Selected question
+  const [openIndex, setOpenIndex] = useState(null);
+
+  // FAQ categories and questions
+  const categories = [
     {
-      question: t('faq.question1'),
-      answer: t('faq.answer1'),
+      id: "general",
+      title: t("faq.categories.general"),
+      questions: [1, 2, 3],
     },
     {
-      question: t('faq.question2'),
-      answer: t('faq.answer2'),
+      id: "inspection",
+      title: t("faq.categories.inspection"),
+      questions: [4, 5, 6],
     },
     {
-      question: t('faq.question3'),
-      answer: t('faq.answer3'),
+      id: "engineering",
+      title: t("faq.categories.engineering"),
+      questions: [7, 8, 9],
+    },
+    {
+      id: "conformity",
+      title: t("faq.categories.conformity"),
+      questions: [10, 11, 12],
+    },
+    {
+      id: "contact",
+      title: t("faq.categories.contact"),
+      questions: [13, 14, 15],
     },
   ];
 
+  // Get questions for the selected category
+  const selectedCategory = categories.find(
+    (category) => category.id === activeCategory
+  );
+
+  // Open or close a question
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  // Change category and close any previously opened question
+  const handleCategoryChange = (categoryId) => {
+    setActiveCategory(categoryId);
+    setOpenIndex(null);
+  };
+
   return (
     <section id="faq" className="faq-section">
-      <h3 className="faq-title">{t('faq.title')}</h3>
-      <div className="faq-list">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className={`faq-item ${openIndex === index ? "open" : ""}`}
+
+      <h3 className="faq-title">{t("faq.title")}</h3>
+
+      {/* Category navigation */}
+      <div className="faq-categories">
+        {categories.map((category) => (
+          <button
+            key={category.id}
+            className={`faq-category ${
+              activeCategory === category.id ? "active" : ""
+            }`}
+            onClick={() => handleCategoryChange(category.id)}
+            aria-pressed={activeCategory === category.id}
           >
-            <h4
+            {category.title}
+          </button>
+        ))}
+      </div>
+
+      {/* Questions and answers */}
+      <div className="faq-list">
+        {selectedCategory.questions.map((number) => (
+          <div
+            key={number}
+            className={`faq-item ${
+              openIndex === number ? "open" : ""
+            }`}
+          >
+            <button
               className="faq-question"
-              onClick={() => toggleFAQ(index)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  toggleFAQ(index);
-                }
-              }}
+              onClick={() => toggleFAQ(number)}
+              aria-expanded={openIndex === number}
             >
-              {faq.question}
-            </h4>
-            {openIndex === index && <p className="faq-answer">{faq.answer}</p>}
+              <span>{t(`faq.question${number}`)}</span>
+
+              <span className="faq-icon">
+                {openIndex === number ? "−" : "+"}
+              </span>
+            </button>
+
+            {openIndex === number && (
+              <p className="faq-answer">
+                {t(`faq.answer${number}`)}
+              </p>
+            )}
           </div>
         ))}
       </div>
+
     </section>
   );
 }

@@ -1,5 +1,6 @@
 .hero {
-  background: linear-gradient(to right, #000000, #000000);
+  /* background: linear-gradient(to right, #000000, #000000); */
+  background: #1f2937;
   min-height: calc(100vh - 170px);
   display: flex;
   justify-content: center;
@@ -24,8 +25,8 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 4px 1px 20px 4px rgba(199, 179, 30, 0.56);
+  border-radius: 5px;
+  box-shadow: 1px 1px 25px 4px rgb(103, 32, 6);
   flex: 1.5;
 }
 
@@ -52,14 +53,13 @@
   margin-bottom: 3rem;
   line-height: 1.1;
   color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(173, 36, 15, 0.92);
 }
 
 .hero-title {
   font-size: 1.5em;
   margin-bottom: 1.5rem;
-  color: #72bd67a0;
-  text-shadow: 1px 1px 20px rgb(189, 178, 177);
+  color: #0a7795;
+  /* text-shadow: 1px 1px 20px rgb(189, 178, 177); */
 }
 
 .hero-buttons {
@@ -73,12 +73,11 @@
 .button-primary {
   background-color: #ffffff;
   color: #030303;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   padding: 0.8rem 2rem;
-  border-radius: 5px;
+  border-radius: 2px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.2s, color 0.2s, transform 0.2s;
   width: fit-content;
   margin-top: 1rem;
 }
@@ -86,27 +85,24 @@
 .RequestService-btn1 {
   background-color: transparent;
   color: #ffffff;
-  border: 1px solid #e2c26a;
+  border: 2px solid #872413;
   padding: 0.8rem 2rem;
-  border-radius: 5px;
+  border-radius: 2px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.2s, color 0.2s, transform 0.2s;
   width: fit-content;
   margin-top: 1rem;
 }
 
-.button-primary:hover{
+.button-primary:hover {
   background-color: transparent;
-    border: 1px solid #e2c26a;
+  border: 2px solid #872513;
   color: #ffffff;
-  transform: scale(1.05);
 }
 .RequestService-btn1:hover {
-  transform: scale(1.05);
   background-color: #ffffff;
   color: #010204;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
 }
 
 @media (max-width: 1024px) {
